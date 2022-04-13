@@ -11,6 +11,7 @@ import { PublicSiteCareersComponent } from './public-site-careers/public-site-ca
 import { PublicSiteNewsComponent } from './public-site-news/public-site-news.component';
 import { PublicSiteRegisterComponent } from './public-site-register/public-site-register.component';
 import { PublicSiteLoginComponent } from './public-site-login/public-site-login.component';
+import { PublicSiteServiceComponent } from './public-site-services/public-site-service/public-site-service.component';
 
 
 
@@ -24,7 +25,8 @@ import { PublicSiteLoginComponent } from './public-site-login/public-site-login.
     PublicSiteCareersComponent,
     PublicSiteNewsComponent,
     PublicSiteRegisterComponent,
-    PublicSiteLoginComponent
+    PublicSiteLoginComponent,
+    PublicSiteServiceComponent
   ],
   imports: [
     CommonModule,

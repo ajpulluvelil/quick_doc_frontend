@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceList } from '../common/interfaces/service-list-type';
+import { serviceLists } from '../common/utils/services-lists';
 
 @Component({
   selector: 'app-public-site-services',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PublicSiteServicesComponent implements OnInit {
 
+  services: Array<ServiceList> = [];
+
   constructor() { }
 
   ngOnInit(): void {
+    this.services = serviceLists;
+    console.log('services', this.services)
   }
 
 }

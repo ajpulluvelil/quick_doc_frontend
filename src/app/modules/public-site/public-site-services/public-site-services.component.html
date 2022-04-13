@@ -1,1 +1,5 @@
-<p>public-site-services works!</p>
+<div class="row service-container">
+    <ng-container *ngFor="let service of services">
+        <app-public-site-service class="col" [service]="service"></app-public-site-service>
+    </ng-container>
+</div>
