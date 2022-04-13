@@ -1,0 +1,82 @@
+.not-found-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    .text-col {
+        .page-text {
+            font-size: 7rem;
+            font-weight: 700;
+        }
+        .not-found-text {
+            font-size: 7rem;
+            font-weight: 700;
+        }
+        .not-found-btn {
+            width: 30%;
+            margin: 30px auto;
+            .back-btn {
+                border-radius: 1.5rem;
+                color: white;
+                background-color: red;
+            }
+        }
+    }
+    .not-found-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .not-found-img {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+    }
+}
+
+// iPad Air landscape (1180x820)
+@media only screen and (min-width: 1025px) and (max-width: 1180px) {
+    .not-found-container {
+        .text-col {
+            .page-text {
+                font-size: 5rem;
+                font-weight: 700;
+            }
+            .not-found-text {
+                font-size: 5rem;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+// iPad Mini landscape (1024x768)
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+    .not-found-container {
+        .text-col {
+            .page-text {
+                font-size: 5rem;
+                font-weight: 700;
+            }
+            .not-found-text {
+                font-size: 5rem;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+    .not-found-container {
+        .text-col {
+            .page-text {
+                font-size: 3rem;
+                font-weight: 700;
+            }
+            .not-found-text {
+                font-size: 3rem;
+                font-weight: 700;
+            }
+        }
+    }
+}
