@@ -1,22 +1,22 @@
 <nav class="public-site-navigation">
-    <div class="nav-title">
-        <span class="quick-doc-title">quickDoc</span>
-        <span class="vertical"></span>
+    <div class="public-site-logo">
+        <span class="quick-doc-logo">quickDoc</span>
+        <span class="vertical-bar"></span>
     </div>
-    <div align="right" class="nav-links">
-        <div [routerLink]="['/public-site/landing/home']" routerLinkActive="router-link-active" (click)="homeSelected()"
-            class="nav-home" [ngClass]="{active: isHomeSelected}">Home</div>
-        <div [routerLink]="['/public-site/landing/services']" routerLinkActive="router-link-active" (click)="servicesSelected()"
-            class="nav-services" [ngClass]="{active: isServicesSelected}">Services</div>
-        <div [routerLink]="['/public-site/landing/contact-us']" routerLinkActive="router-link-active" (click)="contactSelected()"
-            class="nav-contact" [ngClass]="{active: isContactUsSelected}">Contact Us</div>
-        <div [routerLink]="['/public-site/landing/careers']" routerLinkActive="router-link-active" (click)="careersSelected()"
-            class="nav-careers" [ngClass]="{active: isCareersSelected}">Careers</div>
-        <div [routerLink]="['/public-site/landing/news']" routerLinkActive="router-link-active" (click)="newsSelected()" 
-            class="nav-news" [ngClass]="{active: isNewsSelected}">News</div>
-        <div [routerLink]="['/public-site/landing/register']" routerLinkActive="router-link-active" (click)="registerSelected()"
-            class="nav-register" [ngClass]="{active: isRegisterSelected}">Register</div>
-        <div [routerLink]="['/public-site/landing/login']" routerLinkActive="router-link-active" (click)="loginSelected()"
-            class="nav-login" [ngClass]="{active: isLoginSelected}">Login</div>
-    </div>
+    <ul class="nav-lists">
+        <li class="list-item" [routerLink]="['/public-site/landing/home']" routerLinkActive="router-link-active"
+            (click)="homeSelected()" [ngClass]="{active: isHomeSelected}">Home</li>
+        <li class="list-item" [routerLink]="['/public-site/landing/services']" routerLinkActive="router-link-active"
+            (click)="servicesSelected()" [ngClass]="{active: isServicesSelected}">Services</li>
+        <li class="list-item" [routerLink]="['/public-site/landing/contact-us']" routerLinkActive="router-link-active"
+            (click)="contactSelected()" [ngClass]="{active: isContactUsSelected}">Contact Us</li>
+        <li class="list-item" [routerLink]="['/public-site/landing/careers']" routerLinkActive="router-link-active"
+            (click)="careersSelected()" [ngClass]="{active: isCareersSelected}">Careers</li>
+        <li class="list-item" [routerLink]="['/public-site/landing/news']" routerLinkActive="router-link-active"
+            (click)="newsSelected()" [ngClass]="{active: isNewsSelected}">News</li>
+        <li class="list-item" [routerLink]="['/public-site/landing/register']" routerLinkActive="router-link-active"
+            (click)="registerSelected()" [ngClass]="{active: isRegisterSelected}">Register</li>
+        <li class="list-item" [routerLink]="['/public-site/landing/login']" routerLinkActive="router-link-active"
+            (click)="loginSelected()" [ngClass]="{active: isLoginSelected}">Login</li>
+    </ul>
 </nav>
