@@ -2,6 +2,9 @@
     margin-top: 1rem;
     width: 35rem;
     height: 20rem;
+    .service-content {
+        width: 33.75rem !important;
+    }
 }
 :hover {
     overflow-y: scroll;
