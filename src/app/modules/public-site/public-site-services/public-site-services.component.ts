@@ -15,7 +15,6 @@ export class PublicSiteServicesComponent implements OnInit {
 
   ngOnInit(): void {
     this.services = serviceLists;
-    console.log('services', this.services)
   }
 
 }
