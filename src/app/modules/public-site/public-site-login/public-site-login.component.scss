@@ -1,16 +1,31 @@
 .login-container {
-    height: 93%;
+    font-family: "Style Script", cursive;
+    height: 94.2%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    // background: url(https://media.istockphoto.com/photos/analyzing-samples-picture-id182188515?k=20&m=182188515&s=612x612&w=0&h=LgEaPz0mCVTWYjI8KIZjzAGyj1BRrqylP532FJGWBVc=);
+    background: url(../../../../assets/images/login-page.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .label-container {
+        .login-label {
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+    }
     .username-container {
         display: flex;
         margin-bottom: 2rem;
         justify-content: center;
+        margin-top: 1rem;
         .username-section {
             height: 3rem;
             width: 20rem;
+            background-color: #ffffff;
             box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
             .username-input {
                 border-width: 0;
@@ -31,6 +46,7 @@
         .password-section {
             height: 3rem;
             width: 20rem;
+            background-color: #ffffff;
             box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
             .password-input {
                 border-width: 0;
@@ -49,6 +65,7 @@
             background-color: rgb(10, 129, 233);
             color: #ffffff;
             width: 20rem;
+            text-transform: capitalize;
         }
     }
 }
