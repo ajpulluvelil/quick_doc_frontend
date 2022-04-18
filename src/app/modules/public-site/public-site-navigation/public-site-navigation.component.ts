@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { PublicSiteApiService } from '../common/services/public-site-api.service';
+import { PublicSiteService } from '../common/services/public-site.service';
 
 @Component({
   selector: 'app-public-site-navigation',
@@ -14,12 +16,30 @@ export class PublicSiteNavigationComponent implements OnInit {
   isNewsSelected: boolean = false;
   isRegisterSelected: boolean = false;
   isLoginSelected: boolean = false;
+  isPositionFixedEnabled: boolean = false;
 
-  constructor() { }
+  constructor(
+    private publicSiteService: PublicSiteService,
+    private publicSiteApiService: PublicSiteApiService
+  ) {
+  }
+
+  @HostListener('window:scroll', ['$event']) onWindowScroll(): void {
+    this.publicSiteService.isPositionFixedEnabled = true;
+    this.isPositionFixedEnabled = this.publicSiteService.isPositionFixedEnabled;
+    console.log('isPositionFixedEnabled', this.isPositionFixedEnabled)
+  }
+
+  /** commented for future reference
+  @HostBinding('class.service-scroll')
+  get enablePositionFixed() {
+    return this.isPositionFixedEnabled;
+  } */
 
   ngOnInit(): void {
     const url = window.location.href;
     this.setActiveLink(url);
+    this.isPositionFixedEnabled = this.publicSiteService.isPositionFixedEnabled;
   }
 
   homeSelected(): void {
