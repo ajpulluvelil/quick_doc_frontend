@@ -12,6 +12,7 @@ import { PublicSiteNewsComponent } from './public-site-news/public-site-news.com
 import { PublicSiteRegisterComponent } from './public-site-register/public-site-register.component';
 import { PublicSiteLoginComponent } from './public-site-login/public-site-login.component';
 import { PublicSiteServiceComponent } from './public-site-services/public-site-service/public-site-service.component';
+import { ForgotPasswordModalComponent } from './public-site-login/forgot-password-modal/forgot-password-modal.component';
 
 
 
@@ -26,7 +27,8 @@ import { PublicSiteServiceComponent } from './public-site-services/public-site-s
     PublicSiteNewsComponent,
     PublicSiteRegisterComponent,
     PublicSiteLoginComponent,
-    PublicSiteServiceComponent
+    PublicSiteServiceComponent,
+    ForgotPasswordModalComponent
   ],
   imports: [
     CommonModule,
