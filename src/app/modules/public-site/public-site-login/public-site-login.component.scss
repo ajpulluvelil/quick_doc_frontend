@@ -5,8 +5,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    // background: url(https://media.istockphoto.com/photos/analyzing-samples-picture-id182188515?k=20&m=182188515&s=612x612&w=0&h=LgEaPz0mCVTWYjI8KIZjzAGyj1BRrqylP532FJGWBVc=);
-    background: url(../../../../assets/images/login-page.jpg);
+    background: url(../../../../assets/images/public-site-background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     .label-container {
@@ -66,6 +65,14 @@
             color: #ffffff;
             width: 20rem;
             text-transform: capitalize;
+        }
+    }
+    .forgot-password {
+        .forgot-password-label {
+            font-size: 0.8rem;
+            text-decoration: underline;
+            cursor: pointer;
+            color: #0000ff;
         }
     }
 }

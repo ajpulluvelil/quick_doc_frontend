@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { ForgotPasswordModalComponent } from './forgot-password-modal/forgot-password-modal.component';
 
 @Component({
   selector: 'app-public-site-login',
@@ -7,9 +10,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PublicSiteLoginComponent implements OnInit {
 
-  constructor() { }
+  loginForm!: FormGroup;
+
+  constructor(
+    private fb: FormBuilder,
+    private dialog: MatDialog
+  ) { }
 
   ngOnInit(): void {
+    this.buildLoginForm();
+  }
+
+  buildLoginForm() {
+    this.loginForm = this.fb.group({
+      username: new FormControl('', Validators.required),
+      password: new FormControl('', Validators.required),
+    });
+  }
+
+  onSubmit(loginForm: FormGroup) {
+    console.log('form', loginForm)
+  }
+
+  forgotPassword() {
+    this.dialog.open(ForgotPasswordModalComponent, {
+      disableClose: true
+    }).afterClosed().subscribe(res => {
+      if (res) {
+      }
+    });
   }
 
 }

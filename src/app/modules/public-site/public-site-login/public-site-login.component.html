@@ -1,21 +1,26 @@
 <div class="login-container">
-    <div class="label-container">
-        <mat-label class="login-label">
-            <span>login to the portal</span>
-        </mat-label>
-    </div>
-    <div class="username-container">
-        <div class="username-section">
-            <input mat-input type="text" class="username-input" placeholder="Username">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
+        <div class="label-container">
+            <mat-label class="login-label">
+                <span>login to the portal</span>
+            </mat-label>
         </div>
-    </div>
-    <div class="password-container">
-        <div class="password-section">
-            <input mat-input type="password" class="password-input" placeholder="Password">
+        <div class="username-container">
+            <div class="username-section">
+                <input mat-input type="text" class="username-input" placeholder="Username" formControlName="username">
+            </div>
         </div>
-    </div>
-    <div class="login-section">
-        <button mat-raised-button class="login-button">login</button>
-    </div>
-
+        <div class="password-container">
+            <div class="password-section">
+                <input mat-input type="password" class="password-input" placeholder="Password"
+                    formControlName="password">
+            </div>
+        </div>
+        <div class="login-section">
+            <button mat-raised-button [disabled]="!loginForm.valid" class="login-button" type="submit">login</button>
+        </div>
+        <div class="forgot-password">
+            <mat-label class="forgot-password-label" (click)="forgotPassword()">Forgot Password?</mat-label>
+        </div>
+    </form>
 </div>

@@ -27,7 +27,6 @@ export class PublicSiteNavigationComponent implements OnInit {
   @HostListener('window:scroll', ['$event']) onWindowScroll(): void {
     this.publicSiteService.isPositionFixedEnabled = true;
     this.isPositionFixedEnabled = this.publicSiteService.isPositionFixedEnabled;
-    console.log('isPositionFixedEnabled', this.isPositionFixedEnabled)
   }
 
   /** commented for future reference
