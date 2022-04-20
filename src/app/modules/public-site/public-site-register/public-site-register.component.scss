@@ -1,6 +1,187 @@
 .registration-wrapper {
-    background: url(../../../../assets/images/public-site-background.jpg);
     height: 94.2%;
+    display: flex;
+    background-size: cover !important;
+    justify-content: center;
+    align-items: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    font-family: "Style Script", cursive;
+    background: url(../../../../assets/images/public-site-background.jpg);
+    .registration-title {
+        display: flex;
+        justify-content: center;
+        .title-label {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    }
+    .name-wrapper {
+        display: flex;
+        flex-direction: row;
+        .first-name-wrapper {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            .first-name-input {
+                padding: 0.3rem;
+            }
+        }
+        .last-email-wrapper {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            .last-name-input {
+                padding: 0.3rem;
+            }
+        }
+    }
+    .email-wrapper {
+        display: flex;
+        flex-direction: row;
+        .email-address-wrapper {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            .email-input {
+                padding: 0.3rem;
+            }
+        }
+        .confirm-email-wrapper {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            .confirm-email-input {
+                padding: 0.3rem;
+            }
+        }
+    }
+    .gender-telephone-wrapper {
+        display: flex;
+        flex-direction: row;
+        .gender-wrapper {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            .gender-input {
+                padding: 0.3rem;
+            }
+        }
+        .telephone-wrapper {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            .telephone-input {
+                padding: 0.3rem;
+            }
+        }
+    }
+    .dob-nationality-wrapper {
+        display: flex;
+        flex-direction: row;
+        .dob-wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            .dob-input {
+                padding: 0.3rem;
+            }
+        }
+        .nationality-wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            .nationality-input {
+                padding: 0.3rem;
+            }
+        }
+    }
+    .country-state-wrapper {
+        display: flex;
+        flex-direction: row;
+        .country-wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            .country-input {
+                padding: 0.3rem;
+            }
+        }
+        .state-wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            .state-input {
+                padding: 0.3rem;
+            }
+        }
+    }
+    .district-city-wrapper {
+        display: flex;
+        flex-direction: row;
+        .district-wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            .district-input {
+                padding: 0.3rem;
+            }
+        }
+        .city-wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            .city-input {
+                padding: 0.3rem;
+            }
+        }
+    }
+    .pin-landmark-wrapper {
+        display: flex;
+        flex-direction: row;
+        .pin-wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            .pin-input {
+                padding: 0.3rem;
+            }
+        }
+        .landmark-wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            .landmark-input {
+                padding: 0.3rem;
+            }
+        }
+    }
+    .apartment-street-wrapper {
+        display: flex;
+        flex-direction: row;
+        .apartment-wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            .apartment-input {
+                padding: 0.3rem;
+            }
+        }
+        .street-wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            .street-input {
+                padding: 0.3rem;
+            }
+        }
+    }
+    .submit-button-wrapper {
+        display: flex;
+        justify-content: center;
+        .submit-button {
+            margin-top: 1rem;
+            background-color: rgb(10, 129, 233);
+            color: #ffffff;
+        }
+    }
 }
