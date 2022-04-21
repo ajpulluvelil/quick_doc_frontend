@@ -24,6 +24,9 @@
             flex-direction: column;
             .first-name-input {
                 padding: 0.3rem;
+                border: none;
+                outline: none;
+                box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
             }
         }
         .last-email-wrapper {
@@ -32,6 +35,9 @@
             flex-direction: column;
             .last-name-input {
                 padding: 0.3rem;
+                border: none;
+                outline: none;
+                box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
             }
         }
     }
@@ -44,6 +50,9 @@
             flex-direction: column;
             .email-input {
                 padding: 0.3rem;
+                border: none;
+                outline: none;
+                box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
             }
         }
         .confirm-email-wrapper {
@@ -52,6 +61,9 @@
             flex-direction: column;
             .confirm-email-input {
                 padding: 0.3rem;
+                border: none;
+                outline: none;
+                box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
             }
         }
     }
@@ -64,6 +76,9 @@
             flex-direction: column;
             .gender-input {
                 padding: 0.3rem;
+                border: none;
+                outline: none;
+                box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
             }
         }
         .telephone-wrapper {
@@ -72,6 +87,9 @@
             flex-direction: column;
             .telephone-input {
                 padding: 0.3rem;
+                border: none;
+                outline: none;
+                box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
             }
         }
     }
@@ -84,6 +102,9 @@
             margin-top: 1rem;
             .dob-input {
                 padding: 0.3rem;
+                border: none;
+                outline: none;
+                box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
             }
         }
         .nationality-wrapper {
@@ -92,6 +113,9 @@
             margin-top: 1rem;
             .nationality-input {
                 padding: 0.3rem;
+                border: none;
+                outline: none;
+                box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
             }
         }
     }
@@ -104,6 +128,9 @@
             margin-top: 1rem;
             .country-input {
                 padding: 0.3rem;
+                border: none;
+                outline: none;
+                box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
             }
         }
         .state-wrapper {
@@ -112,6 +139,9 @@
             margin-top: 1rem;
             .state-input {
                 padding: 0.3rem;
+                border: none;
+                outline: none;
+                box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
             }
         }
     }
@@ -124,6 +154,9 @@
             margin-top: 1rem;
             .district-input {
                 padding: 0.3rem;
+                border: none;
+                outline: none;
+                box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
             }
         }
         .city-wrapper {
@@ -132,6 +165,9 @@
             margin-top: 1rem;
             .city-input {
                 padding: 0.3rem;
+                border: none;
+                outline: none;
+                box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
             }
         }
     }
@@ -144,6 +180,9 @@
             margin-top: 1rem;
             .pin-input {
                 padding: 0.3rem;
+                border: none;
+                outline: none;
+                box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
             }
         }
         .landmark-wrapper {
@@ -152,6 +191,9 @@
             margin-top: 1rem;
             .landmark-input {
                 padding: 0.3rem;
+                border: none;
+                outline: none;
+                box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
             }
         }
     }
@@ -164,6 +206,9 @@
             margin-top: 1rem;
             .apartment-input {
                 padding: 0.3rem;
+                border: none;
+                outline: none;
+                box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
             }
         }
         .street-wrapper {
@@ -172,6 +217,9 @@
             margin-top: 1rem;
             .street-input {
                 padding: 0.3rem;
+                border: none;
+                outline: none;
+                box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
             }
         }
     }
@@ -182,6 +230,7 @@
             margin-top: 1rem;
             background-color: rgb(10, 129, 233);
             color: #ffffff;
+            box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
         }
     }
 }
