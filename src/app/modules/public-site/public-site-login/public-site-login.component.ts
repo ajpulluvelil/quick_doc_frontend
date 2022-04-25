@@ -18,10 +18,10 @@ export class PublicSiteLoginComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.buildLoginForm();
+    this.initLoginForm();
   }
 
-  buildLoginForm() {
+  initLoginForm() {
     this.loginForm = this.fb.group({
       username: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required),

@@ -1,90 +1,95 @@
 <div class="registration-wrapper">
-    <form action="">
+    <form action="" [formGroup]="registrationForm" (ngSubmit)="onSubmit(registrationForm)">
         <div class="registration-title">
             <mat-label class="title-label">Enter your Details!</mat-label>
         </div>
         <div class="row name-wrapper">
             <div class="col first-name-wrapper">
                 <mat-label class="first-name-label">First Name</mat-label>
-                <input mat-input type="text" class="first-name-input">
+                <input mat-input type="text" class="first-name-input" formControlName="firstName">
             </div>
             <div class="col last-email-wrapper">
                 <mat-label class="last-name-label">Last Name</mat-label>
-                <input mat-input type="text" class="last-name-input">
+                <input mat-input type="text" class="last-name-input" formControlName="lastName">
             </div>
         </div>
         <div class="row email-wrapper">
             <div class="col email-address-wrapper">
                 <mat-label class="email-label">Email Address</mat-label>
-                <input mat-input type="email" class="email-input">
+                <input mat-input type="email" class="email-input" formControlName="email">
             </div>
             <div class="col confirm-email-wrapper">
                 <mat-label class="confirm-email-label">Confirm Email Address</mat-label>
-                <input mat-input type="text" class="confirm-email-input">
+                <input mat-input type="text" class="confirm-email-input" formControlName="confirmEmail">
             </div>
         </div>
         <div class="row gender-telephone-wrapper">
             <div class="col gender-wrapper">
                 <mat-label class="gender-label">Gender</mat-label>
-                <input type="text" class="gender-input">
+                <input type="text" class="gender-input" formControlName="gender">
             </div>
             <div class="col telephone-wrapper">
                 <mat-label class="telephone-label">Telephone</mat-label>
-                <input type="text" class="telephone-input">
+                <input type="text" class="telephone-input" formControlName="telephone">
             </div>
         </div>
         <div class="row dob-nationality-wrapper">
             <div class="col dob-wrapper">
                 <mat-label class="dob-label">Date of Birth</mat-label>
-                <input type="text" class="dob-input">
+                <input type="text" class="dob-input" formControlName="dob">
             </div>
             <div class="col nationality-wrapper">
                 <mat-label class="nationality-label">Nationality</mat-label>
-                <input type="text" class="nationality-input">
+                <input type="text" class="nationality-input" formControlName="nationality">
             </div>
         </div>
         <div class="row country-state-wrapper">
             <div class="col country-wrapper">
                 <mat-label class="country-label">Country</mat-label>
-                <input type="text" class="country-input">
+                <input type="text" class="country-input" formControlName="country"  [matAutocomplete]="auto" >
+                <mat-autocomplete class="custom-scroll" #auto="matAutocomplete" [displayWith]="displayFn">
+                    <mat-option class="country-option" *ngFor="let country of countriesList" [value]="country.name.common">
+                        {{country.name.common}}
+                    </mat-option>
+                </mat-autocomplete>
             </div>
             <div class="col state-wrapper">
                 <mat-label class="country-label">State</mat-label>
-                <input type="text" class="state-input">
+                <input type="text" class="state-input" formControlName="state">
             </div>
         </div>
         <div class="row district-city-wrapper">
             <div class="col district-wrapper">
                 <mat-label class="district-label">District</mat-label>
-                <input type="text" class="district-input">
+                <input type="text" class="district-input" formControlName="district">
             </div>
             <div class="col city-wrapper">
                 <mat-label class="city-label">City</mat-label>
-                <input type="text" class="city-input">
+                <input type="text" class="city-input" formControlName="city">
             </div>
         </div>
         <div class="row pin-landmark-wrapper">
             <div class="col pin-wrapper">
                 <mat-label class="pin-label">ZIP</mat-label>
-                <input type="text" class="pin-input">
+                <input type="text" class="pin-input" formControlName="pin">
             </div>
             <div class="col landmark-wrapper">
                 <mat-label class="landmark-label">Landmark</mat-label>
-                <input type="text" class="landmark-input">
+                <input type="text" class="landmark-input" formControlName="landMark">
             </div>
         </div>
         <div class="row apartment-street-wrapper">
             <div class="col apartment-wrapper">
                 <mat-label class="apartment-label">Apartment</mat-label>
-                <input type="text" class="apartment-input">
+                <input type="text" class="apartment-input" formControlName="apartment">
             </div>
             <div class="col street-wrapper">
                 <mat-label class="street-label">Street</mat-label>
-                <input type="text" class="street-input">
+                <input type="text" class="street-input" formControlName="street">
             </div>
         </div>
         <div class="submit-button-wrapper">
-            <button mat-raised-button class="submit-button">Submit</button>
+            <button mat-raised-button type="submit" [disabled]="!registrationForm.valid" class="submit-button">Submit</button>
         </div>
     </form>
 </div>

@@ -13,6 +13,7 @@ import { PublicSiteRegisterComponent } from './public-site-register/public-site-
 import { PublicSiteLoginComponent } from './public-site-login/public-site-login.component';
 import { PublicSiteServiceComponent } from './public-site-services/public-site-service/public-site-service.component';
 import { ForgotPasswordModalComponent } from './public-site-login/forgot-password-modal/forgot-password-modal.component';
+import { ExternalModule } from '../common/modules/external/external.module';
 
 
 
@@ -33,6 +34,7 @@ import { ForgotPasswordModalComponent } from './public-site-login/forgot-passwor
   imports: [
     CommonModule,
     MaterialModule,
+    ExternalModule,
     PublicSiteRoutingModule
   ]
 })
