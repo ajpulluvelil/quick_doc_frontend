@@ -132,6 +132,9 @@
                 outline: none;
                 box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
             }
+            .country-option {
+                font-family: "Style Script", cursive;
+            }
         }
         .state-wrapper {
             display: flex;
@@ -232,5 +235,23 @@
             color: #ffffff;
             box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
         }
+    }
+}
+
+::ng-deep .mat-autocomplete-panel {
+    &::-webkit-scrollbar {
+        width: 1.25rem;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #d6dee1;
+        border-radius: 1.25rem;
+        border: 0.375rem solid transparent;
+        background-clip: content-box;
+    }
+    span {
+        font-family: "Style Script", cursive;
     }
 }
