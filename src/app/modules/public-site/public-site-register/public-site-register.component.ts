@@ -12,6 +12,7 @@ export class PublicSiteRegisterComponent implements OnInit {
 
   registrationForm!: FormGroup;
   countriesList!: any;
+  countries!: any;
 
   constructor(
     private fb: FormBuilder,
@@ -23,8 +24,7 @@ export class PublicSiteRegisterComponent implements OnInit {
     this.initRegistrationForm();
     this.getCountriesList();
     this.registrationForm.controls['country'].valueChanges.pipe().subscribe(value => {
-      this.countriesList = this.countriesList.filter((element: any) => element.name.common === value);
-      console.log('value', this.countriesList);
+      this.countriesList = this.countries.filter((element: any) => element.name.common.includes(value));
     })
   }
 
@@ -55,13 +55,21 @@ export class PublicSiteRegisterComponent implements OnInit {
 
   async getCountriesList() {
     await this.publicSiteApiService.getCountriesList().subscribe((res: any) => {
-      this.countriesList = res
-      console.log('countriesList', this.countriesList);
+      this.countries = res
+      this.countriesList = this.countries;  
     });
   }
 
   displayFn(country: any): string {
-    return country && country.name ? country.name.common ? country.name.common : '' : '';
+    return country ? country : '';
+  }
+
+  onFocusOut() {
+    // const country = this.countries.filter((element: any) => element.name.common === this.registrationForm.controls['country'].value)
+    // if (country && country.length > 0)
+    //   return
+    // else
+    //   this.registrationForm.controls['country'].setValue('')
   }
 
 }

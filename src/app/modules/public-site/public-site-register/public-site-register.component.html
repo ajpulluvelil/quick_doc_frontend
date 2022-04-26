@@ -46,9 +46,10 @@
         <div class="row country-state-wrapper">
             <div class="col country-wrapper">
                 <mat-label class="country-label">Country</mat-label>
-                <input type="text" class="country-input" formControlName="country"  [matAutocomplete]="auto" >
+                <input type="text" class="country-input" formControlName="country" [matAutocomplete]="auto" (focusout)="onFocusOut()">
                 <mat-autocomplete class="custom-scroll" #auto="matAutocomplete" [displayWith]="displayFn">
-                    <mat-option class="country-option" *ngFor="let country of countriesList" [value]="country.name.common">
+                    <mat-option class="country-option" *ngFor="let country of countriesList"
+                        [value]="country.name.common">
                         {{country.name.common}}
                     </mat-option>
                 </mat-autocomplete>
@@ -89,7 +90,8 @@
             </div>
         </div>
         <div class="submit-button-wrapper">
-            <button mat-raised-button type="submit" [disabled]="!registrationForm.valid" class="submit-button">Submit</button>
+            <button mat-raised-button type="submit" [disabled]="!registrationForm.valid"
+                class="submit-button">Submit</button>
         </div>
     </form>
 </div>
