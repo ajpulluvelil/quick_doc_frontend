@@ -1,3 +1,13 @@
 <div class="news-wrapper">
-    
+    <div class="news-scrolling-wrapper">
+        <div class="news-card" *ngFor="let news of newsList">
+            <img class="news-image" alt="news-img" [src]="news.image">
+            <div class="news-content-wrapper">
+                <span class="head-line">{{ news.headLine }}</span>
+                <div class="read-more">
+                    <button mat-raised-button class="read-more-btn">Read More</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NewsListType } from '../common/interfaces/news-list-type';
+import { NewsLists } from '../common/utils/news-lists';
 
 @Component({
   selector: 'app-public-site-news',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PublicSiteNewsComponent implements OnInit {
 
+  newsList: Array<NewsListType> = [];
+
   constructor() { }
 
   ngOnInit(): void {
+    this.newsList = NewsLists;
   }
 
 }
