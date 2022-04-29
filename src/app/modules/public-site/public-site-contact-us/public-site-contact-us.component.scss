@@ -36,33 +36,84 @@
                         font-weight: 700;
                     }
                     .content {
+                        font-size: 1rem;
                     }
                 }
             }
             .phone-number {
                 margin: 1rem;
+                .image-wrapper {
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+                    .image {
+                        width: 3rem;
+                    }
+                }
                 .phone-number-content {
                     .title {
                         color: rgb(10, 129, 233);
                         font-weight: 500;
                     }
                     .content {
+                        font-size: 1rem;
                     }
                 }
             }
             .email {
                 margin: 1rem;
+                .image-wrapper {
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+                    .image {
+                        width: 3rem;
+                    }
+                }
                 .email-content {
                     .title {
                         color: rgb(10, 129, 233);
                         font-weight: 500;
                     }
                     .content {
+                        font-size: 1rem;
                     }
                 }
             }
         }
         .message-wrapper {
+            .message-content {
+                background-color: #ffffff;
+                color: #000000;
+                width: 50%;
+                font-size: calc(1.325rem + 0.8vw);
+                .full-name {
+                    font-size: calc(1rem);
+                    .full-name-field {
+                        display: block;
+                        background-color: #ffffff;
+                    }
+                }
+                .email {
+                    font-size: calc(1rem);
+                    .email-field {
+                        display: block;
+                        background-color: #ffffff;
+                    }
+                }
+                .message {
+                    font-size: calc(1rem);
+                    .message-field {
+                        display: block;
+                        background-color: #ffffff;
+                    }
+                }
+                .send {
+                    .send-btn {
+                        color: rgb(10, 129, 233);
+                    }
+                }
+            }
         }
     }
 }
