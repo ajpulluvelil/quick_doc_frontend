@@ -1,7 +1,8 @@
 <div class="contact-us-wrapper">
     <div class="contact-us-title">
         <span class="title">Contact Us</span>
-        <span class="description" align="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        <span class="description" align="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor
             incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam</span>
     </div>
@@ -17,14 +18,18 @@
                 </div>
             </div>
             <div class="row phone-number">
-                <div class="col image"></div>
+                <div class="col image-wrapper">
+                    <img class="image" src="../../../../assets/svg-icons/telePhoneIcon.svg">
+                </div>
                 <div class="col phone-number-content">
                     <span class="row title">Phone</span>
                     <span class="row content">+918113811270</span>
                 </div>
             </div>
             <div class="row email">
-                <div class="col image"></div>
+                <div class="col image-wrapper">
+                    <img class="image" src="../../../../assets/svg-icons/emailIcon.svg">
+                </div>
                 <div class="col email-content">
                     <span class="row title">Email</span>
                     <span class="row content">enquiry@quickdoc.me</span>
@@ -32,6 +37,32 @@
             </div>
         </div>
         <div class="col message-wrapper">
+            <div class="message-content">
+                <div class="title">
+                    Send Message
+                </div>
+                <div class="full-name">
+                    <mat-form-field class="full-name-field" appearance="fill">
+                        <mat-label>Full Name</mat-label>
+                        <input matInput placeholder="David Williams">
+                    </mat-form-field>
+                </div>
+                <div class="email">
+                    <mat-form-field class="email-field" appearance="fill">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="david.williams@quickdoc.me">
+                    </mat-form-field>
+                </div>
+                <div class="message">
+                    <mat-form-field class="message-field" appearance="fill">
+                        <mat-label>Leave a comment</mat-label>
+                        <textarea matInput placeholder="Comments"></textarea>
+                    </mat-form-field>
+                </div>
+                <div class="send">
+                    <button mat-raised-button class="send-btn">Send</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
