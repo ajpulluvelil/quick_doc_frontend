@@ -71,9 +71,22 @@
     .forgot-password {
         .forgot-password-label {
             font-size: 0.8rem;
-            text-decoration: underline;
             cursor: pointer;
             color: #0000ff;
+            background-image: linear-gradient(
+                transparent 0%,
+                transparent 90%,
+                #0000ff 90%,
+                #0000ff 100%
+            );
+            background-repeat: no-repeat;
+            background-size: 0% 100%;
+            background-position-x: right;
+            transition: background-size 300ms;
+        }
+        :hover {
+            background-size: 100% 100%;
+            background-position-x: left;
         }
     }
 }
