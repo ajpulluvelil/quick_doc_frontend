@@ -1,3 +1,5 @@
+@import "../../common/styles/quickDoc.scss";
+
 .login-container {
     font-family: "Style Script", cursive;
     height: 94.2%;
@@ -13,7 +15,7 @@
             font-size: 1.6rem;
             font-weight: 700;
             text-transform: uppercase;
-            color: #ffffff;
+            color: $mainFontColor;
         }
     }
     .username-container {
@@ -24,7 +26,7 @@
         .username-section {
             height: 3rem;
             width: 20rem;
-            background-color: #ffffff;
+            background-color: $mainBackgroundColor;
             box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
             .username-input {
                 border-width: 0;
@@ -45,7 +47,7 @@
         .password-section {
             height: 3rem;
             width: 20rem;
-            background-color: #ffffff;
+            background-color: $mainBackgroundColor;
             box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
             .password-input {
                 border-width: 0;
@@ -61,8 +63,8 @@
     }
     .login-section {
         .login-button {
-            background-color: rgb(10, 129, 233);
-            color: #ffffff;
+            background-color: $mainForeColor;
+            color: $mainFontColor;
             width: 20rem;
             text-transform: capitalize;
             box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
@@ -72,12 +74,12 @@
         .forgot-password-label {
             font-size: 0.8rem;
             cursor: pointer;
-            color: #0000ff;
+            color: $mainForeColor;
             background-image: linear-gradient(
                 transparent 0%,
                 transparent 90%,
-                #0000ff 90%,
-                #0000ff 100%
+                $mainForeColor 90%,
+                $mainForeColor 100%
             );
             background-repeat: no-repeat;
             background-size: 0% 100%;
