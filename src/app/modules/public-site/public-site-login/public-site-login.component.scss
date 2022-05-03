@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: url(../../../../assets/images/public-site-background.jpg);
+    background: $loginBackgroundImageURL;
     background-repeat: no-repeat;
     background-size: cover;
     .label-container {

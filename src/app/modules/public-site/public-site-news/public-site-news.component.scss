@@ -1,5 +1,7 @@
+@import "../../common/styles/quickDoc.scss";
+
 .news-wrapper {
-    background: url(../../../../assets/images/public-site-background.jpg);
+    background: $newsBackgroundImageURL;
     height: 94.2%;
     background-repeat: no-repeat;
     background-size: cover;

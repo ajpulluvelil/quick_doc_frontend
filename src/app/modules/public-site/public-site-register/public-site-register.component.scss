@@ -1,3 +1,5 @@
+@import "../../common/styles/quickDoc.scss";
+
 .registration-wrapper {
     height: 94.2%;
     display: flex;
@@ -6,7 +8,7 @@
     align-items: center;
     background-repeat: no-repeat;
     font-family: "Style Script", cursive;
-    background: url(../../../../assets/images/public-site-background.jpg);
+    background: $registrationBackgroundImageURL;
     .registration-title {
         display: flex;
         justify-content: center;
