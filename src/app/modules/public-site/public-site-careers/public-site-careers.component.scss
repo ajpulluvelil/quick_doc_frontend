@@ -1,5 +1,7 @@
+@import "../../common/styles/quickDoc.scss";
+
 .careers-wrapper {
-    background: url(../../../../assets/images/public-site-background.jpg);
+    background: $careersBackgroundImageURL;
     height: 94.2%;
     background-repeat: no-repeat;
     background-size: cover;
