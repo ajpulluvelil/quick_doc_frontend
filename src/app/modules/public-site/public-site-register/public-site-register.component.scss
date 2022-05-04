@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
     background-repeat: no-repeat;
-    font-family: "Style Script", cursive;
+    font-family: $primaryFontFamily, $secondaryFontFamily;
     background: $registrationBackgroundImageURL;
     .registration-title {
         display: flex;
@@ -232,6 +232,7 @@
         display: flex;
         justify-content: center;
         .submit-button {
+            font-family: $primaryFontFamily, $secondaryFontFamily;
             margin-top: 1rem;
             background-color: rgb(10, 129, 233);
             color: #ffffff;

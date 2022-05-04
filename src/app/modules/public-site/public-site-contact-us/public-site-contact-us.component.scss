@@ -22,19 +22,22 @@
         color: #ffffff;
         margin: 1rem;
         .address-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             .address {
                 margin: 1rem;
                 .image-wrapper {
                     display: flex;
-                    justify-content: end;
+                    justify-content: flex-end;
                     align-items: center;
                     .image {
-                        width: 3rem;
+                        width: 2rem;
                     }
                 }
                 .address-content {
                     .title {
-                        color: rgb(10, 129, 233);
+                        color: $secondaryFontColor;
                         font-weight: 700;
                     }
                     .content {
@@ -46,15 +49,15 @@
                 margin: 1rem;
                 .image-wrapper {
                     display: flex;
-                    justify-content: end;
+                    justify-content: flex-end;
                     align-items: center;
                     .image {
-                        width: 3rem;
+                        width: 2rem;
                     }
                 }
                 .phone-number-content {
                     .title {
-                        color: rgb(10, 129, 233);
+                        color: $secondaryFontColor;
                         font-weight: 500;
                     }
                     .content {
@@ -66,15 +69,15 @@
                 margin: 1rem;
                 .image-wrapper {
                     display: flex;
-                    justify-content: end;
+                    justify-content: flex-end;
                     align-items: center;
                     .image {
-                        width: 3rem;
+                        width: 2rem;
                     }
                 }
                 .email-content {
                     .title {
-                        color: rgb(10, 129, 233);
+                        color: $secondaryFontColor;
                         font-weight: 500;
                     }
                     .content {
@@ -89,15 +92,19 @@
                 color: #000000;
                 width: 50%;
                 font-size: calc(1.325rem + 0.8vw);
+                .title {
+                    padding: 1rem;
+                }
                 .full-name {
                     font-size: calc(1rem);
+                    padding: 0rem 1rem 1rem 1rem;
                     .full-name-field {
                         display: block;
-                        background-color: #ffffff;
                     }
                 }
                 .email {
                     font-size: calc(1rem);
+                    padding: 0rem 1rem 1rem 1rem;
                     .email-field {
                         display: block;
                         background-color: #ffffff;
@@ -105,17 +112,24 @@
                 }
                 .message {
                     font-size: calc(1rem);
+                    padding: 0rem 1rem 1rem 1rem;
                     .message-field {
                         display: block;
                         background-color: #ffffff;
                     }
                 }
                 .send {
+                    padding: 0rem 1rem 1rem 1rem;
                     .send-btn {
-                        color: rgb(10, 129, 233);
+                        color: $buttonTextColor;
+                        background-color: $buttonColor;
                     }
                 }
             }
         }
     }
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: #ffffff !important;
 }

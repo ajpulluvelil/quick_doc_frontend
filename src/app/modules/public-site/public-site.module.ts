@@ -14,6 +14,7 @@ import { PublicSiteLoginComponent } from './public-site-login/public-site-login.
 import { PublicSiteServiceComponent } from './public-site-services/public-site-service/public-site-service.component';
 import { ForgotPasswordModalComponent } from './public-site-login/forgot-password-modal/forgot-password-modal.component';
 import { ExternalModule } from '../common/modules/external/external.module';
+import { OpenCareerListsComponent } from './public-site-careers/open-career-lists/open-career-lists.component';
 
 
 
@@ -29,7 +30,8 @@ import { ExternalModule } from '../common/modules/external/external.module';
     PublicSiteRegisterComponent,
     PublicSiteLoginComponent,
     PublicSiteServiceComponent,
-    ForgotPasswordModalComponent
+    ForgotPasswordModalComponent,
+    OpenCareerListsComponent
   ],
   imports: [
     CommonModule,
