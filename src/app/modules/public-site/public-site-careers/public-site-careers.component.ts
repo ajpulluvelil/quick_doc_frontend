@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PublicSiteCareersComponent implements OnInit {
 
+  isOpenPositionsRequested: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  openPositions() {
+    this.isOpenPositionsRequested = true;
   }
 
 }

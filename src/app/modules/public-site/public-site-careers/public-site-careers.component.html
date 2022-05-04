@@ -1,3 +1,14 @@
-<div class="careers-wrapper">
-    
+<div *ngIf="!isOpenPositionsRequested" class="careers-wrapper">
+    <div class="title-wrapper">
+        <span class="title">Excited to work with us!</span>
+    </div>
+    <div class="career-description-wrapper">
+        <span class="career-description" align="center">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+        </span>
+    </div>
+    <div class="btn-wrapper">
+        <button mat-raised-button class="opportunity-btn" (click)="openPositions()">Search Open Opportunities</button>
+    </div>
 </div>
+<app-open-career-lists *ngIf="isOpenPositionsRequested"></app-open-career-lists>
