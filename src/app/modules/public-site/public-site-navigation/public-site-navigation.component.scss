@@ -1,3 +1,5 @@
+@import "../../common/styles/quickDoc.scss";
+
 .public-site-navigation {
     top: 0rem;
     left: 0rem;
@@ -9,7 +11,7 @@
     position: inherit;
     align-items: center;
     justify-content: space-around;
-    font-family: "Style Script", cursive;
+    font-family: $primaryFontFamily, $secondaryFontFamily;
     background-color: rgb(10, 129, 233);
     box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
     .public-site-logo {
