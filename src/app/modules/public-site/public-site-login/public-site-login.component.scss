@@ -1,7 +1,7 @@
 @import "../../common/styles/quickDoc.scss";
 
 .login-container {
-    font-family: "Style Script", cursive;
+    font-family: $primaryFontFamily, $secondaryFontFamily;
     height: 94.2%;
     display: flex;
     justify-content: center;
