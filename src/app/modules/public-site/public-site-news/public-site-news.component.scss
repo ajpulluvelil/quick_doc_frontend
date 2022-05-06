@@ -39,8 +39,8 @@
                     justify-content: center;
                     margin: 1rem;
                     .read-more-btn {
-                        background-color: rgb(10, 129, 233);
-                        color: #ffffff;
+                        background-color: $primaryBackgroundColor;
+                        color: $mainFontColor;
                     }
                 }
             }
