@@ -124,6 +124,10 @@
                         color: $buttonTextColor;
                         background-color: $buttonColor;
                     }
+                    :hover {
+                        color: $buttonColor;
+                        background-color: $buttonTextColor;
+                    }
                 }
             }
         }
