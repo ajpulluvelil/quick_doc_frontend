@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProfessionalDashboardComponent } from './professional-dashboard/professional-dashboard.component';
+import { ProfessionalDashboardRoutingModule } from './professional-dashboard-routing.module';
 
 
 
@@ -9,7 +10,8 @@ import { ProfessionalDashboardComponent } from './professional-dashboard/profess
     ProfessionalDashboardComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ProfessionalDashboardRoutingModule
   ]
 })
 export class ProfessionalDashboardModule { }

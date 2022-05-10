@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { ForgotPasswordModalComponent } from './forgot-password-modal/forgot-password-modal.component';
 
 @Component({
@@ -14,7 +15,8 @@ export class PublicSiteLoginComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -29,7 +31,11 @@ export class PublicSiteLoginComponent implements OnInit {
   }
 
   onSubmit(loginForm: FormGroup) {
-    console.log('form', loginForm)
+    if (loginForm.value.username === 'professional_admin' && loginForm.value.password === 'admin_password') {
+      this.router.navigate(['/professional/dashboard']);
+    } else {
+      // snack bar implementation
+    }
   }
 
   forgotPassword() {
