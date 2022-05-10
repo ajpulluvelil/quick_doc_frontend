@@ -11,7 +11,7 @@ const routes: Routes = [{
   path: 'public-site',
   loadChildren: () => import('./modules/public-site/public-site.module').then(module => module.PublicSiteModule)
 }, {
-  path: 'professional/dashboard',
+  path: 'professional',
   loadChildren: () => import('./modules/dashboard/professional-dashboard/professional-dashboard.module').then(module => module.ProfessionalDashboardModule)
 }, {
   path: 'user/dashboard',
