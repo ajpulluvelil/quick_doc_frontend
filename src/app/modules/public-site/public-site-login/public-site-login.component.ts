@@ -25,14 +25,14 @@ export class PublicSiteLoginComponent implements OnInit {
 
   initLoginForm() {
     this.loginForm = this.fb.group({
-      username: new FormControl('', Validators.required),
-      password: new FormControl('', Validators.required),
+      username: new FormControl('professional_admin', Validators.required),
+      password: new FormControl('admin_password', Validators.required),
     });
   }
 
   onSubmit(loginForm: FormGroup) {
     if (loginForm.value.username === 'professional_admin' && loginForm.value.password === 'admin_password') {
-      this.router.navigate(['/professional/dashboard']);
+      this.router.navigate(['/professional']);
     } else {
       // snack bar implementation
     }

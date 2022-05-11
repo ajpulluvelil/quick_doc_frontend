@@ -12,7 +12,7 @@ const routes: Routes = [{
   loadChildren: () => import('./modules/public-site/public-site.module').then(module => module.PublicSiteModule)
 }, {
   path: 'professional',
-  loadChildren: () => import('./modules/dashboard/professional-dashboard/professional-dashboard.module').then(module => module.ProfessionalDashboardModule)
+  loadChildren: () => import('./modules/professional-patient-web/professional-patient-web.module').then(module => module.ProfessionalPatientWebModule)
 }, {
   path: 'user/dashboard',
   loadChildren: () => import('./modules/dashboard/user-dashboard/user-dashboard.module').then(module => module.UserDashboardModule)
