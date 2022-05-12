@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ENVIRONMENT } from 'src/environments/environment';
-import { OpportunitiesResponse } from '../interfaces/opportunities-response';
+import { OpportunitiesResponse } from '../classes/opportunities-response';
 
 @Injectable({
   providedIn: 'root'
@@ -16,9 +16,7 @@ export class PublicSiteApiService {
   ) { }
 
   getAllOpportunities(): Observable<OpportunitiesResponse[]> {
-    const apiURL = this.apiEndPoint + '/api/v1/opportunities';
-    return this.http.get<OpportunitiesResponse[]>(apiURL);
-
+    return this.http.get<OpportunitiesResponse[]>(`${this.apiEndPoint}/api/v1/opportunities`);
   }
 
   getCountriesList(): Observable<any> {
