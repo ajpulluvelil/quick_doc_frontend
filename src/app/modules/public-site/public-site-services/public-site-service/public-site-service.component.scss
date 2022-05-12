@@ -4,10 +4,13 @@
     height: 20rem;
     .service-content {
         width: 33.75rem !important;
+        height: 18rem;
+        overflow: hidden;
+        overflow-y: scroll;
+        .service-description {
+            margin-right: 1rem;
+        }
     }
-}
-:hover {
-    overflow-y: scroll;
 }
 
 ::-webkit-scrollbar {
