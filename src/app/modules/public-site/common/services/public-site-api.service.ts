@@ -19,6 +19,10 @@ export class PublicSiteApiService {
     return this.http.get<OpportunitiesResponse[]>(`${this.apiEndPoint}/api/v1/opportunities`);
   }
 
+  createNewPatientUser(): Observable<any> {
+    return this.http.get<any>(`${this.apiEndPoint}/api/v1/self-registration`);
+  }
+
   getCountriesList(): Observable<any> {
     const apiURL = `https://restcountries.com/v3.1/all`;
     return this.http.get(apiURL)
