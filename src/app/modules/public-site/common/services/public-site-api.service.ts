@@ -19,8 +19,8 @@ export class PublicSiteApiService {
     return this.http.get<OpportunitiesResponse[]>(`${this.apiEndPoint}/api/v1/opportunities`);
   }
 
-  createNewPatientUser(patientUserRequest: any): Observable<any> {
-    return this.http.post<any>(`${this.apiEndPoint}/api/v1/self-registration`, patientUserRequest);
+  createNewPatientUser(patientUserRequestBody: any): Observable<any> {
+    return this.http.post<any>(`${this.apiEndPoint}/api/v1/self-registration`, patientUserRequestBody);
   }
 
   getCountriesList(): Observable<any> {

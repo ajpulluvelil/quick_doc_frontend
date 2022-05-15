@@ -51,6 +51,9 @@ export class PublicSiteRegisterComponent implements OnInit {
 
   onSubmit(registrationForm: FormGroup) {
     console.log(registrationForm);
+    this.publicSiteApiService.createNewPatientUser(registrationForm.value).subscribe(response => {
+
+    });
   }
 
   async getCountriesList() {
@@ -62,14 +65,6 @@ export class PublicSiteRegisterComponent implements OnInit {
 
   displayFn(country: any): string {
     return country ? country : '';
-  }
-
-  onFocusOut() {
-    // const country = this.countries.filter((element: any) => element.name.common === this.registrationForm.controls['country'].value)
-    // if (country && country.length > 0)
-    //   return
-    // else
-    //   this.registrationForm.controls['country'].setValue('')
   }
 
 }

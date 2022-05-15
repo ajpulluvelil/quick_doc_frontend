@@ -16,6 +16,7 @@ import { ForgotPasswordModalComponent } from './public-site-login/forgot-passwor
 import { ExternalModule } from '../common/modules/external/external.module';
 import { OpenCareerListsComponent } from './public-site-careers/open-career-lists/open-career-lists.component';
 import { NewsComponent } from './public-site-news/news/news.component';
+import { SharedModule } from '../common/shared/shared.module';
 
 
 
@@ -39,7 +40,8 @@ import { NewsComponent } from './public-site-news/news/news.component';
     CommonModule,
     MaterialModule,
     ExternalModule,
-    PublicSiteRoutingModule
+    PublicSiteRoutingModule,
+    SharedModule
   ]
 })
 export class PublicSiteModule { }
