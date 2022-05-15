@@ -17,6 +17,7 @@
             <div class="col email-address-wrapper">
                 <mat-label class="email-label">Email Address</mat-label>
                 <input mat-input type="email" class="email-input" formControlName="email">
+                <app-common-error [errorMessage]="'Enter correct mail ID'"></app-common-error>
             </div>
             <div class="col confirm-email-wrapper">
                 <mat-label class="confirm-email-label">Confirm Email Address</mat-label>
@@ -46,7 +47,7 @@
         <div class="row country-state-wrapper">
             <div class="col country-wrapper">
                 <mat-label class="country-label">Country</mat-label>
-                <input type="text" class="country-input" formControlName="country" [matAutocomplete]="auto" (focusout)="onFocusOut()">
+                <input type="text" class="country-input" formControlName="country" [matAutocomplete]="auto">
                 <mat-autocomplete class="custom-scroll" #auto="matAutocomplete" [displayWith]="displayFn">
                     <mat-option class="country-option" *ngFor="let country of countriesList"
                         [value]="country.name.common">
