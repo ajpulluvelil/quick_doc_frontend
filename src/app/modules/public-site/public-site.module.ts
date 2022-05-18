@@ -17,6 +17,8 @@ import { ExternalModule } from '../common/modules/external/external.module';
 import { OpenCareerListsComponent } from './public-site-careers/open-career-lists/open-career-lists.component';
 import { NewsComponent } from './public-site-news/news/news.component';
 import { SharedModule } from '../common/shared/shared.module';
+import { ClinicSelectionComponent } from './public-site-register/clinic-selection/clinic-selection.component';
+import { ClinicComponent } from './public-site-register/clinic/clinic.component';
 
 
 
@@ -34,7 +36,9 @@ import { SharedModule } from '../common/shared/shared.module';
     PublicSiteServiceComponent,
     ForgotPasswordModalComponent,
     OpenCareerListsComponent,
-    NewsComponent
+    NewsComponent,
+    ClinicSelectionComponent,
+    ClinicComponent
   ],
   imports: [
     CommonModule,
