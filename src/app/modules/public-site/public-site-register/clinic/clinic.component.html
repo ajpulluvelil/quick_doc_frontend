@@ -1,0 +1,13 @@
+<mat-card class="clinic-wrapper">
+    <img [src]="clinic.image" alt="clinic-image.jpg" class="clinic-image">
+    <div class="content-wrapper">
+        <div class="clinic-name"> {{ clinic.clinicName }} </div>
+        <div class="clinic-description"> {{ clinic.description }} </div>
+        <div class="clinic-facilities">
+            <span>Facilities</span>
+            <ul class="facility-wrapper">
+                <li *ngFor="let facility of clinic.facilities"> {{ facility }} </li>
+            </ul>
+        </div>
+    </div>
+</mat-card>
