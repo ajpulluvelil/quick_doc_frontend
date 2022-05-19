@@ -1,4 +1,4 @@
-<div class="row home-container">
+<!-- <div class="row home-container">
     <div class="col image-container">
         <img class="img-class" [src]="imageUrl" [alt]="imageName">
     </div>
@@ -25,9 +25,24 @@
             <div class="search">
                 <input mat-input class="search-input" placeholder="Search for the facilities">
                 <span class="search-icon">
-                    <img src="../../../../assets/SVG Icons/searchIcon.svg" alt="">
+                    <img src="../../../../assets/SVG Icons/searchIcon.svg" alt=""> https://codeburst.io/display-a-table-using-components-with-angular-4-f13f0971666d
                 </span>
             </div>
         </div>
     </div>
-</div>
+</div> -->
+
+<table>
+    <tr>
+        <th *ngFor="let value of values">
+            {{ value }}
+        </th>
+    </tr>
+    <tbody>
+        <tr *ngFor="let row of rows">
+            <td *ngFor="let value of values;">
+                {{ row[value] }}
+            </td>
+        </tr>
+    </tbody>
+</table>
