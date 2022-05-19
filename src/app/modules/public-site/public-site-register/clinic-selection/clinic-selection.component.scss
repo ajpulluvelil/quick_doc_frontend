@@ -1,4 +1,8 @@
 .clinics-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
 }

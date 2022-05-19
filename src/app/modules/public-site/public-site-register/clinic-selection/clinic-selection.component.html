@@ -1,10 +1,7 @@
 <ng-container *ngIf="true">
-    <div class="container clinics-container">
+    <div class="container-fluid clinics-container">
         <div class="row clinics-wrapper" *ngFor="let clinic of clinics">
             <app-clinic [clinic]="clinic"></app-clinic>
         </div>
     </div>
-</ng-container>
-<ng-container *ngIf="false">
-    <app-public-site-register></app-public-site-register>
 </ng-container>

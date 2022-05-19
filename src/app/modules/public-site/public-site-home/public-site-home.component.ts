@@ -18,6 +18,18 @@ export class PublicSiteHomeComponent implements OnInit {
     '../../../../assets/images/image-four-for-home.jpg'
   ]
 
+
+  values: string[] = ["id", "name", "age", "phoneNumber"];
+  rows:  any[] = [
+    {
+      "id": "1",
+      "name": "Abc",
+      "age": "27",
+      "phoneNumber": "8113811270"
+    }
+  ]
+
+
   constructor(
     private publicSiteService: PublicSiteService,
     private publicSiteApiService: PublicSiteApiService
@@ -39,4 +51,11 @@ export class PublicSiteHomeComponent implements OnInit {
     }, 5000)
   }
 
+}
+
+export interface rowType {
+  "id": string,
+  "name": string,
+  "age": string,
+  "phoneNumber": string
 }

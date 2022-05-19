@@ -13,7 +13,6 @@ export class ClinicComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.clinic);
   }
 
 }

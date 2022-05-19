@@ -16,4 +16,12 @@ export class PublicSiteService {
   get positionFixed() {
     return this.isPositionFixedEnabled;
   }
+
+  set clinic(value: any) {
+    this.clinic = value;
+  }
+
+  get clinic() {
+    return this.clinic;
+  }
 }
