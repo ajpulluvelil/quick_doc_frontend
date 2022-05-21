@@ -40,10 +40,3 @@ export class PublicSiteHomeComponent implements OnInit {
   }
 
 }
-
-export interface rowType {
-  "id": string,
-  "name": string,
-  "age": string,
-  "phoneNumber": string
-}
