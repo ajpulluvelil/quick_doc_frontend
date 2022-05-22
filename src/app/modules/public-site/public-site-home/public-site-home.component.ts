@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ENVIRONMENT } from 'src/environments/environment';
 import { PublicSiteApiService } from '../common/services/public-site-api.service';
 import { PublicSiteService } from '../common/services/public-site.service';
 
@@ -9,13 +10,18 @@ import { PublicSiteService } from '../common/services/public-site.service';
 })
 export class PublicSiteHomeComponent implements OnInit {
 
+  carousel = ENVIRONMENT.MODULES.COMMON.CAROUSEL;
+
   imageUrl: string = '../../../../assets/images/image-one-for-home.jpg';
   imageName: string = 'pic.jpg'
   imageUrls = [
-    '../../../../assets/images/image-one-for-home.jpg',
-    '../../../../assets/images/image-two-for-home.jpg',
-    '../../../../assets/images/image-three-for-home.jpg',
-    '../../../../assets/images/image-four-for-home.jpg'
+    { path: '../../../../assets/images/publicSiteCarousel/publicSiteCarouselOne.jpg' },
+    { path: '../../../../assets/images/publicSiteCarousel/publicSiteCarouselTwo.jpg' },
+    { path: '../../../../assets/images/publicSiteCarousel/publicSiteCarouselThree.jpg' },
+    { path: '../../../../assets/images/publicSiteCarousel/publicSiteCarouselFour.jpg' },
+    { path: '../../../../assets/images/publicSiteCarousel/publicSiteCarouselFive.jpg' },
+    { path: '../../../../assets/images/publicSiteCarousel/publicSiteCarouselSix.jpg' },
+    { path: '../../../../assets/images/publicSiteCarousel/publicSiteCarouselSeven.jpg' }
   ]
 
   constructor(
@@ -26,17 +32,17 @@ export class PublicSiteHomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.runningImageInterval();
+    // this.runningImageInterval();
   }
 
-  runningImageInterval(): void {
-    let imageUrlIndex = 0;
-    setInterval(() => {
-      this.imageUrl = this.imageUrls[imageUrlIndex];
-      imageUrlIndex++;
-      if (imageUrlIndex > 3)
-        imageUrlIndex = 0;
-    }, 5000)
-  }
+  // runningImageInterval(): void {
+  //   let imageUrlIndex = 0;
+  //   setInterval(() => {
+  //     this.imageUrl = this.imageUrls[imageUrlIndex];
+  //     imageUrlIndex++;
+  //     if (imageUrlIndex > 3)
+  //       imageUrlIndex = 0;
+  //   }, 5000)
+  // }
 
 }

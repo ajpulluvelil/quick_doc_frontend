@@ -19,4 +19,7 @@
         <li class="list-item" [routerLink]="['/public-site/landing/login']" routerLinkActive="router-link-active"
             (click)="loginSelected()" [ngClass]="{active: isLoginSelected}">Login</li>
     </ul>
+    <div class="ham-burger" (click)="onPopUpMenuClick()">
+        <mat-icon>reorder</mat-icon>
+    </div>
 </nav>

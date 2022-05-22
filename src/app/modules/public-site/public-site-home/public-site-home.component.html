@@ -31,3 +31,13 @@
         </div>
     </div>
 </div> -->
+<div class="container container-fluid container-xxl container-xl container-lg container-md container-sm carousel-container">
+    <carousel [autoplay]="carousel.AUTO_PLAY" [cellWidth]="'100%'" [autoplayInterval]="carousel.AUTO_PLAY_INTERVAL"
+        [pauseOnHover]="carousel.PAUSE_ON_HOVER" [dots]="carousel.DOTS" [loop]="carousel.LOOP"
+        [arrowsOutside]="carousel.ARROWS_OUT_SIDE" [arrowsTheme]="carousel.ARROWS_THEME_DARK ? 'dark' : 'light'"
+        [arrows]="carousel.ARROWS" [lightDOM]="true" [objectFit]="'cover'" [width]="300">
+        <div class="carousel-cell" *ngFor="let image of imageUrls">
+            <img [src]="image?.path">
+        </div>
+    </carousel>
+</div>
