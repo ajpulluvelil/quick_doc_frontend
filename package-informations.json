@@ -1,0 +1,9 @@
+{
+    "packages": [
+        {
+            "name": "angular-responsive-carousel",
+            "description": "Carousel for Angular",
+            "command": "npm i angular-responsive-carousel"
+        }
+    ]
+}

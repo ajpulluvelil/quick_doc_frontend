@@ -1,6 +1,8 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { PublicSiteApiService } from '../common/services/public-site-api.service';
 import { PublicSiteService } from '../common/services/public-site.service';
+import { PopUpMenuComponent } from './pop-up-menu/pop-up-menu.component';
 
 @Component({
   selector: 'app-public-site-navigation',
@@ -20,7 +22,8 @@ export class PublicSiteNavigationComponent implements OnInit {
 
   constructor(
     private publicSiteService: PublicSiteService,
-    private publicSiteApiService: PublicSiteApiService
+    private publicSiteApiService: PublicSiteApiService,
+    private dialog: MatDialog
   ) {
   }
 
@@ -127,6 +130,16 @@ export class PublicSiteNavigationComponent implements OnInit {
     } else if (url.endsWith('login')) {
       this.isLoginSelected = true;
     }
+  }
+
+  onPopUpMenuClick() {
+    this.dialog.open(PopUpMenuComponent, {
+      disableClose: true,
+      panelClass: "pop-up-menu"
+    }).afterClosed().subscribe(res => {
+      if (res) {
+      }
+    });
   }
 
 }

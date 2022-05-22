@@ -2,15 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    IvyCarouselModule
   ],
   exports: [
-    HttpClientModule
+    HttpClientModule,
+    IvyCarouselModule
   ],
   providers: [
     HttpClientModule

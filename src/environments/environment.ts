@@ -3,9 +3,19 @@ export const ENVIRONMENT = {
   IP: "http://127.0.0.1:8081",
   MODULES: {
     COMMON: {
+      CAROUSEL: {
+        AUTO_PLAY: true,
+        AUTO_PLAY_INTERVAL: 5000,
+        PAUSE_ON_HOVER: true,
+        DOTS: true,
+        LOOP: true,
+        ARROWS_OUT_SIDE: false,
+        ARROWS_THEME_DARK: true,
+        ARROWS: true
+      },
       REGISTRATION: {
         ENABLED: true
-      }
+      },
     },
     PROFESSIONAL: {
       DASHBOARD: {

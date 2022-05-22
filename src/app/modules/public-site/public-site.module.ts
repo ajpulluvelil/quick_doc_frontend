@@ -19,6 +19,7 @@ import { NewsComponent } from './public-site-news/news/news.component';
 import { SharedModule } from '../common/shared/shared.module';
 import { ClinicSelectionComponent } from './public-site-register/clinic-selection/clinic-selection.component';
 import { ClinicComponent } from './public-site-register/clinic/clinic.component';
+import { PopUpMenuComponent } from './public-site-navigation/pop-up-menu/pop-up-menu.component';
 
 
 
@@ -38,7 +39,8 @@ import { ClinicComponent } from './public-site-register/clinic/clinic.component'
     OpenCareerListsComponent,
     NewsComponent,
     ClinicSelectionComponent,
-    ClinicComponent
+    ClinicComponent,
+    PopUpMenuComponent
   ],
   imports: [
     CommonModule,
