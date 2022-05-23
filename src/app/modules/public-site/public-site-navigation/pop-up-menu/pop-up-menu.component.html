@@ -1,23 +1,24 @@
 <div class="pop-up-menu-container">
-    <div class="menu-item home">
+    <div class="menu-item home" (click)="homeHasClicked()" [ngClass]="{'menu-item-active': isHomeSelected}">
         Home
     </div>
-    <div class="menu-item services">
+    <div class="menu-item services" (click)="servicesHasClicked()" [ngClass]="{'menu-item-active': isServicesSelected}">
         Services
     </div>
-    <div class="menu-item contact-us">
+    <div class="menu-item contact-us" (click)="contactUsHasClicked()" [ngClass]="{'menu-item-active': isContactUsSelected}">
         Contact Us
     </div>
-    <div class="menu-item careers">
+    <div class="menu-item careers" (click)="careersHasClicked()" [ngClass]="{'menu-item-active': isCareersSelected}">
         Careers
     </div>
-    <div class="menu-item news">
+    <div class="menu-item news" (click)="newsHasClicked()" [ngClass]="{'menu-item-active': isNewsSelected}">
         News
     </div>
-    <div class="menu-item register">
+    <div class="menu-item register" (click)="registerHasClicked()" [ngClass]="{'menu-item-active': isRegisterSelected}">
         Register
     </div>
-    <div class="menu-item login">
+    <!--   -->
+    <div class="menu-item login" (click)="loginHasClicked()" [ngClass]="{'menu-item-active': isLoginSelected}">
         Login
     </div>
 </div>
