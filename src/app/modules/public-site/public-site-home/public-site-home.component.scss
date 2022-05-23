@@ -54,6 +54,7 @@
     top: 3rem;
     carousel {
         width: 100% !important;
+        z-index: 1;
         .carousel-cell {
             img {
                 object-fit: cover !important;

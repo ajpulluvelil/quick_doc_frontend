@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { PublicSiteApiService } from '../common/services/public-site-api.service';
 import { PublicSiteService } from '../common/services/public-site.service';
 import { PopUpMenuComponent } from './pop-up-menu/pop-up-menu.component';
@@ -23,7 +24,8 @@ export class PublicSiteNavigationComponent implements OnInit {
   constructor(
     private publicSiteService: PublicSiteService,
     private publicSiteApiService: PublicSiteApiService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private router: Router
   ) {
   }
 
@@ -138,6 +140,39 @@ export class PublicSiteNavigationComponent implements OnInit {
       panelClass: "pop-up-menu"
     }).afterClosed().subscribe(res => {
       if (res) {
+        switch (res) {
+          case 'home':
+            this.router.navigate(['public-site/landing/home']);
+            this.homeSelected();
+            break;
+          case 'services':
+            this.router.navigate(['public-site/landing/services']);
+            this.servicesSelected();
+            break;
+          case 'contact-us':
+            this.router.navigate(['public-site/landing/contact-us']);
+            this.servicesSelected();
+            break;
+          case 'careers':
+            this.router.navigate(['public-site/landing/careers']);
+            this.careersSelected();
+            break;
+          case 'news':
+            this.router.navigate(['public-site/landing/news']);
+            this.newsSelected();
+            break;
+          case 'register':
+            this.router.navigate(['public-site/landing/register']);
+            this.registerSelected();
+            break;
+          case 'login':
+            this.router.navigate(['public-site/landing/login']);
+            this.loginSelected();
+            break;
+          default:
+            this.router.navigate(['**']);
+            break;
+        }
       }
     });
   }

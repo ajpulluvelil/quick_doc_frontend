@@ -4,7 +4,7 @@ export const ENVIRONMENT = {
   MODULES: {
     COMMON: {
       CAROUSEL: {
-        AUTO_PLAY: true,
+        AUTO_PLAY: false,
         AUTO_PLAY_INTERVAL: 5000,
         PAUSE_ON_HOVER: true,
         DOTS: true,
