@@ -20,6 +20,7 @@ import { SharedModule } from '../common/shared/shared.module';
 import { ClinicSelectionComponent } from './public-site-register/clinic-selection/clinic-selection.component';
 import { ClinicComponent } from './public-site-register/clinic/clinic.component';
 import { PopUpMenuComponent } from './public-site-navigation/pop-up-menu/pop-up-menu.component';
+import { SearchQueryListComponent } from './public-site-home/search-query-list/search-query-list.component';
 
 
 
@@ -40,7 +41,8 @@ import { PopUpMenuComponent } from './public-site-navigation/pop-up-menu/pop-up-
     NewsComponent,
     ClinicSelectionComponent,
     ClinicComponent,
-    PopUpMenuComponent
+    PopUpMenuComponent,
+    SearchQueryListComponent
   ],
   imports: [
     CommonModule,

@@ -1,43 +1,50 @@
-<!-- <div class="row home-container">
-    <div class="col image-container">
-        <img class="img-class" [src]="imageUrl" [alt]="imageName">
-    </div>
-    <div class="col description-container">
-        <div class="title">
-            quickDoc
+<ng-container *ngIf="!isSearchQueryComponentEnabled">
+    <div class="container container-fluid container-xxl container-xl container-lg container-md container-sm">
+        <div class="carousel-container">
+            <carousel [autoplay]="carousel.AUTO_PLAY" [cellWidth]="'100%'"
+                [autoplayInterval]="carousel.AUTO_PLAY_INTERVAL" [pauseOnHover]="carousel.PAUSE_ON_HOVER"
+                [dots]="carousel.DOTS" [loop]="carousel.LOOP" [arrowsOutside]="carousel.ARROWS_OUT_SIDE"
+                [arrowsTheme]="carousel.ARROWS_THEME_DARK ? 'dark' : 'light'" [arrows]="carousel.ARROWS"
+                [lightDOM]="true" [objectFit]="'cover'" [width]="300">
+                <div class="carousel-cell" *ngFor="let image of imageUrls">
+                    <img [src]="image?.path">
+                </div>
+            </carousel>
         </div>
-        <div class="description">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-            aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-            Nemo
-            enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-            eos
-            qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-            consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
-            aliquam
-            quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
-            laboriosam,
-            nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit
-            esse
-            quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+        <div class="description-container">
+            <div class="title">
+                quickDoc
+            </div>
+            <div class="description">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+                rem
+                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                explicabo.
+                Nemo
+                enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+                dolores
+                eos
+                qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
+                aliquam
+                quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+                laboriosam,
+                nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate
+                velit
+                esse
+                quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+            </div>
         </div>
         <div class="search-container">
             <div class="search">
-                <input mat-input class="search-input" placeholder="Search for the facilities">
-                <span class="search-icon">
-                    <img src="../../../../assets/SVG Icons/searchIcon.svg" alt=""> https://codeburst.io/display-a-table-using-components-with-angular-4-f13f0971666d
+                <input mat-input class="search-input" [(ngModel)]="searchQuery" placeholder="Search your queries...">
+                <span class="search-icon" (click)="onSearchQueryClick()">
+                    <img src="../../../../assets/svg-icons/searchIcon.svg" alt="">
                 </span>
             </div>
         </div>
     </div>
-</div> -->
-<div class="container container-fluid container-xxl container-xl container-lg container-md container-sm carousel-container">
-    <carousel [autoplay]="carousel.AUTO_PLAY" [cellWidth]="'100%'" [autoplayInterval]="carousel.AUTO_PLAY_INTERVAL"
-        [pauseOnHover]="carousel.PAUSE_ON_HOVER" [dots]="carousel.DOTS" [loop]="carousel.LOOP"
-        [arrowsOutside]="carousel.ARROWS_OUT_SIDE" [arrowsTheme]="carousel.ARROWS_THEME_DARK ? 'dark' : 'light'"
-        [arrows]="carousel.ARROWS" [lightDOM]="true" [objectFit]="'cover'" [width]="300">
-        <div class="carousel-cell" *ngFor="let image of imageUrls">
-            <img [src]="image?.path">
-        </div>
-    </carousel>
-</div>
+</ng-container>
+<ng-container *ngIf="isSearchQueryComponentEnabled">
+    <app-search-query-list [query]="searchQuery" (disableSearchQueryComponent)="disableSearchQueryComponent()"></app-search-query-list>
+</ng-container>
