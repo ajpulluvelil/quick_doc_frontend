@@ -13,15 +13,16 @@ export class PublicSiteHomeComponent implements OnInit {
   carousel = ENVIRONMENT.MODULES.COMMON.CAROUSEL;
 
   imageUrl: string = '../../../../assets/images/image-one-for-home.jpg';
-  imageName: string = 'pic.jpg'
+  imageName: string = 'pic.jpg';
+  searchQuery: string = '';
+  isSearchQueryComponentEnabled: boolean = false;
   imageUrls = [
     { path: '../../../../assets/images/publicSiteCarousel/publicSiteCarouselOne.jpg' },
     { path: '../../../../assets/images/publicSiteCarousel/publicSiteCarouselTwo.jpg' },
     { path: '../../../../assets/images/publicSiteCarousel/publicSiteCarouselThree.jpg' },
     { path: '../../../../assets/images/publicSiteCarousel/publicSiteCarouselFour.jpg' },
     { path: '../../../../assets/images/publicSiteCarousel/publicSiteCarouselFive.jpg' },
-    { path: '../../../../assets/images/publicSiteCarousel/publicSiteCarouselSix.jpg' },
-    { path: '../../../../assets/images/publicSiteCarousel/publicSiteCarouselSeven.jpg' }
+    { path: '../../../../assets/images/publicSiteCarousel/publicSiteCarouselSix.jpg' }
   ]
 
   constructor(
@@ -32,17 +33,17 @@ export class PublicSiteHomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.runningImageInterval();
   }
 
-  // runningImageInterval(): void {
-  //   let imageUrlIndex = 0;
-  //   setInterval(() => {
-  //     this.imageUrl = this.imageUrls[imageUrlIndex];
-  //     imageUrlIndex++;
-  //     if (imageUrlIndex > 3)
-  //       imageUrlIndex = 0;
-  //   }, 5000)
-  // }
+  onSearchQueryClick(): void {
+    if (this.searchQuery) {
+      console.log('clicked...')
+      this.isSearchQueryComponentEnabled = true;
+    }
+  }
+
+  disableSearchQueryComponent() {
+    this.isSearchQueryComponentEnabled = false;
+  }
 
 }

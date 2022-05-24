@@ -137,7 +137,8 @@ export class PublicSiteNavigationComponent implements OnInit {
   onPopUpMenuClick() {
     this.dialog.open(PopUpMenuComponent, {
       disableClose: true,
-      panelClass: "pop-up-menu"
+      panelClass: "pop-up-menu",
+      backdropClass: "back-drop-pop-up-menu"
     }).afterClosed().subscribe(res => {
       if (res) {
         switch (res) {

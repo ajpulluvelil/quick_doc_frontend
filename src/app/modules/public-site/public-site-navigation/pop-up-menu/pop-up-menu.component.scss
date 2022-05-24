@@ -1,8 +1,11 @@
+@import "../../../common/styles/quickDoc.scss";
+
 .pop-up-menu-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 70vw;
+    font-family: $primaryFontFamily, $secondaryFontFamily;
     .menu-item {
         padding: 1rem;
         color: #ffffff;
@@ -12,11 +15,11 @@
         justify-content: center;
     }
     :hover {
-        color: rgb(10, 129, 233);
+        color: $mainForeColor;
         background-color: #ffffff;
     }
     .menu-item-active {
-        color: rgb(10, 129, 233);
+        color: $mainForeColor;
         background-color: #ffffff;
     }
 }

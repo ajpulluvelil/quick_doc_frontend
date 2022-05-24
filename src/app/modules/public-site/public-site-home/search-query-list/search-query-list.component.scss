@@ -1,0 +1,30 @@
+@import "../../../common/styles/quickDoc.scss";
+.container {
+    margin-top: 1rem;
+    font-family: $primaryFontFamily, $secondaryFontFamily;
+    text-align: justify;
+    .back {
+        display: flex;
+        color: rgb(0, 0, 204);
+        cursor: pointer;
+        .back-text {
+            display: flex;
+            background-image: linear-gradient(transparent 0%, transparent 90%, $mainForeColor 90%, $mainForeColor 100%);
+            background-repeat: no-repeat;
+            background-size: 0% 100%;
+            background-position-x: right;
+            transition: background-size 300ms;
+        }
+        :hover {
+            background-size: 100% 100%;
+            background-position-x: left;
+        }
+    }
+    .back-text {
+        margin-top: 1rem;
+        .query {
+            color: $mainForeColor;
+            font-style: italic;
+        }
+    }
+}
