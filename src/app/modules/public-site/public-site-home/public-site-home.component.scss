@@ -55,3 +55,17 @@
         }
     }
 }
+
+// extra small screens
+@media screen and (max-width: 350px) {
+    .container {
+        .search-container {
+            .search {
+                width: 16rem;
+                .search-input {
+                    width: 13rem;
+                }
+            }
+        }
+    }
+}

@@ -35,11 +35,14 @@ export class PublicSiteHomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onEnterPress(event: any): void {
+    if (this.searchQuery && event.key === "Enter")
+      this.onSearchQueryClick();
+  }
+
   onSearchQueryClick(): void {
-    if (this.searchQuery) {
-      console.log('clicked...')
+    if (this.searchQuery)
       this.isSearchQueryComponentEnabled = true;
-    }
   }
 
   disableSearchQueryComponent() {

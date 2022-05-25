@@ -37,7 +37,7 @@
         </div>
         <div class="search-container">
             <div class="search">
-                <input mat-input class="search-input" [(ngModel)]="searchQuery" placeholder="Search your queries...">
+                <input mat-input class="search-input" [(ngModel)]="searchQuery" (keydown)="onEnterPress($event)"  placeholder="Search your queries...">
                 <span class="search-icon" (click)="onSearchQueryClick()">
                     <img src="../../../../assets/svg-icons/searchIcon.svg" alt="">
                 </span>
