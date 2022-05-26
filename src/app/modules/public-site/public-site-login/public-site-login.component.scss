@@ -26,7 +26,7 @@
         .username-section {
             height: 3rem;
             width: 20rem;
-            background-color: $mainBackgroundColor;
+            background-color: #ffffff;
             box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
             .username-input {
                 border-width: 0;
@@ -47,7 +47,7 @@
         .password-section {
             height: 3rem;
             width: 20rem;
-            background-color: $mainBackgroundColor;
+            background-color: #ffffff;
             box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
             .password-input {
                 border-width: 0;
@@ -74,12 +74,12 @@
         .forgot-password-label {
             font-size: 0.8rem;
             cursor: pointer;
-            color: $mainForeColor;
+            color: rgb(0, 0, 204);
             background-image: linear-gradient(
                 transparent 0%,
                 transparent 90%,
-                $mainForeColor 90%,
-                $mainForeColor 100%
+                rgb(0, 0, 204) 90%,
+                rgb(0, 0, 204) 100%
             );
             background-repeat: no-repeat;
             background-size: 0% 100%;

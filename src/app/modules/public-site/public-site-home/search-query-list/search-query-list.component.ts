@@ -9,10 +9,15 @@ export class SearchQueryListComponent implements OnInit {
 
   @Input() query: string = '';
   @Output() disableSearchQueryComponent = new EventEmitter;
-  
-  constructor() { }
+
+  constructor() {}
 
   ngOnInit(): void {
+    this.scrollToTop();
+  }
+
+  scrollToTop() {
+    window.scrollTo(0, 0);
   }
 
   onBackClick(): void {
