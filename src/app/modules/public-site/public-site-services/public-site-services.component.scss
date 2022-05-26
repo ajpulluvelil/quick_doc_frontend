@@ -1,9 +1,9 @@
 @import "../../common/styles/quickDoc.scss";
 
 .service-container {
-    background: $contactUsBackgroundImageURL;
-    padding: 3rem 2rem 3rem 3rem;
-    background-size: cover;
-    width: 99.7vw;
-    background-attachment: fixed;
+    margin-top: 4rem;
+    padding-bottom: 1rem;
+    .service-wrapper {
+        position: relative;
+    }
 }

@@ -1,11 +1,11 @@
 @import "../../../common/styles/quickDoc.scss";
 .container {
-    margin-top: 1rem;
     font-family: $primaryFontFamily, $secondaryFontFamily;
     text-align: justify;
     .back {
         display: flex;
         color: rgb(0, 0, 204);
+        margin-top: 4rem;
         cursor: pointer;
         .back-text {
             display: flex;

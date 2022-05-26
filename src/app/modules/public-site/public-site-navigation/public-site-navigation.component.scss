@@ -7,12 +7,12 @@
     right: 0rem;
     display: flex;
     font-size: 1rem;
-    color: #ffffff;
-    position: sticky;
+    color: $mainBackgroundColor;
+    position: fixed;
     align-items: center;
     justify-content: space-around;
     font-family: $primaryFontFamily, $secondaryFontFamily;
-    background-color: rgb(10, 129, 233);
+    background-color: $mainForeColor;
     box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
     .public-site-logo {
         margin-right: 55rem;
@@ -27,8 +27,8 @@
         margin: 0rem;
         list-style-type: none;
         .active {
-            color: rgb(10, 129, 233) !important;
-            background-color: rgb(255, 255, 255);
+            color: $mainForeColor !important;
+            background-color: $mainBackgroundColor;
         }
         .list-item {
             display: inline-block;
@@ -36,8 +36,8 @@
             cursor: pointer;
         }
         :hover {
-            color: rgb(10, 129, 233);
-            background-color: #ffffff;
+            color: $mainForeColor;
+            background-color: $mainBackgroundColor;
         }
     }
     .ham-burger {

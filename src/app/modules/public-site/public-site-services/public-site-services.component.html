@@ -1,5 +1,8 @@
-<div class="row service-container">
-    <ng-container *ngFor="let service of services">
-        <app-public-site-service class="col" [service]="service"></app-public-site-service>
-    </ng-container>
+<div class="container container-fluid container-xxl container-xl container-lg container-md container-sm service-container">
+    <div class="row service-wrapper">
+        <ng-container *ngFor="let service of services">
+            <app-public-site-service class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3" [service]="service">
+            </app-public-site-service>
+        </ng-container>
+    </div>
 </div>

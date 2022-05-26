@@ -6,8 +6,8 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        top: 3rem;
         z-index: 1;
+        margin-top: 4.5rem;
         carousel {
             width: 100% !important;
             z-index: 1 !important;
@@ -19,7 +19,7 @@
         }
     }
     .description-container {
-        margin-top: 4rem;
+        margin-top: 1rem;
         font-family: $primaryFontFamily, $secondaryFontFamily;
         .title {
             text-align: center;
