@@ -26,6 +26,10 @@ export class PopUpMenuComponent implements OnInit {
     this.setActiveLink(url);
   }
 
+  onCloseMenuClick(): void {
+    this.closeDialog();
+  }
+
   setActiveLink(url: string): void {
     if (url.endsWith('home')) {
       this.isHomeSelected = true;
@@ -72,7 +76,7 @@ export class PopUpMenuComponent implements OnInit {
     this.closeDialog('login');
   }
 
-  closeDialog(value: any) {
+  closeDialog(value?: any) {
     this.dialogRef.close(value);
   }
 

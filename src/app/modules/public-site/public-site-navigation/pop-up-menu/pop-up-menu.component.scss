@@ -4,22 +4,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70vw;
     font-family: $primaryFontFamily, $secondaryFontFamily;
+    .close-menu {
+        top: 1rem;
+        position: absolute;
+        right: 1rem;
+        cursor: pointer;
+        color: $mainBackgroundColor;
+    }
     .menu-item {
         padding: 1rem;
-        color: #ffffff;
+        color: $mainBackgroundColor;
         cursor: pointer;
         width: 100%;
         display: flex;
         justify-content: center;
     }
-    :hover {
+    .menu-item:hover {
         color: $mainForeColor;
-        background-color: #ffffff;
+        background-color: $mainBackgroundColor;
     }
     .menu-item-active {
         color: $mainForeColor;
-        background-color: #ffffff;
+        background-color: $mainBackgroundColor;
     }
 }

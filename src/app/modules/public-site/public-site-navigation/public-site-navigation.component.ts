@@ -136,6 +136,10 @@ export class PublicSiteNavigationComponent implements OnInit {
 
   onPopUpMenuClick() {
     this.dialog.open(PopUpMenuComponent, {
+      maxWidth: "100vw",
+      maxHeight: "100vh",
+      height: "100%",
+      width: "100%",
       disableClose: true,
       panelClass: "pop-up-menu",
       backdropClass: "back-drop-pop-up-menu"

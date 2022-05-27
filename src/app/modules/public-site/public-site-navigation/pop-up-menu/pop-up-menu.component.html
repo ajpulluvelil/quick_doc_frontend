@@ -1,4 +1,7 @@
 <div class="pop-up-menu-container">
+    <div class="close-menu" (click)="onCloseMenuClick()">
+        <mat-icon>close</mat-icon>
+    </div>
     <div class="menu-item home" (click)="homeHasClicked()" [ngClass]="{'menu-item-active': isHomeSelected}">
         Home
     </div>
