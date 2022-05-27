@@ -1,6 +1,7 @@
 @import "../../common/styles/quickDoc.scss";
 .container {
     font-family: $primaryFontFamily, $secondaryFontFamily;
+    overflow-y: hidden;
     .carousel-container {
         display: flex;
         justify-content: center;

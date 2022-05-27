@@ -1,4 +1,5 @@
 @import "~bootstrap/dist/css/bootstrap.css";
+@import "../src/app/modules/common/styles/quickDoc.scss";
 html,
 body {
     height: 100%;
@@ -10,10 +11,36 @@ body {
 
 .pop-up-menu {
     .mat-dialog-container {
-        background-color: rgb(10, 129, 233) !important;
+        background-color: $mainForeColor !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 
 .back-drop-pop-up-menu {
     backdrop-filter: blur(0.5rem);
+}
+
+.success-notification-message {
+    background-color: #008000;
+    color: #ffffff;
+    .mat-simple-snackbar, .mat-simple-snackbar-action, .mat-button {
+        font-family: $primaryFontFamily, $secondaryFontFamily !important;
+    }
+    .mat-simple-snackbar-action {
+        color: $mainForeColor;
+    }
+}
+
+.error-notification-message {
+    font-family: $primaryFontFamily, $secondaryFontFamily !important;
+    background-color: #ff0000;
+    color: #ffffff;
+    .mat-simple-snackbar, .mat-button {
+        font-family: $primaryFontFamily, $secondaryFontFamily !important;
+    }
+    .mat-simple-snackbar-action {
+        color: $mainForeColor;
+    }
 }
