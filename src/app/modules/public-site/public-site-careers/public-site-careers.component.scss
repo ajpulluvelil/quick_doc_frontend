@@ -2,7 +2,7 @@
 
 .careers-wrapper {
     background: $careersBackgroundImageURL;
-    height: 94.2%;
+    height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -12,6 +12,7 @@
     .title-wrapper {
         padding: 2rem;
         color: $mainFontColor;
+        text-align: center;
         .title {
             font-size: 3rem;
             font-family: $primaryFontFamily, $secondaryFontFamily;
