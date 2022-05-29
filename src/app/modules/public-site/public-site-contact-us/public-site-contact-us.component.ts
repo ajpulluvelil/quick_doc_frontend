@@ -10,6 +10,7 @@ import { NotificationServiceService } from '../../common/shared/services/notific
 export class PublicSiteContactUsComponent implements OnInit {
 
   contactUsForm!: FormGroup;
+  isLocationEnabled: boolean = false;
 
   constructor(
     private fb: FormBuilder,
@@ -39,6 +40,14 @@ export class PublicSiteContactUsComponent implements OnInit {
 
   resetContactUsForm() {
     this.contactUsForm.reset();
+  }
+
+  enableLocationView(): void {
+    this.isLocationEnabled = true;
+  }
+
+  closeLocationView(): void {
+    this.isLocationEnabled = false;
   }
 
 }

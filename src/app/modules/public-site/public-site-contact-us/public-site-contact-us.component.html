@@ -10,34 +10,40 @@
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  address-wrapper">
                 <div class="row address">
                     <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 image-wrapper">
-                        <img class="image" src="../../../../assets/svg-icons/worldLocation.svg">
+                        <img class="image" src="../../../../assets/svg-icons/worldLocation.svg" (click)="enableLocationView()">
                     </div>
                     <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 address-content">
                         <span class="row title">Address</span>
-                        <span class="row content">4671 Sugar camp road, <br /> Owatonna, Minnesota, <br /> 55060</span>
+                        <span class="row content" (click)="enableLocationView()">4671 Sugar camp road, <br /> Owatonna, Minnesota, <br /> 55060</span>
                     </div>
                 </div>
                 <div class="row phone-number">
                     <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 image-wrapper">
-                        <img class="image" src="../../../../assets/svg-icons/telePhoneIcon.svg">
+                        <a href="tel:+918113811270">
+                            <img class="image" src="../../../../assets/svg-icons/telePhoneIcon.svg">
+                        </a>
                     </div>
                     <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 phone-number-content">
                         <span class="row title">Phone</span>
-                        <span class="row content">+918113811270</span>
+                        <a class="row content" href="tel:+918113811270">+918113811270</a>
                     </div>
                 </div>
                 <div class="row email">
                     <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 image-wrapper">
-                        <img class="image" src="../../../../assets/svg-icons/emailIcon.svg">
+                        <a href="mailto:enquiry@quickdoc.me?cc=ajpulluvelil@gmail.com&subject=Hospital%20enquiry%20from%20QuickDoc&body=Hi%20QuickDoc">
+                            <img class="image" src="../../../../assets/svg-icons/emailIcon.svg">
+                        </a>
                     </div>
                     <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 email-content">
                         <span class="row title">Email</span>
-                        <span class="row content">enquiry@quickdoc.me</span>
+                        <a class="row content"
+                            href="mailto:enquiry@quickdoc.me?cc=ajpulluvelil@gmail.com&subject=Hospital%20enquiry%20from%20QuickDoc&body=Hi%20QuickDoc">
+                            enquiry@quickdoc.me</a>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  message-wrapper">
-                <div class="message-content">
+                <div class="message-content" *ngIf="!isLocationEnabled">
                     <form [formGroup]="contactUsForm">
                         <div class="title">
                             Send Message
@@ -79,6 +85,7 @@
                         </div>
                     </form>
                 </div>
+                <app-location *ngIf="isLocationEnabled" (locationViewClose)="closeLocationView()"></app-location>
             </div>
         </div>
     </div>

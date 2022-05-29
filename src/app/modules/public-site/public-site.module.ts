@@ -21,6 +21,7 @@ import { ClinicSelectionComponent } from './public-site-register/clinic-selectio
 import { ClinicComponent } from './public-site-register/clinic/clinic.component';
 import { PopUpMenuComponent } from './public-site-navigation/pop-up-menu/pop-up-menu.component';
 import { SearchQueryListComponent } from './public-site-home/search-query-list/search-query-list.component';
+import { LocationComponent } from './public-site-contact-us/location/location.component';
 
 
 
@@ -42,7 +43,8 @@ import { SearchQueryListComponent } from './public-site-home/search-query-list/s
     ClinicSelectionComponent,
     ClinicComponent,
     PopUpMenuComponent,
-    SearchQueryListComponent
+    SearchQueryListComponent,
+    LocationComponent
   ],
   imports: [
     CommonModule,
