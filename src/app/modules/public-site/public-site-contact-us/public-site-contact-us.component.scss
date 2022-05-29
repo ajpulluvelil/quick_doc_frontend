@@ -38,6 +38,7 @@
                     align-items: center;
                     .image {
                         width: 2rem;
+                        cursor: pointer;
                     }
                 }
                 .address-content {
@@ -47,6 +48,11 @@
                     }
                     .content {
                         font-size: 1rem;
+                        cursor: pointer;
+                        color: #ffffff;
+                    }
+                    :hover {
+                        color: $secondaryFontColor;
                     }
                 }
             }
@@ -58,6 +64,7 @@
                     align-items: center;
                     .image {
                         width: 2rem;
+                        cursor: pointer;
                     }
                 }
                 .phone-number-content {
@@ -67,6 +74,10 @@
                     }
                     .content {
                         font-size: 1rem;
+                        text-decoration: none;
+                        color: #ffffff;
+                    }:hover {
+                        color: $secondaryFontColor;
                     }
                 }
             }
@@ -78,6 +89,7 @@
                     align-items: center;
                     .image {
                         width: 2rem;
+                        cursor: pointer;
                     }
                 }
                 .email-content {
@@ -87,6 +99,10 @@
                     }
                     .content {
                         font-size: 1rem;
+                        text-decoration: none;
+                        color: #ffffff;
+                    }:hover {
+                        color: $secondaryFontColor;
                     }
                 }
             }

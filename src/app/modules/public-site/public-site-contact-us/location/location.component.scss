@@ -1,0 +1,11 @@
+.location-wrapper {
+    position: relative;
+    .close-location {
+        width: 100%;
+        text-align: end;
+        color: #ffffff;
+        mat-icon {
+            cursor: pointer;
+        }
+    }
+}

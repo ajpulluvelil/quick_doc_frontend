@@ -1,17 +1,14 @@
 @import "../../common/styles/quickDoc.scss";
 
 .careers-wrapper {
-    background: $careersBackgroundImageURL;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
+    min-height: 100%;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     .title-wrapper {
         padding: 2rem;
-        color: $mainFontColor;
+        font-weight: 700;
         text-align: center;
         .title {
             font-size: 3rem;
@@ -20,7 +17,6 @@
     }
     .career-description-wrapper {
         padding: 2rem;
-        color: $mainFontColor;
         .career-description {
             display: flex;
             font-size: calc(1.275rem + 0.3vw);
@@ -35,6 +31,7 @@
             border-radius: 3rem;
             padding: 0rem 2rem;
             font-family: $primaryFontFamily, $secondaryFontFamily;
+            box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
         }
         :hover {
             color: $buttonTextSecondaryColor;
