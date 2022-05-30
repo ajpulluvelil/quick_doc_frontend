@@ -4,6 +4,11 @@
             "name": "angular-responsive-carousel",
             "description": "Carousel for Angular",
             "command": "npm i angular-responsive-carousel"
+        },
+        {
+            "name": "ngx-lightbox",
+            "description": "Image gallery for Angular. We can click and view an enlarged image with the help of this library",
+            "command": "npm i ngx-lightbox"
         }
     ]
 }
