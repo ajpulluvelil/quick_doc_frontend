@@ -1,4 +1,5 @@
-<div *ngIf="!isOpenPositionsRequested" class="careers-wrapper">
+<div *ngIf="!isOpenPositionsRequested"
+    class="container container-fluid container-xxl container-xl container-lg container-md container-sm careers-container">
     <div class="title-wrapper">
         <span class="title">Excited to work with us!</span>
     </div>
@@ -8,7 +9,10 @@
         </span>
     </div>
     <div class="btn-wrapper">
-        <button mat-raised-button class="opportunity-btn" (click)="openPositions()">Search Open Opportunities</button>
+        <button href="#careers" mat-raised-button class="opportunity-btn">Search Open Opportunities</button>
     </div>
 </div>
-<app-open-career-lists *ngIf="isOpenPositionsRequested"></app-open-career-lists>
+
+<div #careers class="careers-wrapper">
+    Career wrapper works!
+</div>

@@ -1,6 +1,6 @@
 @import "../../common/styles/quickDoc.scss";
 
-.careers-wrapper {
+.careers-container {
     display: flex;
     min-height: 100%;
     align-items: center;
@@ -38,4 +38,7 @@
             background-color: $buttonSecondaryColor;
         }
     }
+}
+.careers-wrapper {
+    height: 100px;
 }
