@@ -40,5 +40,15 @@
     }
 }
 .careers-wrapper {
-    height: 100px;
+    background-color: #fafafa;
+    .careers {
+        font-family: $primaryFontFamily, $secondaryFontFamily;
+        padding-bottom: 1rem;
+        .career-title {
+            text-align: center;
+            font-weight: 700;
+            font-size: 3rem;
+            padding: 4rem 0 4rem 0;
+        }
+    }
 }

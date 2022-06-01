@@ -9,10 +9,20 @@
         </span>
     </div>
     <div class="btn-wrapper">
-        <button href="#careers" mat-raised-button class="opportunity-btn">Search Open Opportunities</button>
+        <button mat-raised-button class="opportunity-btn" (click)="scrollToCareerWrapper()">Search Open
+            Opportunities</button>
     </div>
 </div>
-
-<div #careers class="careers-wrapper">
-    Career wrapper works!
+<div class="careers-wrapper">
+    <div id="careers"
+        class="careers container container-fluid container-xxl container-xl container-lg container-md container-sm">
+        <div class="career-title">
+            <span class="title">Current Openings</span>
+        </div>
+        <div class="row career">
+            <ng-container *ngFor="let career of careerLists">
+                <app-career-item class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4" [career]="career"></app-career-item>
+            </ng-container>
+        </div>
+    </div>
 </div>

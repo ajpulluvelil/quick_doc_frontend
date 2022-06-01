@@ -50,7 +50,6 @@ export class PublicSiteRegisterComponent implements OnInit {
   }
 
   onSubmit(registrationForm: FormGroup) {
-    console.log(registrationForm);
     this.publicSiteApiService.createNewPatientUser(registrationForm.value).subscribe(response => {
 
     });

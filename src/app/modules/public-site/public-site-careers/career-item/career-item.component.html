@@ -1,0 +1,21 @@
+<mat-card class="career-item">
+    <div class="vertical-bar"></div>
+    <div class="content-wrapper">
+        <div class="row header">
+            <h4 class="col name"> {{ career.name }} </h4>
+            <div  class="col btn-icon-wrapper">
+                <button mat-button class="next-button" (click)="applyForTheSpecifiedOpportunity(career.id)">
+                    <mat-icon>navigate_next</mat-icon>
+                </button>
+            </div>
+        </div>
+        <div class="career-content">
+            <span align="justify"> {{ career.description }} </span>
+        </div>
+        <div class="tags" *ngIf="career.tags && career?.tags?.length > 0">
+            <div class="tag-item" *ngFor="let tag of career.tags">
+                <span class="display">{{ tag.display }}</span>
+            </div>
+        </div>
+    </div>
+</mat-card>

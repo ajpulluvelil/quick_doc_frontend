@@ -30,7 +30,6 @@ export class ForgotPasswordModalComponent implements OnInit {
   }
 
   onConfirmClick(passwordRecoveryForm: FormGroup) {
-    console.log('form', passwordRecoveryForm)
     // this.dialogRef.close(passwordRecoveryForm);
   }
 
