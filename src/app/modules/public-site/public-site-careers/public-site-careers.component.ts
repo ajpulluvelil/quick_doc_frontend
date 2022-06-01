@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CareerType } from '../common/interfaces/career-type';
+import { CareerList } from '../common/utils/career-list';
 
 @Component({
   selector: 'app-public-site-careers',
@@ -9,13 +11,22 @@ export class PublicSiteCareersComponent implements OnInit {
 
   isOpenPositionsRequested: boolean = false;
 
+  careerLists: CareerType[] = CareerList;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.scrollToTop();
   }
 
-  openPositions() {
-    this.isOpenPositionsRequested = true;
+  scrollToTop(): void {
+    window.scrollTo(0, 0);
+  }
+
+  scrollToCareerWrapper(): void {
+    const element = document.getElementById("careers");
+    if (element)
+      element.scrollIntoView();
   }
 
 }

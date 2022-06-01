@@ -2,7 +2,7 @@
 .container {
     font-family: $primaryFontFamily, $secondaryFontFamily;
     text-align: justify;
-    overflow-y: hidden;
+    overflow: hidden;
     .back {
         display: flex;
         color: rgb(0, 0, 204);

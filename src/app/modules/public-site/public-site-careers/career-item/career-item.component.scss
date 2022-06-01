@@ -1,0 +1,65 @@
+@import "../../../common/styles/quickDoc.scss";
+
+.career-item {
+    font-family: $primaryFontFamily, $secondaryFontFamily;
+    padding: 0 !important;
+    margin-top: 1rem;
+    display: flex;
+    box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
+    .vertical-bar {
+        min-width: 0.25rem;
+        background-color: $mainForeColor;
+        border-radius: 0.25rem 0 0 0.25rem;
+    }
+    .content-wrapper {
+        padding: 1rem;
+        .header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .name {
+                font-weight: 700;
+                margin: 0;
+            }
+            .btn-icon-wrapper {
+                display: flex;
+                justify-content: flex-end;
+                .next-button {
+                    display: flex;
+                    justify-content: flex-end;
+                    color: $mainForeColor;
+                    cursor: pointer;
+                    padding: 0 0.5rem;
+                    min-width: 1rem;
+                }
+                :hover {
+                    color: #fff;
+                    background-color: $mainForeColor;
+                }
+            }
+        }
+        .career-content {
+            display: flex;
+            flex-direction: column;
+            margin-top: 0.5rem;
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin-top: 1rem;
+            .tag-item {
+                flex: 0 1 auto;
+                background-color: $mainForeColor;
+                color: $mainBackgroundColor;
+                border-radius: 0.255rem;
+                margin-right: 0.25rem;
+                margin-bottom: 0.25rem;
+                .display {
+                    padding: 0 0.25rem 0 0.25rem;
+                    font-size: 0.75rem;
+                }
+            }
+        }
+    }
+}

@@ -14,7 +14,6 @@ import { PublicSiteLoginComponent } from './public-site-login/public-site-login.
 import { PublicSiteServiceComponent } from './public-site-services/public-site-service/public-site-service.component';
 import { ForgotPasswordModalComponent } from './public-site-login/forgot-password-modal/forgot-password-modal.component';
 import { ExternalModule } from '../common/modules/external/external.module';
-import { OpenCareerListsComponent } from './public-site-careers/open-career-lists/open-career-lists.component';
 import { NewsComponent } from './public-site-news/news/news.component';
 import { SharedModule } from '../common/shared/shared.module';
 import { ClinicSelectionComponent } from './public-site-register/clinic-selection/clinic-selection.component';
@@ -22,6 +21,8 @@ import { ClinicComponent } from './public-site-register/clinic/clinic.component'
 import { PopUpMenuComponent } from './public-site-navigation/pop-up-menu/pop-up-menu.component';
 import { SearchQueryListComponent } from './public-site-home/search-query-list/search-query-list.component';
 import { LocationComponent } from './public-site-contact-us/location/location.component';
+import { CareerItemComponent } from './public-site-careers/career-item/career-item.component';
+import { ApplyOpportunityComponent } from './public-site-careers/apply-opportunity/apply-opportunity.component';
 
 
 
@@ -38,13 +39,14 @@ import { LocationComponent } from './public-site-contact-us/location/location.co
     PublicSiteLoginComponent,
     PublicSiteServiceComponent,
     ForgotPasswordModalComponent,
-    OpenCareerListsComponent,
     NewsComponent,
     ClinicSelectionComponent,
     ClinicComponent,
     PopUpMenuComponent,
     SearchQueryListComponent,
-    LocationComponent
+    LocationComponent,
+    CareerItemComponent,
+    ApplyOpportunityComponent
   ],
   imports: [
     CommonModule,

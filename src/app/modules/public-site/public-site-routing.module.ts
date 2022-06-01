@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ApplyOpportunityComponent } from './public-site-careers/apply-opportunity/apply-opportunity.component';
 import { PublicSiteCareersComponent } from './public-site-careers/public-site-careers.component';
 import { PublicSiteContactUsComponent } from './public-site-contact-us/public-site-contact-us.component';
 import { PublicSiteHomeComponent } from './public-site-home/public-site-home.component';
@@ -31,6 +32,9 @@ const routes: Routes = [{
     }, {
         path: 'careers',
         component: PublicSiteCareersComponent
+    }, {
+        path: 'careers/apply',
+        component: ApplyOpportunityComponent
     }, {
         path: 'news',
         component: PublicSiteNewsComponent
