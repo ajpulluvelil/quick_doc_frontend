@@ -17,9 +17,10 @@ export class CareerItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  applyForTheSpecifiedOpportunity(opportunityId: string): void {
+  applyForTheSpecifiedOpportunity(opportunityId: any): void {
     const URL = this.router.url;
     this.router.navigate([URL + '/apply'], { queryParams: { id: opportunityId } });
+    // this.router.navigateByUrl(URL + '/apply', { state: opportunity }); 
   }
 
 }

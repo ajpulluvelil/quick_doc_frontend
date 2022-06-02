@@ -123,7 +123,7 @@ export class PublicSiteNavigationComponent implements OnInit {
       this.isServicesSelected = true;
     } else if (url.endsWith('contact-us')) {
       this.isContactUsSelected = true;
-    } else if (url.endsWith('careers')) {
+    } else if (url.includes('careers')) {
       this.isCareersSelected = true;
     } else if (url.endsWith('news')) {
       this.isNewsSelected = true;
