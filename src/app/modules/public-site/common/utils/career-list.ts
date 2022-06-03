@@ -11,8 +11,8 @@ export const CareerList: CareerType[] = [
         description: "Ante in nibh mauris cursus mattis molestie a iaculis at. Eleifend mi in nulla posuere sollicitudin aliquam. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec."
     }, {
         id: '5d4987203504a45cabd8dd0b',
-        name: "Staff nurse",
-        description: "Ante in nibh mauris cursus mattis molestie a iaculis at.",
+        name: "Registered Nurse",
+        description: "We are looking for a qualified registered Nurse to promote and restore patients’ health. You will work with a variety of patients and you will provide direct nursing care along with physical or psychological support when required.",
         tags: [
             {
                 display: "Onsite"
@@ -23,6 +23,14 @@ export const CareerList: CareerType[] = [
             }, {
                 display: "Night shift - CODE - 12365"
             }
+        ],
+        responsibilities: [
+            "Obtaining vital sign measurements",
+            "Neurologic intensive care",
+            "Central line dressing and care",
+            "Explaining how to use crutches, wheelchairs, etc.",
+            "Educating about disease, illness or trauma",
+            "Explaining safety needed at home"
         ]
     }, {
         id: '5d4987343504a45cabd8df13',
