@@ -10,11 +10,13 @@
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  address-wrapper">
                 <div class="row address">
                     <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 image-wrapper">
-                        <img class="image" src="../../../../assets/svg-icons/worldLocation.svg" (click)="enableLocationView()">
+                        <img class="image" src="../../../../assets/svg-icons/worldLocation.svg"
+                            (click)="enableLocationView()">
                     </div>
                     <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 address-content">
                         <span class="row title">Address</span>
-                        <span class="row content" (click)="enableLocationView()">4671 Sugar camp road, <br /> Owatonna, Minnesota, <br /> 55060</span>
+                        <span class="row content" (click)="enableLocationView()">4671 Sugar camp road, <br /> Owatonna,
+                            Minnesota, <br /> 55060</span>
                     </div>
                 </div>
                 <div class="row phone-number">
@@ -30,7 +32,8 @@
                 </div>
                 <div class="row email">
                     <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 image-wrapper">
-                        <a href="mailto:enquiry@quickdoc.me?cc=ajpulluvelil@gmail.com&subject=Hospital%20enquiry%20from%20QuickDoc&body=Hi%20QuickDoc">
+                        <a
+                            href="mailto:enquiry@quickdoc.me?cc=ajpulluvelil@gmail.com&subject=Hospital%20enquiry%20from%20QuickDoc&body=Hi%20QuickDoc">
                             <img class="image" src="../../../../assets/svg-icons/emailIcon.svg">
                         </a>
                     </div>
@@ -73,15 +76,16 @@
                         <div class="message">
                             <mat-form-field class="message-field" appearance="fill">
                                 <mat-label>Leave a comment</mat-label>
-                                <textarea matInput placeholder="Comments" formControlName="comment"></textarea>
+                                <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"
+                                    placeholder="Comments" formControlName="comment"></textarea>
                                 <mat-error *ngIf="form['comment'].errors?.['required']">
                                     Comment is <strong>required</strong>
                                 </mat-error>
                             </mat-form-field>
                         </div>
                         <div class="send">
-                            <button mat-raised-button type="button" class="btn send-btn" [disabled]="!contactUsForm.valid"
-                                (click)="onSubmit(contactUsForm)">Send</button>
+                            <button mat-raised-button type="button" class="btn send-btn"
+                                [disabled]="!contactUsForm.valid" (click)="onSubmit(contactUsForm)">Send</button>
                         </div>
                     </form>
                 </div>
