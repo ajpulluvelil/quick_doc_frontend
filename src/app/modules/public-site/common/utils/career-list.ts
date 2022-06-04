@@ -31,6 +31,14 @@ export const CareerList: CareerType[] = [
             "Explaining how to use crutches, wheelchairs, etc.",
             "Educating about disease, illness or trauma",
             "Explaining safety needed at home"
+        ],
+        requirements: [
+            "Obtaining vital sign measurements",
+            "Neurologic intensive care",
+            "Central line dressing and care",
+            "Explaining how to use crutches, wheelchairs, etc.",
+            "Educating about disease, illness or trauma",
+            "Explaining safety needed at home"
         ]
     }, {
         id: '5d4987343504a45cabd8df13',

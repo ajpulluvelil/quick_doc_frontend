@@ -1,0 +1,43 @@
+<div class="container container-fluid container-xxl container-xl container-lg container-md container-sm">
+    <div class="back-container">
+        <span class="back-text" (click)="onBackClick()">
+            <mat-icon>keyboard_backspace</mat-icon>
+            <span>Back</span>
+        </span>
+    </div>
+    <div class="row opportunity-container">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6  content">
+            <div class="title">
+                <span> {{ career.name }} </span> 
+            </div>
+            <div class="tags">
+                <div class="tag-item" *ngFor="let tag of career.tags">
+                    <span class="display"> {{ tag.display }} </span>
+                </div>
+            </div>
+            <div class="description">
+                <span class="title-opening">About the opening:</span>
+                <h6> {{ career.description }} </h6>
+            </div>
+            <div class="responsibility" *ngIf="career.responsibilities && career.responsibilities.length > 0">
+                <span class="title-responsibility"> Responsibilities: </span>
+                <ul class="responsibilities">
+                    <li *ngFor="let responsibility of career.responsibilities">
+                        {{ responsibility }}
+                    </li>
+                </ul>
+            </div>
+            <div class="requirement" *ngIf="career.requirements && career.requirements.length > 0">
+                <span class="title-requirement"> Requirements: </span>
+                <ul class="requirements">
+                    <li *ngFor="let requirement of career.requirements">
+                        {{ requirement }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6  apply-job-wrapper">
+            <app-apply-opportunity></app-apply-opportunity>
+        </div>
+    </div>
+</div>

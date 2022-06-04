@@ -1,34 +1,26 @@
-<div class="container container-fluid container-xxl container-xl container-lg container-md container-sm">
-    <div class="back-container">
-        <span class="back-text" (click)="onBackClick()">
-            <mat-icon>keyboard_backspace</mat-icon>
-            <span>Back</span>
-        </span>
+<div class="apply-opportunity-container">
+    <div class="name">
+        <mat-form-field class="name-field" appearance="outline">
+            <mat-label>Full name</mat-label>
+            <input matInput placeholder="David williams">
+        </mat-form-field>
     </div>
-    <div class="row opportunity-container">
-        <div class="col content">
-            <div class="title">
-                <h2> {{ career.name }} </h2>
-            </div>
-            <div class="tags">
-                <div class="tag-item" *ngFor="let tag of career.tags">
-                    <span class="display"> {{ tag.display }} </span>
-                </div>
-            </div>
-            <div class="description">
-                <h6> {{ career.description }} </h6>
-            </div>
-            <div class="responsibility">
-                <span> Responsibilities: </span>
-                <ul>
-                    <li *ngFor="let responsibility of career.responsibilities">
-                        {{ responsibility }}
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="col apply-job-wrapper">
-            <input type="text">
-        </div>
+    <div class="email">
+        <mat-form-field class="email-field" appearance="outline">
+            <mat-label>Email address</mat-label>
+            <input matInput placeholder="david.williams.quickdoc.me">
+        </mat-form-field>
+    </div>
+    <div class="mobile">
+        <mat-form-field class="mobile-field" appearance="outline">
+            <mat-label>Mobile number</mat-label>
+            <input matInput placeholder="+910000000000">
+        </mat-form-field>
+    </div>
+    <div class="file-upload">
+        <input type="file" [accept]="careerAcceptableUploadFileTypes" style="visibility: none;"  multiple>
+    </div>
+    <div class="submit">
+        <button mat-raised-button color="primary">Apply</button>
     </div>
 </div>

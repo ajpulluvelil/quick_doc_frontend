@@ -23,6 +23,7 @@ import { SearchQueryListComponent } from './public-site-home/search-query-list/s
 import { LocationComponent } from './public-site-contact-us/location/location.component';
 import { CareerItemComponent } from './public-site-careers/career-item/career-item.component';
 import { ApplyOpportunityComponent } from './public-site-careers/apply-opportunity/apply-opportunity.component';
+import { OpportunityDetailsComponent } from './public-site-careers/opportunity-details/opportunity-details.component';
 
 
 
@@ -46,7 +47,8 @@ import { ApplyOpportunityComponent } from './public-site-careers/apply-opportuni
     SearchQueryListComponent,
     LocationComponent,
     CareerItemComponent,
-    ApplyOpportunityComponent
+    ApplyOpportunityComponent,
+    OpportunityDetailsComponent
   ],
   imports: [
     CommonModule,

@@ -4,4 +4,5 @@ export interface CareerType {
     description: string,
     tags?: any[],
     responsibilities?: string[]
+    requirements?: string[]
 }
