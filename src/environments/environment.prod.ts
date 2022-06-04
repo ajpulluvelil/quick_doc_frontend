@@ -16,6 +16,9 @@ export const ENVIRONMENT = {
       REGISTRATION: {
         ENABLED: true
       },
+      CAREER: {
+        ACCEPTABLE_UPLOAD_FILE_TYPES: ["application/pdf", ".pdf"]
+      }
     },
     PROFESSIONAL: {
       DASHBOARD: {

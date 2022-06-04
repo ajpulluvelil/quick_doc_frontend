@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { CareerType } from '../../common/interfaces/career-type';
-import { CareerList } from '../../common/utils/career-list';
+import { ENVIRONMENT } from 'src/environments/environment';
 
 @Component({
   selector: 'app-apply-opportunity',
@@ -10,39 +8,10 @@ import { CareerList } from '../../common/utils/career-list';
 })
 export class ApplyOpportunityComponent implements OnInit {
 
-  opportunityId: any = '';
-  career: CareerType = {
-    id: '',
-    name: '',
-    description: ''
-  };
-  careerLists: CareerType[] = CareerList;
+  careerAcceptableUploadFileTypes = ENVIRONMENT.MODULES.COMMON.CAREER.ACCEPTABLE_UPLOAD_FILE_TYPES;
 
-  constructor(
-    private router: Router,
-    private route: ActivatedRoute
-  ) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.getOpportunityIdFromQueryParams();
-    this.findCareerObject();
-  }
-
-  findCareerObject(): void {
-    const career = this.careerLists.find(career => career.id === this.opportunityId);
-    if (career) {
-      this.career = career;
-    }
-  }
-
-  getOpportunityIdFromQueryParams(): void {
-    this.route.queryParamMap.subscribe(params =>
-      this.opportunityId = params.get('id')
-    );
-  }
-
-  onBackClick(): void {
-    this.router.navigate(['public-site/landing/careers']);
-  }
+  ngOnInit(): void { }
 
 }
