@@ -1,8 +1,14 @@
 <div class="apply-opportunity-container">
     <div class="name">
         <mat-form-field class="name-field" appearance="outline">
-            <mat-label>Full name</mat-label>
-            <input matInput placeholder="David williams">
+            <mat-label>First name</mat-label>
+            <input matInput placeholder="David">
+        </mat-form-field>
+    </div>
+    <div class="name">
+        <mat-form-field class="name-field" appearance="outline">
+            <mat-label>Last name</mat-label>
+            <input matInput placeholder="Williams">
         </mat-form-field>
     </div>
     <div class="email">
@@ -17,8 +23,14 @@
             <input matInput placeholder="+910000000000">
         </mat-form-field>
     </div>
+    <div class="mobile">
+        <mat-form-field class="mobile-field" appearance="outline">
+            <mat-label>Additional Links</mat-label>
+            <input matInput placeholder="https://in.linkedin.com/">
+        </mat-form-field>
+    </div>
     <div class="file-upload">
-        <input type="file" [accept]="careerAcceptableUploadFileTypes" style="visibility: none;"  multiple>
+        <input type="file" [accept]="careerAcceptableUploadFileTypes"  multiple>
     </div>
     <div class="submit">
         <button mat-raised-button color="primary">Apply</button>
