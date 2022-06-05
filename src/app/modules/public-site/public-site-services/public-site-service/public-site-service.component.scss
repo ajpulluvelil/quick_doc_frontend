@@ -31,17 +31,5 @@
 }
 
 ::-webkit-scrollbar {
-    width: 1.25rem;
     display: none;
-}
-
-::-webkit-scrollbar-track {
-    background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #d6dee1;
-    border-radius: 1.25rem;
-    border: 0.375rem solid transparent;
-    background-clip: content-box;
 }

@@ -15,8 +15,18 @@
             min-width: 100%;
         }
     }
-    .file-upload{
-        padding-bottom: 1.34375em;
+    .file-upload {
+        margin-bottom: 1.34375em;
+        border: 0.063rem solid;
+        border-radius: 0.25rem;
+        border-color: #e0e0e0e0;
+        input {
+            padding: 1rem 0.625rem;
+        }
+    }
+    .file-upload:hover {
+        border-color: #000000;
+        border: 0.125rem solid;
     }
     .submit {
         button {
