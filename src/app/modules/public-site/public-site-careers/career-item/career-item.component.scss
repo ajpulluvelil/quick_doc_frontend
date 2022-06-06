@@ -6,17 +6,25 @@
     margin-top: 1rem;
     display: flex;
     box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
+    height: 220px;
+    position: relative;
     .vertical-bar {
         min-width: 0.25rem;
+        max-width: 0.25rem;
         background-color: $mainForeColor;
         border-radius: 0.25rem 0 0 0.25rem;
     }
     .content-wrapper {
-        padding: 1rem;
+        padding: 0 1rem 1rem 1rem;
+        overflow: scroll;
         .header {
             display: flex;
             flex-direction: row;
             align-items: center;
+            min-width: calc(100% - 1.25rem);
+            padding: 1rem 0 0.5rem 0;
+            position: absolute;
+            background-color: #ffffff;
             .name {
                 font-weight: 700;
                 margin: 0;
@@ -24,13 +32,9 @@
             .btn-icon-wrapper {
                 display: flex;
                 justify-content: flex-end;
-                .next-button {
-                    display: flex;
-                    justify-content: flex-end;
-                    color: $mainForeColor;
+                mat-icon {
                     cursor: pointer;
-                    padding: 0 0.5rem;
-                    min-width: 1rem;
+                    border-radius: 0.25rem;
                 }
                 :hover {
                     color: #fff;
@@ -41,7 +45,7 @@
         .career-content {
             display: flex;
             flex-direction: column;
-            margin-top: 0.5rem;
+            margin-top: 3rem;
         }
         .tags {
             display: flex;
@@ -62,4 +66,8 @@
             }
         }
     }
+}
+
+::-webkit-scrollbar {
+    display: none;
 }

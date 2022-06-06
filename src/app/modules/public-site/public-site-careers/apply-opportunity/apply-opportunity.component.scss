@@ -1,18 +1,23 @@
+@import "../../../common/styles/quickDoc.scss";
+
 .apply-opportunity-container {
     padding: 1rem;
     .name {
         .name-field {
             min-width: 100%;
+            width: 0;
         }
     }
     .email {
         .email-field {
             min-width: 100%;
+            width: 0;
         }
     }
     .mobile {
         .mobile-field {
             min-width: 100%;
+            width: 0;
         }
     }
     .file-upload {
@@ -20,8 +25,10 @@
         border: 0.063rem solid;
         border-radius: 0.25rem;
         border-color: #e0e0e0e0;
+        overflow-x: scroll;
         input {
             padding: 1rem 0.625rem;
+            cursor: pointer;
         }
     }
     .file-upload:hover {
@@ -31,6 +38,29 @@
     .submit {
         button {
             min-width: 100%;
+            background-color: $mainForeColor;
+            color: $mainBackgroundColor;
+        }
+        :hover {
+            background-color: $mainBackgroundColor;
+            color: $mainForeColor;
         }
     }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@media only screen and (max-width: 350px) {
+    .apply-opportunity-container {
+        font-size: 0.75rem;
+    }
+    .submit {
+        font-size: 1rem;
+    }
+}
+
+::ng-deep .mat-form-field-appearance-outline:focus .mat-form-field-outline:focus {
+    color: $mainForeColor;
 }
