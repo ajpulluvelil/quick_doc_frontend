@@ -3,10 +3,8 @@
     <div class="content-wrapper">
         <div class="row header">
             <h4 class="col-10 name"> {{ career.name }} </h4>
-            <div  class="col-2 btn-icon-wrapper">
-                <button mat-button class="next-button" (click)="applyForTheSpecifiedOpportunity(career.id)">
-                    <mat-icon>navigate_next</mat-icon>
-                </button>
+            <div class="col-2 btn-icon-wrapper">
+                <mat-icon (click)="applyForTheSpecifiedOpportunity(career.id)">navigate_next</mat-icon>
             </div>
         </div>
         <div class="career-content">
