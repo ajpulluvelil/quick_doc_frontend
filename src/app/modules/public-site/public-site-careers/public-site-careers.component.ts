@@ -9,8 +9,6 @@ import { CareerList } from '../common/utils/career-list';
 })
 export class PublicSiteCareersComponent implements OnInit {
 
-  isOpenPositionsRequested: boolean = false;
-
   careerLists: CareerType[] = CareerList;
 
   constructor() { }

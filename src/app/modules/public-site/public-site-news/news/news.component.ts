@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NewsListType } from '../../common/interfaces/news-list-type';
 
 @Component({
   selector: 'app-news',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsComponent implements OnInit {
 
+  @Input() news: NewsListType = {
+    image: '',
+    headLine: '',
+    description: '',
+    date: ''
+  };
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.news);
+
   }
 
 }
