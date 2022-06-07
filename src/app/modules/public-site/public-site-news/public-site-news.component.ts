@@ -10,11 +10,17 @@ import { NewsLists } from '../common/utils/news-lists';
 export class PublicSiteNewsComponent implements OnInit {
 
   newsList: Array<NewsListType> = [];
+  focusedArticle: NewsListType | undefined;
 
   constructor() { }
 
   ngOnInit(): void {
     this.newsList = NewsLists;
+    this.findFocusedArticle(this.newsList)
+  }
+
+  findFocusedArticle(newsList: Array<NewsListType>): void {
+    this.focusedArticle = newsList.find(news => news.focusedItem);
   }
 
 }

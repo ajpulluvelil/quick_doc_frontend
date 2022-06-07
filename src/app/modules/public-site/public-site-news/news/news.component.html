@@ -1,1 +1,16 @@
-<p>news works!</p>
+<div class="item-container" [ngClass]="{'not-focused-item' : !news?.focusedItem}">
+    <div class="col image-wrapper">
+        <img [src]="news?.image" alt="alt_text" class="image">
+    </div>
+    <div class="col content-wrapper">
+        <div *ngIf="!news?.focusedItem" class="item-date">
+            {{ news?.date }}
+        </div>
+        <div class="item-title">
+            {{ news?.headLine }}
+        </div>
+        <div *ngIf="news?.focusedItem" class="description">
+            {{ news?.description }}
+        </div>
+    </div>
+</div>
