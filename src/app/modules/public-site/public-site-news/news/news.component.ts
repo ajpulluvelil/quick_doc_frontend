@@ -9,6 +9,7 @@ import { NewsListType } from '../../common/interfaces/news-list-type';
 export class NewsComponent implements OnInit {
 
   @Input() news: NewsListType = {
+    id: '',
     image: '',
     headLine: '',
     description: '',
@@ -18,8 +19,6 @@ export class NewsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.news);
-
   }
 
 }

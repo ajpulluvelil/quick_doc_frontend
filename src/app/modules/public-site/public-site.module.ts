@@ -24,6 +24,7 @@ import { LocationComponent } from './public-site-contact-us/location/location.co
 import { CareerItemComponent } from './public-site-careers/career-item/career-item.component';
 import { ApplyOpportunityComponent } from './public-site-careers/apply-opportunity/apply-opportunity.component';
 import { OpportunityDetailsComponent } from './public-site-careers/opportunity-details/opportunity-details.component';
+import { ReadArticleComponent } from './public-site-news/read-article/read-article.component';
 
 
 
@@ -48,7 +49,8 @@ import { OpportunityDetailsComponent } from './public-site-careers/opportunity-d
     LocationComponent,
     CareerItemComponent,
     ApplyOpportunityComponent,
-    OpportunityDetailsComponent
+    OpportunityDetailsComponent,
+    ReadArticleComponent
   ],
   imports: [
     CommonModule,
