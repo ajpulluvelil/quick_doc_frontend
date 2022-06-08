@@ -1,0 +1,23 @@
+<div
+    class="container container-fluid container-xxl container-xl container-lg container-md container-sm article-container read-article-container">
+    <div class="back">
+        <span class="back-text" (click)="onBackClick()">
+            <mat-icon>keyboard_backspace</mat-icon>
+            <span>Back</span>
+        </span>
+    </div>
+    <div class="read-article-wrapper">
+        <div class="article-image">
+            <img [src]="article.image" alt="" class="image">
+        </div>
+        <div class="headline">
+            {{ article.headLine }}
+        </div>
+        <div class="description">
+            {{ article.description }}
+        </div>
+        <div class="full-description">
+            {{ article.fullDescription }}
+        </div>
+    </div>
+</div>

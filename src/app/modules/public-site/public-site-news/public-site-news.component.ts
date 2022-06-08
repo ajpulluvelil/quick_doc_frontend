@@ -11,6 +11,14 @@ export class PublicSiteNewsComponent implements OnInit {
 
   newsList: Array<NewsListType> = [];
   focusedArticle: NewsListType | undefined;
+  isIndividualArticleSelected: boolean = false;
+  selectedArticle: NewsListType = {
+    id: '',
+    image: '',
+    headLine: '',
+    description: '',
+    date: ''
+  };
 
   constructor() { }
 
@@ -20,7 +28,22 @@ export class PublicSiteNewsComponent implements OnInit {
   }
 
   findFocusedArticle(newsList: Array<NewsListType>): void {
-    this.focusedArticle = newsList.find(news => news.focusedItem);
+    if (newsList && newsList.length > 0) {
+      this.focusedArticle = newsList.find(news => news.focusedItem);
+      if (!this.focusedArticle) {
+        this.newsList[0].focusedItem = true;
+        this.focusedArticle = newsList[0];
+      }
+    }
+  }
+
+  selectArticle(article: NewsListType): void {
+    this.isIndividualArticleSelected = true;
+    this.selectedArticle = article;
+  }
+
+  individualArticleDisabled(): void {
+    this.isIndividualArticleSelected = false;
   }
 
 }

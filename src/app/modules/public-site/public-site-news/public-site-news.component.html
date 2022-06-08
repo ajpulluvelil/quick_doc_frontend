@@ -1,42 +1,20 @@
-<!-- <div class="news-wrapper">
-    <div class="news-header">
-        <div class="header">
-            LATEST NEWS
-        </div>
-        <div class="header-bottom-bar">
-            <mat-divider class="bottom-bar"></mat-divider>
-        </div>
-    </div>
-    <div class="news-scrolling-wrapper">
-        <div class="news-card"> -->
-<!-- <app-news [news]="news"></app-news> -->
-<!-- <img class="news-image" alt="news-img" [src]="news.image">
-            <div class="news-content-wrapper">
-                <span class="head-line">{{ news.headLine }}</span>
-                <div class="read-more">
-                    <button mat-raised-button class="read-more-btn">Read More</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-<div
+<div *ngIf="!isIndividualArticleSelected"
     class="container container-fluid container-xxl container-xl container-lg container-md container-sm article-container">
     <div class="article-header">
         Articles / News
     </div>
     <div class="row article-wrapper">
         <div *ngIf="focusedArticle" class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 article-focused">
-            <app-news [news]="focusedArticle"></app-news>
+            <app-news [news]="focusedArticle" (click)="selectArticle(focusedArticle)"></app-news>
         </div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 article">
             <ng-container *ngFor="let news of newsList">
                 <div *ngIf="!news.focusedItem" class="row">
-                    <app-news [news]="news"></app-news>
+                    <app-news [news]="news" (click)="selectArticle(news)"></app-news>
                     <mat-divider class="divider"></mat-divider>
                 </div>
             </ng-container>
         </div>
     </div>
 </div>
+<app-read-article *ngIf="isIndividualArticleSelected" [article]="selectedArticle" (readArticleViewDisabled)="individualArticleDisabled()"></app-read-article>
