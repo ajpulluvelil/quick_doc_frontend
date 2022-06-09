@@ -1,38 +1,52 @@
 <div class="apply-opportunity-container">
-    <div class="name">
-        <mat-form-field class="name-field" appearance="outline">
-            <mat-label>First name</mat-label>
-            <input matInput placeholder="David">
-        </mat-form-field>
-    </div>
-    <div class="name">
-        <mat-form-field class="name-field" appearance="outline">
-            <mat-label>Last name</mat-label>
-            <input matInput placeholder="Williams">
-        </mat-form-field>
-    </div>
-    <div class="email">
-        <mat-form-field class="email-field" appearance="outline">
-            <mat-label>Email address</mat-label>
-            <input matInput placeholder="david.williams.quickdoc.me">
-        </mat-form-field>
-    </div>
-    <div class="mobile">
-        <mat-form-field class="mobile-field" appearance="outline">
-            <mat-label>Mobile number</mat-label>
-            <input matInput placeholder="+910000000000">
-        </mat-form-field>
-    </div>
-    <div class="mobile">
-        <mat-form-field class="mobile-field" appearance="outline">
-            <mat-label>Additional Links</mat-label>
-            <input matInput placeholder="https://in.linkedin.com/">
-        </mat-form-field>
-    </div>
-    <div class="file-upload">
-        <input type="file" [accept]="careerAcceptableUploadFileTypes"  multiple>
-    </div>
-    <div class="submit">
-        <button mat-raised-button>Apply</button>
-    </div>
+    <form [formGroup]="applyOpportunityForm">
+        <div class="name">
+            <mat-form-field class="name-field" appearance="outline">
+                <mat-label>First name</mat-label>
+                <input matInput formControlName="firstName" placeholder="David">
+            </mat-form-field>
+        </div>
+        <div class="name">
+            <mat-form-field class="name-field" appearance="outline">
+                <mat-label>Last name</mat-label>
+                <input matInput formControlName="lastName" placeholder="Williams">
+            </mat-form-field>
+        </div>
+        <div class="email">
+            <mat-form-field class="email-field" appearance="outline">
+                <mat-label>Email address</mat-label>
+                <input matInput formControlName="email" placeholder="david.williams.quickdoc.me">
+            </mat-form-field>
+        </div>
+        <div class="mobile">
+            <mat-form-field class="mobile-field" appearance="outline">
+                <mat-label>Mobile number</mat-label>
+                <input matInput formControlName="mobileNumber" id="mobile-number" placeholder="+910000000000">
+            </mat-form-field>
+        </div>
+        <div class="mobile">
+            <ng-container formArrayName="additionalLinks">
+                <ng-container *ngFor="let additionalLinkForm of additionalLinks.controls; let linkIndex = index">
+                    <div [formGroupName]="linkIndex">
+                        <mat-form-field [ngClass]="{'mat-form-field-invalid': additionalLinkForm?.errors}" class="mobile-field"
+                            appearance="outline">
+                            <mat-label>Additional Links</mat-label>
+                            <input matInput formControlName="additionalLink" placeholder="https://in.linkedin.com/">
+                            <mat-icon *ngIf="linkIndex===0" matSuffix
+                                (click)="onAddAdditionalLinkClick(additionalLinks.controls)">add_circle_outline
+                            </mat-icon>
+                            <mat-icon *ngIf="linkIndex!==0 " matSuffix (click)="onRemoveAdditionalLinkClick(linkIndex)">
+                                remove_circle_outline</mat-icon>
+                        </mat-form-field>
+                    </div>
+                </ng-container>
+            </ng-container>
+        </div>
+        <div class="file-upload">
+            <input type="file" [accept]="careerAcceptableUploadFileTypes" multiple>
+        </div>
+        <div class="submit">
+            <button mat-raised-button>Apply</button>
+        </div>
+    </form>
 </div>

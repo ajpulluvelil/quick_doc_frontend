@@ -18,6 +18,13 @@
         .mobile-field {
             min-width: 100%;
             width: 0;
+            mat-icon {
+                margin-left: 0.5rem;
+                cursor: pointer;
+            }
+            mat-icon:hover {
+                color: $mainForeColor;
+            }
         }
     }
     .file-upload {
