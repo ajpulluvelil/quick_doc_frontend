@@ -14,6 +14,12 @@ export class PublicSiteRegisterComponent implements OnInit {
   countriesList!: any;
   countries!: any;
 
+  possibleGenders = [
+    { value: 'MALE', display: 'Male' },
+    { value: 'FEMALE', display: 'Female' },
+    { value: 'OTHER', display: 'Other' }
+  ];
+
   constructor(
     private fb: FormBuilder,
     private publicSiteService: PublicSiteService,
@@ -58,7 +64,7 @@ export class PublicSiteRegisterComponent implements OnInit {
   async getCountriesList() {
     await this.publicSiteApiService.getCountriesList().subscribe((res: any) => {
       this.countries = res
-      this.countriesList = this.countries;  
+      this.countriesList = this.countries;
     });
   }
 
