@@ -1,4 +1,4 @@
-<div class="registration-wrapper">
+<!-- <div class="registration-wrapper">
     <form action="" [formGroup]="registrationForm" (ngSubmit)="onSubmit(registrationForm)">
         <div class="registration-title">
             <mat-label class="title-label">Enter your Details!</mat-label>
@@ -95,4 +95,92 @@
                 class="submit-button">Submit</button>
         </div>
     </form>
+</div> -->
+<div
+    class="container container-fluid container-xxl container-xl container-lg container-md container-sm registration-container">
+    <div class="registration-title">
+        <span>Please enter your details...</span>
+    </div>
+    <div class="registration-wrapper">
+        <div class="row">
+            <mat-form-field class="col full-name-field" appearance="outline">
+                <mat-label>First Name</mat-label>
+                <input matInput placeholder="David">
+            </mat-form-field>
+            <mat-form-field class="col full-name-field" appearance="outline">
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder="Williams">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="col full-name-field" appearance="outline">
+                <mat-label>Email Address</mat-label>
+                <input matInput placeholder="david.williams.quickdoc.me">
+            </mat-form-field>
+            <mat-form-field class="col full-name-field" appearance="outline">
+                <mat-label>Confirm Email Address</mat-label>
+                <input matInput placeholder="david.williams.quickdoc.me">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="col full-name-field" appearance="outline">
+                <mat-label>Gender</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let gender of possibleGenders" [value]="gender.value">
+                        {{ gender.display }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="col full-name-field" appearance="outline">
+                <mat-label>Mobile Number</mat-label>
+                <input matInput placeholder="">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="col full-name-field" appearance="outline">
+                <mat-label>Date of birth</mat-label>
+                <input matInput placeholder=""[matDatepicker]="picker">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field class="col full-name-field" appearance="outline">
+                <mat-label>Nationality</mat-label>
+                <input matInput placeholder="">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="col full-name-field" appearance="outline">
+                <mat-label>State</mat-label>
+                <input matInput placeholder="">
+            </mat-form-field>
+            <mat-form-field class="col full-name-field" appearance="outline">
+                <mat-label>District</mat-label>
+                <input matInput placeholder="">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="col full-name-field" appearance="outline">
+                <mat-label>Apartment</mat-label>
+                <input matInput placeholder="">
+            </mat-form-field>
+            <mat-form-field class="col full-name-field" appearance="outline">
+                <mat-label>Landmark</mat-label>
+                <input matInput placeholder="">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="col full-name-field" appearance="outline">
+                <mat-label>PIN</mat-label>
+                <input matInput placeholder="">
+            </mat-form-field>
+            <mat-form-field class="col full-name-field" appearance="outline">
+                <mat-label>Street</mat-label>
+                <input matInput placeholder="">
+            </mat-form-field>
+        </div>
+        <div class="registration-button">
+            <button mat-raised-button disabled>Continue Registration</button>
+        </div>
+    </div>
 </div>
