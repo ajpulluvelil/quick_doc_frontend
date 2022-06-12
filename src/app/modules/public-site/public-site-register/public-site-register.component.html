@@ -1,186 +1,90 @@
-<!-- <div class="registration-wrapper">
-    <form action="" [formGroup]="registrationForm" (ngSubmit)="onSubmit(registrationForm)">
-        <div class="registration-title">
-            <mat-label class="title-label">Enter your Details!</mat-label>
-        </div>
-        <div class="row name-wrapper">
-            <div class="col first-name-wrapper">
-                <mat-label class="first-name-label">First Name</mat-label>
-                <input mat-input type="text" class="first-name-input" formControlName="firstName">
-            </div>
-            <div class="col last-email-wrapper">
-                <mat-label class="last-name-label">Last Name</mat-label>
-                <input mat-input type="text" class="last-name-input" formControlName="lastName">
-            </div>
-        </div>
-        <div class="row email-wrapper">
-            <div class="col email-address-wrapper">
-                <mat-label class="email-label">Email Address</mat-label>
-                <input mat-input type="email" class="email-input" formControlName="email">
-                <app-common-error [errorMessage]="'Enter correct mail ID'"></app-common-error>
-            </div>
-            <div class="col confirm-email-wrapper">
-                <mat-label class="confirm-email-label">Confirm Email Address</mat-label>
-                <input mat-input type="text" class="confirm-email-input" formControlName="confirmEmail">
-            </div>
-        </div>
-        <div class="row gender-telephone-wrapper">
-            <div class="col gender-wrapper">
-                <mat-label class="gender-label">Gender</mat-label>
-                <input type="text" class="gender-input" formControlName="gender">
-            </div>
-            <div class="col telephone-wrapper">
-                <mat-label class="telephone-label">Telephone</mat-label>
-                <input type="text" class="telephone-input" formControlName="telephone">
-            </div>
-        </div>
-        <div class="row dob-nationality-wrapper">
-            <div class="col dob-wrapper">
-                <mat-label class="dob-label">Date of Birth</mat-label>
-                <input type="text" class="dob-input" formControlName="dob">
-            </div>
-            <div class="col nationality-wrapper">
-                <mat-label class="nationality-label">Nationality</mat-label>
-                <input type="text" class="nationality-input" formControlName="nationality">
-            </div>
-        </div>
-        <div class="row country-state-wrapper">
-            <div class="col country-wrapper">
-                <mat-label class="country-label">Country</mat-label>
-                <input type="text" class="country-input" formControlName="country" [matAutocomplete]="auto">
-                <mat-autocomplete class="custom-scroll" #auto="matAutocomplete" [displayWith]="displayFn">
-                    <mat-option class="country-option" *ngFor="let country of countriesList"
-                        [value]="country.name.common">
-                        {{country.name.common}}
-                    </mat-option>
-                </mat-autocomplete>
-            </div>
-            <div class="col state-wrapper">
-                <mat-label class="country-label">State</mat-label>
-                <input type="text" class="state-input" formControlName="state">
-            </div>
-        </div>
-        <div class="row district-city-wrapper">
-            <div class="col district-wrapper">
-                <mat-label class="district-label">District</mat-label>
-                <input type="text" class="district-input" formControlName="district">
-            </div>
-            <div class="col city-wrapper">
-                <mat-label class="city-label">City</mat-label>
-                <input type="text" class="city-input" formControlName="city">
-            </div>
-        </div>
-        <div class="row pin-landmark-wrapper">
-            <div class="col pin-wrapper">
-                <mat-label class="pin-label">ZIP</mat-label>
-                <input type="text" class="pin-input" formControlName="pin">
-            </div>
-            <div class="col landmark-wrapper">
-                <mat-label class="landmark-label">Landmark</mat-label>
-                <input type="text" class="landmark-input" formControlName="landMark">
-            </div>
-        </div>
-        <div class="row apartment-street-wrapper">
-            <div class="col apartment-wrapper">
-                <mat-label class="apartment-label">Apartment</mat-label>
-                <input type="text" class="apartment-input" formControlName="apartment">
-            </div>
-            <div class="col street-wrapper">
-                <mat-label class="street-label">Street</mat-label>
-                <input type="text" class="street-input" formControlName="street">
-            </div>
-        </div>
-        <div class="submit-button-wrapper">
-            <button mat-raised-button type="submit" [disabled]="!registrationForm.valid"
-                class="submit-button">Submit</button>
-        </div>
-    </form>
-</div> -->
 <div
     class="container container-fluid container-xxl container-xl container-lg container-md container-sm registration-container">
-    <div class="registration-title">
-        <span>Please enter your details...</span>
-    </div>
-    <div class="registration-wrapper">
-        <div class="row">
-            <mat-form-field class="col full-name-field" appearance="outline">
-                <mat-label>First Name</mat-label>
-                <input matInput placeholder="David" formControlName="firstName">
-            </mat-form-field>
-            <mat-form-field class="col full-name-field" appearance="outline">
-                <mat-label>Last Name</mat-label>
-                <input matInput placeholder="Williams" formControlName="lastName">
-            </mat-form-field>
+    <form action="" [formGroup]="registrationForm" (onsubmit)="onSubmit(registrationForm)">
+        <div class="registration-title">
+            <span>Please enter your details...</span>
         </div>
-        <div class="row">
-            <mat-form-field class="col full-name-field" appearance="outline">
-                <mat-label>Email Address</mat-label>
-                <input matInput placeholder="david.williams.quickdoc.me" formControlName="email">
-            </mat-form-field>
-            <mat-form-field class="col full-name-field" appearance="outline">
-                <mat-label>Confirm Email Address</mat-label>
-                <input matInput placeholder="david.williams.quickdoc.me" formControlName="confirmEmail">
-            </mat-form-field>
+        <div class="registration-wrapper">
+            <div class="row">
+                <mat-form-field class="col full-name-field" appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input matInput placeholder="David" formControlName="firstName">
+                </mat-form-field>
+                <mat-form-field class="col full-name-field" appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput placeholder="Williams" formControlName="lastName">
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field class="col full-name-field" appearance="outline">
+                    <mat-label>Email Address</mat-label>
+                    <input matInput placeholder="david.williams.quickdoc.me" formControlName="email">
+                </mat-form-field>
+                <mat-form-field class="col full-name-field" appearance="outline">
+                    <mat-label>Confirm Email Address</mat-label>
+                    <input matInput placeholder="david.williams.quickdoc.me" formControlName="confirmEmail" (onpaste)="onPaste($event)" (ondrop)="onDrop($event)">
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field class="col full-name-field" appearance="outline">
+                    <mat-label>Gender</mat-label>
+                    <mat-select formControlName="gender">
+                        <mat-option *ngFor="let gender of possibleGenders" [value]="gender.value">
+                            {{ gender.display }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field class="col full-name-field" appearance="outline">
+                    <mat-label>Mobile Number</mat-label>
+                    <input matInput placeholder="" formControlName="mobileNumber">
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field class="col full-name-field" appearance="outline">
+                    <mat-label>Date of birth</mat-label>
+                    <input matInput placeholder="" [matDatepicker]="picker" formControlName="dob">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <mat-form-field class="col full-name-field" appearance="outline">
+                    <mat-label>Nationality</mat-label>
+                    <input matInput placeholder="" formControlName="nationality">
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field class="col full-name-field" appearance="outline">
+                    <mat-label>State</mat-label>
+                    <input matInput placeholder="" formControlName="state">
+                </mat-form-field>
+                <mat-form-field class="col full-name-field" appearance="outline">
+                    <mat-label>District</mat-label>
+                    <input matInput placeholder="" formControlName="district">
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field class="col full-name-field" appearance="outline">
+                    <mat-label>Apartment</mat-label>
+                    <input matInput placeholder="" formControlName="apartment">
+                </mat-form-field>
+                <mat-form-field class="col full-name-field" appearance="outline">
+                    <mat-label>Landmark</mat-label>
+                    <input matInput placeholder="" formControlName="landmark">
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field class="col full-name-field" appearance="outline">
+                    <mat-label>PIN</mat-label>
+                    <input matInput placeholder="" formControlName="pin">
+                </mat-form-field>
+                <mat-form-field class="col full-name-field" appearance="outline">
+                    <mat-label>Street</mat-label>
+                    <input matInput placeholder="" formControlName="street">
+                </mat-form-field>
+            </div>
+            <div class="registration-button">
+                <button mat-raised-button type="submit">Continue Registrations</button>
+            </div>
         </div>
-        <div class="row">
-            <mat-form-field class="col full-name-field" appearance="outline">
-                <mat-label>Gender</mat-label>
-                <mat-select formControlName="gender">
-                    <mat-option *ngFor="let gender of possibleGenders" [value]="gender.value">
-                        {{ gender.display }}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
-            <mat-form-field class="col full-name-field" appearance="outline">
-                <mat-label>Mobile Number</mat-label>
-                <input matInput placeholder="" formControlName="mobileNumber">
-            </mat-form-field>
-        </div>
-        <div class="row">
-            <mat-form-field class="col full-name-field" appearance="outline">
-                <mat-label>Date of birth</mat-label>
-                <input matInput placeholder=""[matDatepicker]="picker" formControlName="dob">
-                <mat-hint>MM/DD/YYYY</mat-hint>
-                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
-            <mat-form-field class="col full-name-field" appearance="outline">
-                <mat-label>Nationality</mat-label>
-                <input matInput placeholder="" formControlName="nationality">
-            </mat-form-field>
-        </div>
-        <div class="row">
-            <mat-form-field class="col full-name-field" appearance="outline">
-                <mat-label>State</mat-label>
-                <input matInput placeholder="" formControlName="state">
-            </mat-form-field>
-            <mat-form-field class="col full-name-field" appearance="outline">
-                <mat-label>District</mat-label>
-                <input matInput placeholder="" formControlName="district">
-            </mat-form-field>
-        </div>
-        <div class="row">
-            <mat-form-field class="col full-name-field" appearance="outline">
-                <mat-label>Apartment</mat-label>
-                <input matInput placeholder="" formControlName="apartment">
-            </mat-form-field>
-            <mat-form-field class="col full-name-field" appearance="outline">
-                <mat-label>Landmark</mat-label>
-                <input matInput placeholder="" formControlName="landmark">
-            </mat-form-field>
-        </div>
-        <div class="row">
-            <mat-form-field class="col full-name-field" appearance="outline">
-                <mat-label>PIN</mat-label>
-                <input matInput placeholder="" formControlName="pin">
-            </mat-form-field>
-            <mat-form-field class="col full-name-field" appearance="outline">
-                <mat-label>Street</mat-label>
-                <input matInput placeholder="" formControlName="street">
-            </mat-form-field>
-        </div>
-        <div class="registration-button">
-            <button mat-raised-button disabled>Continue Registration</button>
-        </div>
-    </div>
+    </form>
 </div>
