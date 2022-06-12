@@ -41,7 +41,7 @@ export class PublicSiteRegisterComponent implements OnInit {
       email: new FormControl('', Validators.required),
       confirmEmail: new FormControl('', Validators.required),
       gender: new FormControl('', Validators.required),
-      telephone: new FormControl('', Validators.required),
+      mobileNumber: new FormControl('', Validators.required),
       dob: new FormControl('', Validators.required),
       nationality: new FormControl('', Validators.required),
       country: new FormControl('', Validators.required),
@@ -49,16 +49,14 @@ export class PublicSiteRegisterComponent implements OnInit {
       district: new FormControl(''),
       city: new FormControl('', Validators.required),
       pin: new FormControl('', Validators.required),
-      landMark: new FormControl('', Validators.required),
+      landmark: new FormControl('', Validators.required),
       apartment: new FormControl('', Validators.required),
       street: new FormControl('', Validators.required)
     })
   }
 
   onSubmit(registrationForm: FormGroup) {
-    this.publicSiteApiService.createNewPatientUser(registrationForm.value).subscribe(response => {
-
-    });
+    console.log('form', registrationForm);
   }
 
   async getCountriesList() {
@@ -72,4 +70,13 @@ export class PublicSiteRegisterComponent implements OnInit {
     return country ? country : '';
   }
 
+  onPaste(event: any): boolean {
+    event.preventDefault;
+    return false;
+  }
+
+  onDrop(event: any): boolean {
+    event.preventDefault;
+    return false;
+  }
 }
