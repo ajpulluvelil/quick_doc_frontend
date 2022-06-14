@@ -16,7 +16,9 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.metaService.addTags([
       { name:'mobile-web-app-capable',content:"Yes"},
-      { name: 'apple-mobile-web-app-capable', content: "Yes"}
+      { name: 'apple-mobile-web-app-capable', content: "Yes"},
+      { name: 'apple-mobile-web-app-status-bar-style', content: "black-translucent"},
+      { name: 'mobile-web-app-status-bar-style', content: "black-translucent"}
     ]);
   }
 }
