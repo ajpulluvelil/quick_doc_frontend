@@ -29,8 +29,8 @@ export class PublicSiteRegisterComponent implements OnInit {
   ngOnInit(): void {
     this.initRegistrationForm();
     this.getCountriesList();
-    this.registrationForm.controls['country'].valueChanges.pipe().subscribe(value => {
-      this.countriesList = this.countries.filter((element: any) => element.name.common.includes(value));
+    this.registrationForm.controls['nationality'].valueChanges.pipe().subscribe(value => {
+      this.countriesList = this.countriesList.filter((element: any) => element.includes(value));
     })
   }
 
@@ -52,7 +52,7 @@ export class PublicSiteRegisterComponent implements OnInit {
       landmark: new FormControl('', Validators.required),
       apartment: new FormControl('', Validators.required),
       street: new FormControl('', Validators.required)
-    })
+    });
   }
 
   onSubmit(registrationForm: FormGroup) {
@@ -60,23 +60,10 @@ export class PublicSiteRegisterComponent implements OnInit {
   }
 
   async getCountriesList() {
-    await this.publicSiteApiService.getCountriesList().subscribe((res: any) => {
-      this.countries = res
-      this.countriesList = this.countries;
-    });
   }
 
   displayFn(country: any): string {
     return country ? country : '';
   }
 
-  onPaste(event: any): boolean {
-    event.preventDefault;
-    return false;
-  }
-
-  onDrop(event: any): boolean {
-    event.preventDefault;
-    return false;
-  }
 }
