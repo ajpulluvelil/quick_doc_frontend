@@ -1,0 +1,22 @@
+{
+    "publicSite": {
+        "selfRegistration": {
+            "title": "कृपया अपना विवरण दर्ज करें...",
+            "firstName": "पहला नाम",
+            "lastName": "उपनाम",
+            "emailAddress": "ईमेल पता",
+            "confirmEmailAddress": "ईमेल पते की पुष्टि करें",
+            "gender": "लिंग",
+            "mobileNumber": "मोबाइल नंबर",
+            "dateOfBirth": "जन्म की तारीख",
+            "nationality": "राष्ट्रीयता",
+            "state": "राज्य",
+            "district": "ज़िला",
+            "apartment": "अपार्टमेंट",
+            "landmark": "सीमाचिह्न",
+            "pinCode": "पिन कोड",
+            "street": "सड़क",
+            "continueRegistration": "पंजीकरण जारी रखें"
+        }
+    }
+}
