@@ -14,7 +14,7 @@ export class PublicSiteContactUsComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private notificationServiceService: NotificationServiceService
+    private notificationService: NotificationServiceService
   ) { }
 
   get form() {
@@ -34,7 +34,7 @@ export class PublicSiteContactUsComponent implements OnInit {
   }
 
   onSubmit(contactUsForm: FormGroup) {
-    this.notificationServiceService.openSuccessSnackBar('Message has been sent successfully', 'Ok');
+    this.notificationService.openSuccessSnackBar('Message has been sent successfully', 'Ok');
     this.resetContactUsForm();
   }
 

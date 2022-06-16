@@ -6,6 +6,8 @@ import { SharedModule } from './modules/common/shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './modules/common/modules/material/material.module';
 import { ExternalModule } from './modules/common/modules/external/external.module';
+import { HttpClientModule } from '@angular/common/http';
+import { TranslocoRootModule } from './transloco-root.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ExternalModule } from './modules/common/modules/external/external.modul
     SharedModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ExternalModule
+    ExternalModule,
+    HttpClientModule,
+    TranslocoRootModule
   ],
   providers: [Meta],
   bootstrap: [AppComponent]

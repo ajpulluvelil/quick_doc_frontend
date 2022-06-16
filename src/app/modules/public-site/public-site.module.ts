@@ -25,6 +25,7 @@ import { CareerItemComponent } from './public-site-careers/career-item/career-it
 import { ApplyOpportunityComponent } from './public-site-careers/apply-opportunity/apply-opportunity.component';
 import { OpportunityDetailsComponent } from './public-site-careers/opportunity-details/opportunity-details.component';
 import { ReadArticleComponent } from './public-site-news/read-article/read-article.component';
+import { TranslocoModule } from '@ngneat/transloco';
 
 
 
@@ -57,7 +58,8 @@ import { ReadArticleComponent } from './public-site-news/read-article/read-artic
     MaterialModule,
     ExternalModule,
     PublicSiteRoutingModule,
-    SharedModule
+    SharedModule,
+    TranslocoModule
   ]
 })
 export class PublicSiteModule { }

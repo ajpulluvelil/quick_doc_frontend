@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { TranslocoService } from '@ngneat/transloco';
+import { NotificationServiceService } from '../../common/shared/services/notification/notification-service.service';
 import { PublicSiteApiService } from '../common/services/public-site-api.service';
 import { PublicSiteService } from '../common/services/public-site.service';
 
@@ -23,7 +25,9 @@ export class PublicSiteRegisterComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private publicSiteService: PublicSiteService,
-    private publicSiteApiService: PublicSiteApiService
+    private publicSiteApiService: PublicSiteApiService,
+    private notificationService: NotificationServiceService,
+    private translocoService: TranslocoService
   ) { }
 
   ngOnInit(): void {
@@ -57,13 +61,36 @@ export class PublicSiteRegisterComponent implements OnInit {
 
   onSubmit(registrationForm: FormGroup) {
     console.log('form', registrationForm);
+    this.switchLanguage();
+  }
+
+  switchLanguage() {
+    if (this.translocoService.getActiveLang() === 'en') {
+      this.translocoService.setActiveLang('hn');
+    } else {
+      this.translocoService.setActiveLang('en');
+    }
   }
 
   async getCountriesList() {
+
   }
 
   displayFn(country: any): string {
     return country ? country : '';
+  }
+
+  triggerOperationTextCut(event: any): void {
+    event.preventDefault();
+  }
+
+  triggerOperationTextCopy(event: any): void {
+    event.preventDefault();
+  }
+
+  triggerOperationTextPaste(event: any): void {
+    event.preventDefault();
+    this.notificationService.openSnackBar('You can\'t paste the content!', 'OK');
   }
 
 }

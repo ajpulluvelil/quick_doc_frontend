@@ -1,0 +1,22 @@
+{
+    "publicSite": {
+        "selfRegistration": {
+            "title": "Please enter your details...",
+            "firstName": "First Name",
+            "lastName": "Last name",
+            "emailAddress": "Email Address",
+            "confirmEmailAddress": "Confirm Email Address",
+            "gender": "Gender",
+            "mobileNumber": "Mobile Number",
+            "dateOfBirth": "DOB",
+            "nationality": "Nationality",
+            "state": "State",
+            "district": "District",
+            "apartment": "Apartment",
+            "landmark": "Landmark",
+            "pinCode": "PIN",
+            "street": "Street",
+            "continueRegistration": "Continue Registration"
+        }
+    }
+}
