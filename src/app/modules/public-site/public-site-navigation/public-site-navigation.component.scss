@@ -35,9 +35,26 @@
             padding: 1rem 1rem;
             cursor: pointer;
         }
-        :hover {
+        .list-item:hover {
             color: $mainForeColor;
             background-color: $mainBackgroundColor;
+        }
+        .language-change {
+            display: inline-block;
+            padding: 1rem 1rem;
+            cursor: pointer;
+            mat-select {
+                font-family: $primaryFontFamily, $secondaryFontFamily;
+            }
+            ::ng-deep.mat-select-value {
+                color: $mainBackgroundColor;
+                font-family: $primaryFontFamily, $secondaryFontFamily;
+            }
+            ::ng-deep.mat-select-arrow-wrapper {
+                .mat-select-arrow {
+                    color: $mainBackgroundColor;
+                }
+            }
         }
     }
     .ham-burger {
@@ -51,7 +68,6 @@
 .scroll {
     position: fixed !important;
 }
-
 
 
 @media only screen and (max-width: 1180px) {
@@ -86,7 +102,7 @@
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     .public-site-navigation {
         height: 56px;
         .public-site-logo {
