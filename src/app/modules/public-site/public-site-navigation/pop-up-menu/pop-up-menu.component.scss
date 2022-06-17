@@ -28,4 +28,27 @@
         color: $mainForeColor;
         background-color: $mainBackgroundColor;
     }
+    .language-change {
+        padding: 1rem;
+        color: $mainBackgroundColor;
+        cursor: pointer;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        mat-select {
+            width: auto !important;
+            font-family: $primaryFontFamily, $secondaryFontFamily;
+        }
+        ::ng-deep.mat-select-trigger {
+            .mat-select-value {
+                color: $mainBackgroundColor;
+                font-family: $primaryFontFamily, $secondaryFontFamily;
+            }
+            .mat-select-arrow-wrapper {
+                .mat-select-arrow {
+                    color: $mainBackgroundColor;
+                }
+            }
+        }
+    }
 }

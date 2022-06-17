@@ -24,4 +24,11 @@
     <div class="menu-item login" (click)="loginHasClicked()" [ngClass]="{'menu-item-active': isLoginSelected}">
         Login
     </div>
+    <div class="language-change">
+        <mat-select [(value)]="selectedLanguage" (selectionChange)="setSelectedLanguageToLocalStorage()">
+            <mat-option *ngFor="let language of possibleLanguageValues" [value]="language.value">
+                {{ language.display }}
+            </mat-option>
+        </mat-select>
+    </div>
 </div>

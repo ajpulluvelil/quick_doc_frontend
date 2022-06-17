@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import { TranslocoService } from '@ngneat/transloco';
 
 @Component({
   selector: 'app-pop-up-menu',
@@ -17,13 +18,21 @@ export class PopUpMenuComponent implements OnInit {
   isLoginSelected: boolean = false;
   isPositionFixedEnabled: boolean = false;
 
+  selectedLanguage = 'en';
+  possibleLanguageValues = [
+    { value: 'hn', display: 'Hindi' },
+    { value: 'en', display: 'English' }
+  ];
+
   constructor(
-    private dialogRef: MatDialogRef<PopUpMenuComponent>
+    private dialogRef: MatDialogRef<PopUpMenuComponent>,
+    private translocoService: TranslocoService
   ) { }
 
   ngOnInit(): void {
     const url = window.location.href;
     this.setActiveLink(url);
+    this.checkWhetherTheLanguageIsAlreadySet();
   }
 
   onCloseMenuClick(): void {
@@ -52,8 +61,21 @@ export class PopUpMenuComponent implements OnInit {
     this.closeDialog('home');
   }
 
+  setSelectedLanguageToLocalStorage(): void {
+    localStorage.setItem('selectedLanguage', this.selectedLanguage);
+    this.translocoService.setActiveLang(this.selectedLanguage);
+  }
+
   servicesHasClicked() {
     this.closeDialog('services');
+  }
+
+  checkWhetherTheLanguageIsAlreadySet(): void {
+    const selectedLanguage = localStorage.getItem('selectedLanguage');
+    if (selectedLanguage) {
+      this.selectedLanguage = selectedLanguage;
+      this.translocoService.setActiveLang(selectedLanguage);
+    }
   }
 
   contactUsHasClicked() {

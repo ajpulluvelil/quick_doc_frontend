@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { TranslocoService } from '@ngneat/transloco';
 import { PublicSiteApiService } from '../common/services/public-site-api.service';
 import { PublicSiteService } from '../common/services/public-site.service';
 import { PopUpMenuComponent } from './pop-up-menu/pop-up-menu.component';
@@ -21,11 +22,17 @@ export class PublicSiteNavigationComponent implements OnInit {
   isLoginSelected: boolean = false;
   isPositionFixedEnabled: boolean = false;
 
+  selectedLanguage: string = 'en';
+  possibleLanguageValues = [
+    { value: 'hn', display: 'Hindi' },
+    { value: 'en', display: 'English' }
+  ];
   constructor(
     private publicSiteService: PublicSiteService,
     private publicSiteApiService: PublicSiteApiService,
     private dialog: MatDialog,
-    private router: Router
+    private router: Router,
+    private translocoService: TranslocoService
   ) {
   }
 
@@ -34,16 +41,11 @@ export class PublicSiteNavigationComponent implements OnInit {
     this.isPositionFixedEnabled = this.publicSiteService.isPositionFixedEnabled;
   }
 
-  /** commented for future reference
-  @HostBinding('class.service-scroll')
-  get enablePositionFixed() {
-    return this.isPositionFixedEnabled;
-  } */
-
   ngOnInit(): void {
     const url = window.location.href;
     this.setActiveLink(url);
     this.isPositionFixedEnabled = this.publicSiteService.isPositionFixedEnabled;
+    this.checkWhetherTheLanguageIsAlreadySet();
   }
 
   homeSelected(): void {
@@ -56,6 +58,11 @@ export class PublicSiteNavigationComponent implements OnInit {
     this.isLoginSelected = false;
   }
 
+  setSelectedLanguageToLocalStorage(): void {
+    localStorage.setItem('selectedLanguage', this.selectedLanguage);
+    this.translocoService.setActiveLang(this.selectedLanguage);
+  }
+
   servicesSelected(): void {
     this.isHomeSelected = false;
     this.isServicesSelected = true;
@@ -64,6 +71,14 @@ export class PublicSiteNavigationComponent implements OnInit {
     this.isNewsSelected = false;
     this.isRegisterSelected = false;
     this.isLoginSelected = false;
+  }
+
+  checkWhetherTheLanguageIsAlreadySet(): void {
+    const selectedLanguage = localStorage.getItem('selectedLanguage');
+    if (selectedLanguage) {
+      this.selectedLanguage = selectedLanguage;
+      this.translocoService.setActiveLang(this.selectedLanguage);
+    }
   }
 
   contactSelected(): void {
