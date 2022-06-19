@@ -37,8 +37,6 @@ export class ApplyOpportunityComponent implements OnInit {
   }
 
   onAddAdditionalLinkClick(additionalLinkFormControls: AbstractControl[]): void {
-    console.log(additionalLinkFormControls);
-    
     if (this.checkAdditionalLinkFormControlsAreValid(additionalLinkFormControls) === 0) {
       this.pushAdditionalLinkForm();
     } else {
@@ -63,6 +61,10 @@ export class ApplyOpportunityComponent implements OnInit {
 
   onRemoveAdditionalLinkClick(index: number): void {
     this.additionalLinks.removeAt(index);
+  }
+
+  onClick(applyOpportunityForm: any): void {
+    console.log(applyOpportunityForm)
   }
 
 }
