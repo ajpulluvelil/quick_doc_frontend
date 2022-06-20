@@ -60,8 +60,6 @@ export class PublicSiteRegisterComponent implements OnInit {
   }
 
   onSubmit(registrationForm: FormGroup) {
-    console.log('form', registrationForm);
-    this.switchLanguage();
   }
 
   switchLanguage() {
