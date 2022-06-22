@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { TranslocoService } from '@ngneat/transloco';
 import { NotificationServiceService } from '../../common/shared/services/notification/notification-service.service';
 import { PublicSiteApiService } from '../common/services/public-site-api.service';
@@ -27,7 +28,8 @@ export class PublicSiteRegisterComponent implements OnInit {
     private publicSiteService: PublicSiteService,
     private publicSiteApiService: PublicSiteApiService,
     private notificationService: NotificationServiceService,
-    private translocoService: TranslocoService
+    private translocoService: TranslocoService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -60,6 +62,7 @@ export class PublicSiteRegisterComponent implements OnInit {
   }
 
   onSubmit(registrationForm: FormGroup) {
+    this.router.navigate(['public-site/landing/clinic-selection']);
   }
 
   switchLanguage() {
