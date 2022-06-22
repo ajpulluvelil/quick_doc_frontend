@@ -6,6 +6,7 @@ import { PublicSiteContactUsComponent } from './public-site-contact-us/public-si
 import { PublicSiteHomeComponent } from './public-site-home/public-site-home.component';
 import { PublicSiteLoginComponent } from './public-site-login/public-site-login.component';
 import { PublicSiteNewsComponent } from './public-site-news/public-site-news.component';
+import { ClinicSelectionComponent } from './public-site-register/clinic-selection/clinic-selection.component';
 import { PublicSiteRegisterComponent } from './public-site-register/public-site-register.component';
 import { PublicSiteServicesComponent } from './public-site-services/public-site-services.component';
 import { PublicSiteComponent } from './public-site/public-site.component';
@@ -41,6 +42,9 @@ const routes: Routes = [{
     }, {
         path: 'register',
         component: PublicSiteRegisterComponent
+    }, {
+        path: 'clinic-selection',
+        component: ClinicSelectionComponent
     }, {
         path: 'login',
         component: PublicSiteLoginComponent
