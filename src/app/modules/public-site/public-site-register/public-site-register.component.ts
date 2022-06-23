@@ -3,8 +3,10 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { TranslocoService } from '@ngneat/transloco';
 import { NotificationServiceService } from '../../common/shared/services/notification/notification-service.service';
+import { CountryList } from '../common/interfaces/country-list-type';
 import { PublicSiteApiService } from '../common/services/public-site-api.service';
 import { PublicSiteService } from '../common/services/public-site.service';
+import { countryLists } from '../common/utils/country-lists';
 
 @Component({
   selector: 'app-public-site-register',
@@ -14,8 +16,10 @@ import { PublicSiteService } from '../common/services/public-site.service';
 export class PublicSiteRegisterComponent implements OnInit {
 
   registrationForm!: FormGroup;
-  countriesList!: any;
+  countriesList: CountryList[] = countryLists;
   countries!: any;
+  states!: any;
+  stateList!: any[];
 
   possibleGenders = [
     { value: 'MALE', display: 'Male' },
@@ -33,10 +37,24 @@ export class PublicSiteRegisterComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.countries = this.countriesList;
     this.initRegistrationForm();
-    this.getCountriesList();
     this.registrationForm.controls['nationality'].valueChanges.pipe().subscribe(value => {
-      this.countriesList = this.countriesList.filter((element: any) => element.includes(value));
+      this.countriesList = this.countries.filter((element: any) => element.display.includes(value));
+      const stateList = this.registrationForm.controls['nationality'].value;
+      if (stateList.display || stateList.value) {
+        this.registrationForm.controls['state'].enable();
+        this.stateList = stateList.state;
+        this.states = stateList.state;
+      } else {
+        this.registrationForm.controls['state'].disable();
+        this.registrationForm.controls['state'].reset();
+      }
+    });
+    this.registrationForm.controls['state'].valueChanges.pipe().subscribe(value => {
+      if (this.states) {
+        this.stateList = this.states.filter((element: { display: string | any[]; }) => element.display.includes(value));
+      }
     })
   }
 
@@ -51,8 +69,14 @@ export class PublicSiteRegisterComponent implements OnInit {
       dob: new FormControl('', Validators.required),
       nationality: new FormControl('', Validators.required),
       country: new FormControl('', Validators.required),
-      state: new FormControl('', Validators.required),
-      district: new FormControl(''),
+      state: new FormControl({
+        value: '',
+        disabled: true
+      }, Validators.required),
+      district: new FormControl({
+        value: '',
+        disabled: true
+      }),
       city: new FormControl('', Validators.required),
       pin: new FormControl('', Validators.required),
       landmark: new FormControl('', Validators.required),
@@ -73,12 +97,12 @@ export class PublicSiteRegisterComponent implements OnInit {
     }
   }
 
-  async getCountriesList() {
-
+  displayFn(country: any): string {
+    return country.display;
   }
 
-  displayFn(country: any): string {
-    return country ? country : '';
+  displayFunctionState(state: any): string {
+    return state.display;
   }
 
   triggerOperationTextCut(event: any): void {
