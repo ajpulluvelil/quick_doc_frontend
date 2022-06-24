@@ -1,0 +1,17 @@
+<mat-card class="clinic-wrapper" (click)="enableQuestionnaireView()">
+    <div class="clinic-image">
+        <img [src]="clinic.image" alt="clinic-image.jpg" class="image">
+    </div>
+    <div class="content-wrapper">
+        <div class="content-scroll-wrapper">
+            <div class="clinic-name"> {{ clinic.clinicName }} </div>
+            <div class="clinic-description"> {{ clinic.description }} </div>
+            <div class="clinic-facilities">
+                <span class="facilities">Facilities</span>
+                <ul class="facility-wrapper">
+                    <li *ngFor="let facility of clinic.facilities"> {{ facility }} </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</mat-card>

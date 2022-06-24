@@ -25,9 +25,31 @@
             button {
                 background-color: $mainForeColor;
                 color: $mainBackgroundColor;
-            }:hover {
+            }
+            :hover {
                 background-color: $mainBackgroundColor;
                 color: $mainForeColor;
+            }
+        }
+    }
+}
+
+::ng-deep .cdk-overlay-container {
+    .cdk-overlay-connected-position-bounding-box {
+        .cdk-overlay-pane .mat-autocomplete-panel .mat-autocomplete-visible {
+            ::-webkit-scrollbar {
+                width: 1.25rem;
+            }
+
+            ::-webkit-scrollbar-track {
+                background-color: transparent;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background-color: #d6dee1;
+                border-radius: 1.25rem;
+                border: 0.375rem solid transparent;
+                background-clip: content-box;
             }
         }
     }

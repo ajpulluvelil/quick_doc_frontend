@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ClinicsType } from '../../common/interfaces/clinics-type';
+import { Router } from '@angular/router';
+import { ClinicsType } from '../../../common/interfaces/clinics-type';
 
 @Component({
   selector: 'app-clinic',
@@ -10,9 +11,14 @@ export class ClinicComponent implements OnInit {
 
   @Input() clinic!: ClinicsType;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
+  enableQuestionnaireView(): void {
+    this.router.navigate(['public-site/landing/questionnaire']);
+  }
 }
