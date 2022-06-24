@@ -25,7 +25,9 @@ body {
 .success-notification-message {
     background-color: #008000;
     color: #ffffff;
-    .mat-simple-snackbar, .mat-simple-snackbar-action, .mat-button {
+    .mat-simple-snackbar,
+    .mat-simple-snackbar-action,
+    .mat-button {
         font-family: $primaryFontFamily, $secondaryFontFamily !important;
     }
     .mat-simple-snackbar-action {
@@ -37,10 +39,25 @@ body {
     font-family: $primaryFontFamily, $secondaryFontFamily !important;
     background-color: #ff0000;
     color: #ffffff;
-    .mat-simple-snackbar, .mat-button {
+    .mat-simple-snackbar,
+    .mat-button {
         font-family: $primaryFontFamily, $secondaryFontFamily !important;
     }
     .mat-simple-snackbar-action {
         color: $mainForeColor;
+    }
+}
+
+.auto-complete.mat-autocomplete-panel {
+    &::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    &::-webkit-scrollbar-track {
+        border-radius: 0.25rem;
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 1.25rem;
+        background-color: #d6dee1;
     }
 }

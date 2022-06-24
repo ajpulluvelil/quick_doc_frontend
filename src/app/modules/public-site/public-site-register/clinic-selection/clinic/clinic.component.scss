@@ -1,0 +1,46 @@
+.clinic-wrapper {
+    max-width: 100%;
+    margin: 1rem;
+    box-sizing: border-box;
+    font-size: 50px;
+    font-size: 14px;
+    padding: 0;
+    box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
+    .clinic-image {
+        .image {
+            position: relative;
+            width: 100%;
+            margin: 0;
+            border-radius: 0.25rem 0.25rem 0 0;
+        }
+    }
+    .content-wrapper {
+        padding: 1rem;
+        overflow: hidden;
+        height: 220px;
+        .content-scroll-wrapper {
+            overflow: scroll;
+            height: 195px;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            .clinic-name {
+                font-weight: 700;
+            }
+            .clinic-description {
+                text-align: justify;
+            }
+            .clinic-facilities {
+                .facilities {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+:hover {
+    cursor: pointer;
+    .image {
+        opacity: 0.3;
+    }
+}

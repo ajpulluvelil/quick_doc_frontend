@@ -1,0 +1,6 @@
+.question-wrapper {
+    padding: 0 1rem;
+    .mat-radio-button ~ .mat-radio-button {
+        margin-left: 1rem;
+    }
+}

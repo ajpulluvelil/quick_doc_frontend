@@ -17,7 +17,7 @@ import { ExternalModule } from '../common/modules/external/external.module';
 import { NewsComponent } from './public-site-news/news/news.component';
 import { SharedModule } from '../common/shared/shared.module';
 import { ClinicSelectionComponent } from './public-site-register/clinic-selection/clinic-selection.component';
-import { ClinicComponent } from './public-site-register/clinic/clinic.component';
+import { ClinicComponent } from './public-site-register/clinic-selection/clinic/clinic.component';
 import { PopUpMenuComponent } from './public-site-navigation/pop-up-menu/pop-up-menu.component';
 import { SearchQueryListComponent } from './public-site-home/search-query-list/search-query-list.component';
 import { LocationComponent } from './public-site-contact-us/location/location.component';
@@ -26,6 +26,9 @@ import { ApplyOpportunityComponent } from './public-site-careers/apply-opportuni
 import { OpportunityDetailsComponent } from './public-site-careers/opportunity-details/opportunity-details.component';
 import { ReadArticleComponent } from './public-site-news/read-article/read-article.component';
 import { TranslocoModule } from '@ngneat/transloco';
+import { RegistrationQuestionnaireComponent } from './public-site-register/registration-questionnaire/registration-questionnaire.component';
+import { SectionComponent } from './public-site-register/registration-questionnaire/section/section.component';
+import { QuestionComponent } from './public-site-register/registration-questionnaire/section/question/question.component';
 
 
 
@@ -51,7 +54,10 @@ import { TranslocoModule } from '@ngneat/transloco';
     CareerItemComponent,
     ApplyOpportunityComponent,
     OpportunityDetailsComponent,
-    ReadArticleComponent
+    ReadArticleComponent,
+    RegistrationQuestionnaireComponent,
+    SectionComponent,
+    QuestionComponent
   ],
   imports: [
     CommonModule,

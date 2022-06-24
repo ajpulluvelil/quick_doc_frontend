@@ -27,8 +27,7 @@
                     appearance="outline">
                     <mat-label>{{ 'publicSite.selfRegistration.confirmEmailAddress' | transloco }}</mat-label>
                     <input matInput placeholder="david.williams.quickdoc.me" formControlName="confirmEmail"
-                        (cut)="triggerOperationTextCut($event)" (copy)="triggerOperationTextCopy($event)"
-                        (paste)="triggerOperationTextPaste($event)">
+                        (cut)="triggerOperationTextCut($event)" (copy)="triggerOperationTextCopy($event)" (paste)="triggerOperationTextPaste($event)">
                 </mat-form-field>
             </div>
             <div class="row">
@@ -60,7 +59,7 @@
                     appearance="outline">
                     <mat-label>{{ 'publicSite.selfRegistration.nationality' | transloco }}</mat-label>
                     <input matInput placeholder="" formControlName="nationality" [matAutocomplete]="auto">
-                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" [displayWith]="displayFn">
+                    <mat-autocomplete class="auto-complete" autoActiveFirstOption #auto="matAutocomplete" [displayWith]="displayFn">
                         <mat-option *ngFor="let country of countriesList" [value]="country">
                             {{ country.display }}
                         </mat-option>
@@ -72,8 +71,7 @@
                     appearance="outline">
                     <mat-label>{{ 'publicSite.selfRegistration.state' | transloco }}</mat-label>
                     <input matInput placeholder="" formControlName="state" [matAutocomplete]="autoCompleteState">
-                    <mat-autocomplete autoActiveFirstOption #autoCompleteState="matAutocomplete"
-                        [displayWith]="displayFn">
+                    <mat-autocomplete class="auto-complete" autoActiveFirstOption #autoCompleteState="matAutocomplete" [displayWith]="displayFunctionState">
                         <mat-option *ngFor="let state of stateList" [value]="state">
                             {{ state.display }}
                         </mat-option>
@@ -83,10 +81,9 @@
                     appearance="outline">
                     <mat-label>{{ 'publicSite.selfRegistration.district' | transloco }}</mat-label>
                     <input matInput placeholder="" formControlName="district" [matAutocomplete]="autoCompleteDistrict">
-                    <mat-autocomplete autoActiveFirstOption #autoCompleteDistrict="matAutocomplete"
-                        [displayWith]="displayFunctionState">
-                        <mat-option *ngFor="let state of stateList" [value]="state">
-                            {{ state.display }}
+                    <mat-autocomplete class="auto-complete" autoActiveFirstOption #autoCompleteDistrict="matAutocomplete" [displayWith]="displayFunctionDistrict">
+                        <mat-option *ngFor="let district of districtList" [value]="district">
+                            {{ district.display }}
                         </mat-option>
                     </mat-autocomplete>
                 </mat-form-field>
@@ -116,8 +113,7 @@
                 </mat-form-field>
             </div>
             <div class="registration-button">
-                <button mat-raised-button type="submit">{{ 'publicSite.selfRegistration.continueRegistration' |
-                    transloco }}</button>
+                <button mat-raised-button type="submit">{{ 'publicSite.selfRegistration.continueRegistration' | transloco }}</button>
             </div>
         </div>
     </form>

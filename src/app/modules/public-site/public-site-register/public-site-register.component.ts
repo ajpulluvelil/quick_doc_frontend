@@ -20,6 +20,8 @@ export class PublicSiteRegisterComponent implements OnInit {
   countries!: any;
   states!: any;
   stateList!: any[];
+  districtList!: any[];
+  districts!: any;
 
   possibleGenders = [
     { value: 'MALE', display: 'Male' },
@@ -54,6 +56,18 @@ export class PublicSiteRegisterComponent implements OnInit {
     this.registrationForm.controls['state'].valueChanges.pipe().subscribe(value => {
       if (this.states) {
         this.stateList = this.states.filter((element: { display: string | any[]; }) => element.display.includes(value));
+        const districtList = this.registrationForm.controls['state'].value;
+        if (districtList.display || districtList.value) {
+          this.registrationForm.controls['district'].enable();
+          this.districtList = districtList.districts;
+          this.districts = districtList.districts;
+          console.log(this.districtList);
+          console.log(this.districts);
+          console.log(districtList);
+        } else {
+          this.registrationForm.controls['district'].disable();
+          this.registrationForm.controls['district'].reset();
+        }
       }
     })
   }
@@ -98,11 +112,21 @@ export class PublicSiteRegisterComponent implements OnInit {
   }
 
   displayFn(country: any): string {
-    return country.display;
+    if (country instanceof Object)
+      return country.display ? country.display : '';
+    return '';
   }
 
   displayFunctionState(state: any): string {
-    return state.display;
+    if (state instanceof Object)
+      return state.display ? state.display : '';
+    return '';
+  }
+
+  displayFunctionDistrict(district: any): string {
+    if (district instanceof Object)
+      return district.display ? district.display : '';
+    return '';
   }
 
   triggerOperationTextCut(event: any): void {
