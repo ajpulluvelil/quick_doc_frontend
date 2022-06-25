@@ -64,7 +64,6 @@ export class ApplyOpportunityComponent implements OnInit {
   }
 
   onClick(applyOpportunityForm: any): void {
-    console.log(applyOpportunityForm)
   }
 
 }
