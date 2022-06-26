@@ -61,9 +61,6 @@ export class PublicSiteRegisterComponent implements OnInit {
           this.registrationForm.controls['district'].enable();
           this.districtList = districtList.districts;
           this.districts = districtList.districts;
-          console.log(this.districtList);
-          console.log(this.districts);
-          console.log(districtList);
         } else {
           this.registrationForm.controls['district'].disable();
           this.registrationForm.controls['district'].reset();
