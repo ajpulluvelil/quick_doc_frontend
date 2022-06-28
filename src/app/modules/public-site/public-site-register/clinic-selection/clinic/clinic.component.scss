@@ -1,4 +1,7 @@
+@import "../../../../common/styles/quickDoc.scss";
+
 .clinic-wrapper {
+    font-family: $primaryFontFamily, $secondaryFontFamily;
     max-width: 100%;
     margin: 1rem;
     box-sizing: border-box;
