@@ -17,8 +17,35 @@ export const ENVIRONMENT = {
         ENABLED: true
       },
       CAREER: {
-        ACCEPTABLE_UPLOAD_FILE_TYPES: [ "application/pdf", ".pdf" ]
-      }
+        ACCEPTABLE_UPLOAD_FILE_TYPES: ["application/pdf", ".pdf"]
+      },
+      WEB_APP: [
+        {
+          "type": "link",
+          "name": "apple-touch-icon",
+          "href": "../apple-touch-icon.png"
+        }, {
+          "type": "link",
+          "name": "shortcut icon",
+          "href": "../apple-touch-icon.png"
+        }, {
+          "type": "meta",
+          "name": "mobile-web-app-capable",
+          "content": "Yes"
+        }, {
+          "type": "meta",
+          "name": "mobile-web-app-status-bar-style",
+          "content": "black-translucent"
+        }, {
+          "type": "meta",
+          "name": "apple-mobile-web-app-capable",
+          "content": "Yes"
+        }, {
+          "type": "meta",
+          "name": "apple-mobile-web-app-status-bar-style",
+          "content": "black-translucent"
+        }
+      ]
     },
     PROFESSIONAL: {
       DASHBOARD: {
