@@ -3,9 +3,11 @@
     <div class="questionnaire-wrapper">
         <div class="title-wrapper">
             <div class="questionnaire-title">
-                Covid questionnaire
+                {{ questionnaire.questionnaireName }}
             </div>
         </div>
-        <app-section></app-section>
+        <ng-container *ngFor="let section of questionnaire?.sections">
+            <app-section [section]="section"></app-section>
+        </ng-container>
     </div>
 </div>

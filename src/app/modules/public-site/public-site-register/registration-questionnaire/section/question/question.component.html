@@ -1,48 +1,50 @@
 <div class="question-wrapper">
-    <div class="question">
-        1. Do you have a temperature of 100.4 °F or higher?
-    </div>
-    <div class="options">
-        <mat-radio-group aria-label="Select an option">
-            <mat-radio-button value="1">Yes</mat-radio-button>
-            <mat-radio-button value="2">No</mat-radio-button>
-        </mat-radio-group>
-    </div>
-    <div class="question">
-        2. Are you taking fever-reducing medicines, such as those that contain asprin, ibuprofen or acetaminophen, in or to
-        reduce your fever?
-    </div>
-    <div class="options">
-        <mat-radio-group aria-label="Select an option">
-            <mat-radio-button value="1">Yes</mat-radio-button>
-            <mat-radio-button value="2">No</mat-radio-button>
-        </mat-radio-group>
-    </div>
-    <div class="question">
-        3. Have you had close contract or cared for someone with COVID-19 in the last 14 days?
-    </div>
-    <div class="options">
-        <mat-radio-group aria-label="Select an option">
-            <mat-radio-button value="1">Yes</mat-radio-button>
-            <mat-radio-button value="2">No</mat-radio-button>
-        </mat-radio-group>
-    </div>
-    <div class="question">
-       4. Have you returned from travel from outside the country?
-    </div>
-    <div class="options">
-        <mat-radio-group aria-label="Select an option">
-            <mat-radio-button value="1">Yes</mat-radio-button>
-            <mat-radio-button value="2">No</mat-radio-button>
-        </mat-radio-group>
-    </div>
-    <div class="question">
-      5. Have you been directed to self-quarantine by a health care provider?
-    </div>
-    <div class="options">
-        <mat-radio-group aria-label="Select an option">
-            <mat-radio-button value="1">Yes</mat-radio-button>
-            <mat-radio-button value="2">No</mat-radio-button>
-        </mat-radio-group>
-    </div>
+    <ng-container [ngSwitch]="question.questionType">
+        <div *ngSwitchCase="questionEnumType.Boolean" class="question boolean-question-container">
+            <div class="title">
+                {{ question.questionName }}
+            </div>
+            <div class="option">
+                <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button *ngFor="let option of question.options" [value]="option.optionValue">
+                        {{ option.optionName }}
+                    </mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+        <div *ngSwitchCase="questionEnumType.SingleChoice" class="question single-choice-question-container">
+            <div class="title">
+                {{ question.questionName }}
+            </div>
+            <div class="option">
+                <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button *ngFor="let option of question.options" [value]="option.optionValue">
+                        {{ option.optionName }}
+                    </mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+        <div *ngSwitchCase="questionEnumType.MultipleChoice" class="question multiple-choice-question-continer">
+            <div class="title">
+                {{ question.questionName }}
+            </div>
+            <div class="option">
+                <mat-checkbox *ngFor="let option of question.options">
+                    {{ option.optionName }}
+                </mat-checkbox>
+            </div>
+        </div>
+        <div *ngSwitchCase="questionEnumType.DropDown" class="question drop-down-question-continer">
+            <mat-form-field appearance="fill">
+                <mat-label>
+                    {{ question.questionName }}
+                </mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let option of question.options" value="option.optionValue">
+                        {{ option.optionName }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </ng-container>
 </div>
