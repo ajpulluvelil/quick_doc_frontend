@@ -1,6 +1,8 @@
 <div class="section-container">
     <div class="section-title">
-        Corona Virus Disease Details
+        {{ section.sectionName }}
     </div>
-    <app-question></app-question>
+    <ng-container *ngFor="let question of section.questions">
+        <app-question [question]="question"></app-question>
+    </ng-container>
 </div>
