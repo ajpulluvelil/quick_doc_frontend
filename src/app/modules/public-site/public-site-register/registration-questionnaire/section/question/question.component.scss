@@ -1,11 +1,34 @@
+@import "../../../../../common/styles/quickDoc.scss";
+
 .question-wrapper {
     padding: 0 1rem;
+    font-family: $primaryFontFamily, $secondaryFontFamily;
     .question {
-        .option {
-            
+        padding: 1rem;
+        .title {
+            font-weight: 700;
+            text-align: justify;
+            .mandatory {
+                color: rgb(255, 0, 0);
+            }
         }
-    }
-    .mat-radio-button ~ .mat-radio-button {
-        margin-left: 1rem;
+        .options-wrapper {
+            margin-top: 1rem;
+            border: dotted;
+            border-color: gray;
+            border-radius: 1rem;
+            .options {
+                padding: 1rem 1rem 0 1rem;
+                .option {
+                    padding: 0 1rem 1rem 0;
+                    text-align: justify;
+                    font-family: $primaryFontFamily, $secondaryFontFamily;
+                    .wrap-mat-radio-label {
+                        white-space: normal;
+                        text-align: justify;
+                    }
+                }
+            }
+        }
     }
 }
