@@ -2,42 +2,60 @@
     <ng-container [ngSwitch]="question.questionType">
         <div *ngSwitchCase="questionEnumType.Boolean" class="question boolean-question-container">
             <div class="title">
-                {{ question.questionName }}
+                {{ question.questionOrdinal }}.&nbsp;{{ question.questionName }}
+                <span class="mandatory" *ngIf="question.isMandatory">*</span>
             </div>
-            <div class="option">
-                <mat-radio-group aria-label="Select an option">
-                    <mat-radio-button *ngFor="let option of question.options" [value]="option.optionValue">
-                        {{ option.optionName }}
-                    </mat-radio-button>
-                </mat-radio-group>
+            <div class="options-wrapper">
+                <div class="options">
+                    <mat-radio-group aria-label="Select an option">
+                        <mat-radio-button *ngFor="let option of question.options" [value]="option.optionValue"
+                            class="option">
+                            <span class="wrap-mat-radio-label">
+                                {{ option.optionName }}
+                            </span>
+                        </mat-radio-button>
+                    </mat-radio-group>
+                </div>
             </div>
         </div>
         <div *ngSwitchCase="questionEnumType.SingleChoice" class="question single-choice-question-container">
             <div class="title">
-                {{ question.questionName }}
+                {{ question.questionOrdinal }}.&nbsp;{{ question.questionName }}
+                <span class="mandatory" *ngIf="question.isMandatory">*</span>
             </div>
-            <div class="option">
-                <mat-radio-group aria-label="Select an option">
-                    <mat-radio-button *ngFor="let option of question.options" [value]="option.optionValue">
-                        {{ option.optionName }}
-                    </mat-radio-button>
-                </mat-radio-group>
+            <div class="options-wrapper">
+                <div class="options">
+                    <mat-radio-group aria-label="Select an option">
+                        <mat-radio-button *ngFor="let option of question.options" [value]="option.optionValue"
+                            class="option">
+                            <span class="wrap-mat-radio-label">
+                                {{ option.optionName }}
+                            </span>
+                        </mat-radio-button>
+                    </mat-radio-group>
+                </div>
             </div>
         </div>
         <div *ngSwitchCase="questionEnumType.MultipleChoice" class="question multiple-choice-question-continer">
             <div class="title">
-                {{ question.questionName }}
+                {{ question.questionOrdinal }}.&nbsp;{{ question.questionName }}
+                <span class="mandatory" *ngIf="question.isMandatory">*</span>
             </div>
-            <div class="option">
-                <mat-checkbox *ngFor="let option of question.options">
-                    {{ option.optionName }}
-                </mat-checkbox>
+            <div class="options-wrapper">
+                <div class="options">
+                    <mat-checkbox *ngFor="let option of question.options" class="option">
+                        <span class="wrap-mat-radio-label">
+                            {{ option.optionName }}
+                        </span>
+                    </mat-checkbox>
+                </div>
             </div>
         </div>
         <div *ngSwitchCase="questionEnumType.DropDown" class="question drop-down-question-continer">
             <mat-form-field appearance="fill">
                 <mat-label>
-                    {{ question.questionName }}
+                    {{ question.questionOrdinal }}.&nbsp;{{ question.questionName }}
+                    <span class="mandatory" *ngIf="question.isMandatory">*</span>
                 </mat-label>
                 <mat-select>
                     <mat-option *ngFor="let option of question.options" value="option.optionValue">
@@ -46,5 +64,6 @@
                 </mat-select>
             </mat-form-field>
         </div>
+        <mat-divider></mat-divider>
     </ng-container>
 </div>
