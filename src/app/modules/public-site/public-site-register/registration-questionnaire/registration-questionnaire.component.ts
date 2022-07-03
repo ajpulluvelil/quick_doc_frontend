@@ -13,7 +13,6 @@ export class RegistrationQuestionnaireComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log('questionnaire', this.questionnaire)
   }
 
 }
