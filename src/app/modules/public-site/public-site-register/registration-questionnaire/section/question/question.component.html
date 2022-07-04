@@ -52,17 +52,20 @@
             </div>
         </div>
         <div *ngSwitchCase="questionEnumType.DropDown" class="question drop-down-question-continer">
-            <mat-form-field appearance="fill">
-                <mat-label>
-                    {{ question.questionOrdinal }}.&nbsp;{{ question.questionName }}
-                    <span class="mandatory" *ngIf="question.isMandatory">*</span>
-                </mat-label>
-                <mat-select>
-                    <mat-option *ngFor="let option of question.options" value="option.optionValue">
-                        {{ option.optionName }}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
+            <div class="title">
+                {{ question.questionOrdinal }}.&nbsp;{{ question.questionName }}
+                <span class="mandatory" *ngIf="question.isMandatory">*</span>
+            </div>
+            <div class="options-wrapper">
+                <div class="row options">
+                    <mat-select class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <mat-option value="none">Please select a value</mat-option>
+                        <mat-option *ngFor="let option of question.options" value="option.optionValue">
+                            {{ option.optionName }}
+                        </mat-option>
+                    </mat-select>
+                </div>
+            </div>
         </div>
         <mat-divider></mat-divider>
     </ng-container>
