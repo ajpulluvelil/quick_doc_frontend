@@ -126,6 +126,18 @@ export const QuestionnaireList = {
                             optionId: '6125cd8e45bbc53'
                         }
                     ]
+                }, {
+                    questionName: 'Input question',
+                    questionType: 'INPUT',
+                    isMandatory: true,
+                    questionId: '6125cd8e45bbi4ci',
+                    questionOrdinal: "5"
+                }, {
+                    questionName: 'Text question',
+                    questionType: 'TEXT',
+                    isMandatory: true,
+                    questionId: '6125cd8e45bbi4ci',
+                    questionOrdinal: "6"
                 }
             ]
         }, {

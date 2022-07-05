@@ -9,7 +9,9 @@ import { QuestionType } from 'src/app/modules/public-site/common/enum/question-t
 export class QuestionComponent implements OnInit {
 
   @Input() question: any;
+  @Input() isDividerInVisible: boolean = false;
   questionEnumType = QuestionType;
+  props: any;
 
   constructor() { }
 
