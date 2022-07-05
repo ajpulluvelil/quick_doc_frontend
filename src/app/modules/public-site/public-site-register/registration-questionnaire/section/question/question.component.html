@@ -58,7 +58,7 @@
             </div>
             <div class="options-wrapper">
                 <div class="row options">
-                    <mat-select class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <mat-select>
                         <mat-option value="none">Please select a value</mat-option>
                         <mat-option *ngFor="let option of question.options" value="option.optionValue">
                             {{ option.optionName }}
@@ -67,6 +67,28 @@
                 </div>
             </div>
         </div>
-        <mat-divider></mat-divider>
+        <div *ngSwitchCase="questionEnumType.Input" class="question">
+            <div class="title">
+                {{ question.questionOrdinal }}.&nbsp;{{ question.questionName }}
+                <span class="mandatory" *ngIf="question.isMandatory">*</span>
+            </div>
+            <div class="options-wrapper">
+                <div class="row options">
+                    <input  class="input-type" matInput placeholder="Type your answer">
+                </div>
+            </div>
+        </div>
+        <div *ngSwitchCase="questionEnumType.Text" class="question">
+            <div class="title">
+                {{ question.questionOrdinal }}.&nbsp;{{ question.questionName }}
+                <span class="mandatory" *ngIf="question.isMandatory">*</span>
+            </div>
+            <div class="options-wrapper">
+                <div class="row options">
+                    <textarea  class="input-type" matInput placeholder="Type your answer"></textarea>
+                </div>
+            </div>
+        </div>
+        <mat-divider *ngIf="!isDividerInVisible"></mat-divider>
     </ng-container>
 </div>

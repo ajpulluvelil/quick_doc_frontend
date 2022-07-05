@@ -2,7 +2,7 @@
     <div class="section-title">
         {{ section.sectionName }}
     </div>
-    <ng-container *ngFor="let question of section.questions">
-        <app-question [question]="question"></app-question>
+    <ng-container *ngFor="let question of section.questions;let i=index">
+        <app-question [question]="question" [isDividerInVisible]="section.questions.length === (i+1)"></app-question>
     </ng-container>
 </div>
