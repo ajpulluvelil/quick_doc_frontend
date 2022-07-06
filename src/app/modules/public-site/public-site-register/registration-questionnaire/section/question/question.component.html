@@ -57,7 +57,7 @@
                 <span class="mandatory" *ngIf="question.isMandatory">*</span>
             </div>
             <div class="options-wrapper">
-                <div class="row options">
+                <div class="options">
                     <mat-select>
                         <mat-option value="none">Please select a value</mat-option>
                         <mat-option *ngFor="let option of question.options" value="option.optionValue">
@@ -73,7 +73,7 @@
                 <span class="mandatory" *ngIf="question.isMandatory">*</span>
             </div>
             <div class="options-wrapper">
-                <div class="row options">
+                <div class="options">
                     <input  class="input-type" matInput placeholder="Type your answer">
                 </div>
             </div>
@@ -84,7 +84,7 @@
                 <span class="mandatory" *ngIf="question.isMandatory">*</span>
             </div>
             <div class="options-wrapper">
-                <div class="row options">
+                <div class="options">
                     <textarea  class="input-type" matInput placeholder="Type your answer"></textarea>
                 </div>
             </div>
