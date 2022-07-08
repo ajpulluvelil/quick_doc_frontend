@@ -120,10 +120,6 @@ export const QuestionnaireList = {
                             optionName: 'Option 3',
                             optionValue: 2,
                             optionId: '6125cd8e45bbc52'
-                        }, {
-                            optionName: 'Option 4',
-                            optionValue: 3,
-                            optionId: '6125cd8e45bbc53'
                         }
                     ]
                 }, {
