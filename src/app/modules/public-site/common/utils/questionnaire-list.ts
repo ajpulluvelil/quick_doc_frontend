@@ -139,11 +139,11 @@ export const QuestionnaireList = {
                     questionId: '6125cd8e45bbi4ci',
                     questionOrdinal: "6"
                 }, {
-                    questionName: 'Text question',
-                    questionType: 'TEXT',
+                    questionName: 'Date question',
+                    questionType: 'DATE',
                     isMandatory: true,
                     questionId: '6125cd8e45bbi4ci',
-                    questionOrdinal: "6"
+                    questionOrdinal: "7"
                 }
             ]
         }, {

@@ -4,5 +4,6 @@ export enum QuestionType {
     MultipleChoice = 'MULTIPLE-CHOICE',
     DropDown = 'DROP-DOWN',
     Input = 'INPUT',
-    Text = 'TEXT'
+    Text = 'TEXT',
+    Date = 'DATE'
 }
