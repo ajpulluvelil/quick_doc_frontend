@@ -10,3 +10,11 @@
         box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .section-container {
+        .section-title {
+            top: 7.5rem;
+        }
+    }
+}
