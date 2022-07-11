@@ -74,7 +74,7 @@
             </div>
             <div class="options-wrapper">
                 <div class="options">
-                    <input class="input-type" matInput placeholder="Type your answer">
+                    <input class="input-type full-width" matInput placeholder="Type your answer">
                 </div>
             </div>
         </div>
@@ -85,18 +85,22 @@
             </div>
             <div class="options-wrapper">
                 <div class="options">
-                    <textarea class="input-type" matInput placeholder="Type your answer"></textarea>
+                    <textarea class="input-type full-width" matInput placeholder="Type your answer"></textarea>
                 </div>
             </div>
         </div>
         <div *ngSwitchCase="questionEnumType.Date" class="question">
-            <mat-form-field appearance="fill">
-                <mat-label>Choose a date</mat-label>
-                <input matInput [matDatepicker]="picker">
-                <mat-hint>MM/DD/YYYY</mat-hint>
-                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
+            <div class="title">
+                {{ question.questionOrdinal }}.&nbsp;{{ question.questionName }}
+                <span class="mandatory" *ngIf="question.isMandatory">*</span>
+            </div>
+            <div class="options-wrapper">
+                <div class="options">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                    <input matInput class="input-type custom-width" [matDatepicker]="picker">
+                </div>
+            </div>
         </div>
         <mat-divider *ngIf="!isDividerInVisible"></mat-divider>
     </ng-container>
