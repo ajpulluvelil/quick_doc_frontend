@@ -1,0 +1,11 @@
+<div class="success-window container container-fluid container-xxl container-xl container-lg container-md container-sm registration-container">
+    <ng-container *ngIf="!!successWindowData.imagePath">
+        <img class="image" [src]="successWindowData.imagePath" alt="">
+    </ng-container>
+    <ng-container *ngIf="!!successWindowData.message">
+        <span class="message">{{ successWindowData.message }}</span>
+    </ng-container>
+    <ng-container *ngIf="!!successWindowData.buttonText">
+        <button class="button" mat-raised-button (click)="onButtonClick()">{{ successWindowData.buttonText }}</button>
+    </ng-container>
+</div>

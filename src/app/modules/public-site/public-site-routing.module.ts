@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CommonSuccessWindowComponent } from '../common/shared/components/common-success-window/common-success-window.component';
 import { OpportunityDetailsComponent } from './public-site-careers/opportunity-details/opportunity-details.component';
 import { PublicSiteCareersComponent } from './public-site-careers/public-site-careers.component';
 import { PublicSiteContactUsComponent } from './public-site-contact-us/public-site-contact-us.component';
@@ -52,6 +53,9 @@ const routes: Routes = [{
     }, {
         path: 'login',
         component: PublicSiteLoginComponent
+    }, {
+        path: 'success',
+        component: CommonSuccessWindowComponent
     }]
 }];
 

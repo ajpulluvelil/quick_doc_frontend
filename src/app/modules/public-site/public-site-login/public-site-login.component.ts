@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { TableDataList } from '../common/utils/table-data-list';
 import { ForgotPasswordModalComponent } from './forgot-password-modal/forgot-password-modal.component';
 
 @Component({
@@ -12,6 +13,7 @@ import { ForgotPasswordModalComponent } from './forgot-password-modal/forgot-pas
 export class PublicSiteLoginComponent implements OnInit {
 
   loginForm!: FormGroup;
+  tableDataList = TableDataList;
 
   constructor(
     private fb: FormBuilder,
@@ -21,6 +23,7 @@ export class PublicSiteLoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.initLoginForm();
+    console.log('tableDataList', this.tableDataList);
   }
 
   initLoginForm() {
