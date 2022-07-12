@@ -19,6 +19,13 @@
                 font-weight: 500;
             }
         }
+        .questionnaire-footer {
+            .submit-button {
+                display: flex;
+                justify-content: center;
+                padding-bottom: 1rem;
+            }
+        }
     }
 }
 

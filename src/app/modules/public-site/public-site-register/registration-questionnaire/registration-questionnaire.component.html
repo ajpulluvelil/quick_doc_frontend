@@ -1,13 +1,24 @@
-<div
-    class="container container-fluid container-xxl container-xl container-lg container-md container-sm registration-container">
-    <div class="questionnaire-wrapper">
-        <div class="title-wrapper">
-            <div class="questionnaire-title">
-                {{ questionnaire.questionnaireName }}
+<ng-container *ngIf="!isSubmitClicked">
+    <div
+        class="container container-fluid container-xxl container-xl container-lg container-md container-sm registration-container">
+        <div class="questionnaire-wrapper">
+            <div class="title-wrapper">
+                <div class="questionnaire-title">
+                    {{ questionnaire.questionnaireName }}
+                </div>
+            </div>
+            <ng-container *ngFor="let section of questionnaire?.sections">
+                <app-section [section]="section"></app-section>
+            </ng-container>
+            <div class="questionnaire-footer">
+                <div class="submit-button">
+                    <button mat-raised-button [routerLink]="['/public-site/landing/success']"
+                        routerLinkActive="router-link-active" (click)="onSubmitClick()">Submit your answers</button>
+                </div>
             </div>
         </div>
-        <ng-container *ngFor="let section of questionnaire?.sections">
-            <app-section [section]="section"></app-section>
-        </ng-container>
     </div>
-</div>
+</ng-container>
+<ng-container *ngIf="isSubmitClicked && !!successData">
+    <app-common-success-window [successWindowData]="successData"></app-common-success-window>
+</ng-container>
