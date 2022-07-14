@@ -83,7 +83,7 @@ export class PublicSiteRegisterComponent implements OnInit {
       state: new FormControl({
         value: '',
         disabled: true
-      }, Validators.required),
+      }),
       district: new FormControl({
         value: '',
         disabled: true
@@ -97,7 +97,8 @@ export class PublicSiteRegisterComponent implements OnInit {
   }
 
   onSubmit(registrationForm: FormGroup) {
-    this.router.navigate(['public-site/landing/clinic-selection']);
+    console.log('registrationForm', this.registrationForm);
+    // this.router.navigate(['public-site/landing/clinic-selection']);
   }
 
   switchLanguage() {

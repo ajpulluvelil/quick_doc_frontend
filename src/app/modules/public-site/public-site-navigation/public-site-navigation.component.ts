@@ -24,8 +24,8 @@ export class PublicSiteNavigationComponent implements OnInit {
 
   selectedLanguage: string = 'en';
   possibleLanguageValues = [
-    { value: 'hn', display: 'Hindi' },
-    { value: 'en', display: 'English' }
+    { value: 'hn', display: 'Hn' },
+    { value: 'en', display: 'En' }
   ];
   constructor(
     private publicSiteService: PublicSiteService,
