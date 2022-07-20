@@ -4,10 +4,10 @@ import { ProfessionalDashboardComponent } from "./professional-dashboard/profess
 
 const routes: Routes = [{
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'analytics',
     pathMatch: 'full'
 }, {
-    path: 'dashboard',
+    path: 'analytics',
     component: ProfessionalDashboardComponent,
 }];
 

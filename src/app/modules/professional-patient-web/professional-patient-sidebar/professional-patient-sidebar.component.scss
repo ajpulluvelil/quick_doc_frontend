@@ -1,0 +1,44 @@
+@import "../../common/styles/quickDoc.scss";
+.sidebar {
+    position: fixed;
+    left: 0;
+    height: calc(100% - 3.75rem);
+    width: 78px;
+    box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 0px 2px #0000001f;
+    .menu-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem;
+        cursor: pointer;
+        img {
+            width: 30px;
+        }
+        &:hover {
+            background-color: $sideBarHoverColor;
+        }
+        .tooltip {
+            position: absolute;
+            top: -20px;
+            left: calc(100% + 15px);
+            z-index: 3;
+            background: #fff;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: 400;
+            opacity: 0;
+            white-space: nowrap;
+            pointer-events: none;
+            transition: 0s;
+        }
+    }
+    .hamburger {
+        background-color: #b3b0b0;
+        cursor: auto;
+        &:hover {
+            background-color: #b3b0b0;
+        }
+    }
+}

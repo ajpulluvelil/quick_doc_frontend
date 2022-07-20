@@ -1,20 +1,22 @@
 // Color codes defines here
-$mainForeColor: #0a81e9;
-$mainBackgroundColor: #ffffff;
+$mainForeColor: #f5c13b;
+$mainBackgroundColor: #242220;
 
-$primaryBackgroundColor: #0a81e9;
-$secondaryBackgroundColor: #ffffff;
+$primaryBackgroundColor: #f5c13b;
+$secondaryBackgroundColor: #242220;
 
-$mainFontColor: #ffffff;
-$secondaryFontColor: #0a81e9;
+$mainFontColor: #242220;
+$secondaryFontColor: #f5c13b;
 
 $primaryFontFamily: "Roboto Mono";
 $secondaryFontFamily: monospace;
 
-$buttonTextColor: #ffffff;
-$buttonColor: #0a81e9;
-$buttonTextSecondaryColor: #0a81e9;
-$buttonSecondaryColor: #ffffff;
+$buttonTextColor: #242220;
+$buttonColor: #f5c13b;
+$buttonTextSecondaryColor: #f5c13b;
+$buttonSecondaryColor: #242220;
+
+$sideBarHoverColor: #f5c13b;
 
 // Image URL defines here
 $contactUsBackgroundImageURL: url('../../../../assets/images/contact-us-background.jpg');

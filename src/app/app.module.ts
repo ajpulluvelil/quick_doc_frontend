@@ -8,6 +8,7 @@ import { MaterialModule } from './modules/common/modules/material/material.modul
 import { ExternalModule } from './modules/common/modules/external/external.module';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslocoRootModule } from './transloco-root.module';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TranslocoRootModule } from './transloco-root.module';
     MaterialModule,
     ExternalModule,
     HttpClientModule,
-    TranslocoRootModule
+    TranslocoRootModule,
+    NgChartsModule
   ],
   providers: [Meta],
   bootstrap: [AppComponent]

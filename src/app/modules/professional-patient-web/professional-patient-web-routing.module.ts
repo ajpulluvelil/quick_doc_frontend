@@ -7,13 +7,13 @@ const routes: Routes = [
     path: '',
     redirectTo: 'web',
     pathMatch: 'full'
-  }, // {
-  //   path: 'web',
-  //   loadChildren: () => import('../dashboard/professional-dashboard/professional-dashboard.module').then(module => module.ProfessionalDashboardModule)
-  // }
-  {
+  }, {
     path: 'web',
-    component: ProfessionalPatientComponent
+    component: ProfessionalPatientComponent,
+    children: [{
+      path: 'dashboard',
+      loadChildren: () => import('../dashboard/professional-dashboard/professional-dashboard-routing.module').then(module => module.ProfessionalDashboardRoutingModule)
+    }]
   }
 ];
 
