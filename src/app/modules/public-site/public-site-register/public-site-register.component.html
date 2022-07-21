@@ -113,7 +113,7 @@
                 </mat-form-field>
             </div>
             <div class="registration-button">
-                <button mat-raised-button type="submit">{{ 'publicSite.selfRegistration.continueRegistration' | transloco }}</button>
+                <button mat-raised-button [disabled]="!registrationForm.valid" type="submit">{{ 'publicSite.selfRegistration.continueRegistration' | transloco }}</button>
             </div>
         </div>
     </form>

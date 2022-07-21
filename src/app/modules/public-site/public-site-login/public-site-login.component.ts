@@ -13,7 +13,6 @@ import { ForgotPasswordModalComponent } from './forgot-password-modal/forgot-pas
 export class PublicSiteLoginComponent implements OnInit {
 
   loginForm!: FormGroup;
-  tableDataList = TableDataList;
 
   constructor(
     private fb: FormBuilder,
@@ -23,7 +22,6 @@ export class PublicSiteLoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.initLoginForm();
-    console.log('tableDataList', this.tableDataList);
   }
 
   initLoginForm() {

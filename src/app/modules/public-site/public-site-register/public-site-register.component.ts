@@ -79,7 +79,6 @@ export class PublicSiteRegisterComponent implements OnInit {
       mobileNumber: new FormControl('', Validators.required),
       dob: new FormControl('', Validators.required),
       nationality: new FormControl('', Validators.required),
-      country: new FormControl('', Validators.required),
       state: new FormControl({
         value: '',
         disabled: true
@@ -88,7 +87,6 @@ export class PublicSiteRegisterComponent implements OnInit {
         value: '',
         disabled: true
       }),
-      city: new FormControl('', Validators.required),
       pin: new FormControl('', Validators.required),
       landmark: new FormControl('', Validators.required),
       apartment: new FormControl('', Validators.required),
@@ -97,8 +95,7 @@ export class PublicSiteRegisterComponent implements OnInit {
   }
 
   onSubmit(registrationForm: FormGroup) {
-    console.log('registrationForm', this.registrationForm);
-    // this.router.navigate(['public-site/landing/clinic-selection']);
+    this.router.navigate(['public-site/landing/clinic-selection']);
   }
 
   switchLanguage() {
