@@ -12,7 +12,8 @@ export class AppComponent implements OnInit {
 
   constructor(
     private metaService: Meta
-  ) {}
+  ) {
+  }
   ngOnInit(): void {
     this.metaService.addTags([
       { name:'mobile-web-app-capable',content:"Yes"},
